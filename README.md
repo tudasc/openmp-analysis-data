@@ -11,7 +11,7 @@ in this case the "build" script should just extract the tarball while serving as
 The build script gets the following input parameters.
 
 * `$1` : fully qualified path to where the repository was checked out
-* `$2` : O0 or O2 indicating if building with optimizations turned on
+* `$2` : `-O0` or `-O2` indicating if building with optimizations turned on
 
 
 #### Execution
