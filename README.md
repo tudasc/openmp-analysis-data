@@ -11,13 +11,13 @@ in this case the "build" script should just extract the tarball while serving as
 The build script gets the following input parameters.
 
 * `$1` : fully qualified path to where the repository was checked out
-* `$2` : O0 or O2 indicating wether to build with optimizations turned on
+* `$2` : O0 or O2 indicating if building with optimizations turned on
 
 
 #### Execution
-The build system should be executed with the following compiler versions `gcc/11.2.0 , openmpi/4.1.6` to produce an x86 binary.
+The build system should be executed with the following compiler versions `gcc/11.2.0 , openmpi/4.1.6` to produce an x86 binary. It can expect to have `cmake/3.26.1 , make/4.2.1` available in the PATH.
 The build script is expected to put the binaries somewhere inside the repository (excluding the `.git` dir).
-either in a separate directory inside the repo or straight in the source-tree.
+Either in a separate directory inside the repo or straight in the source-tree.
 
 #### Output
 The last line that the build scripts prints to stdout should be 1 of 3 strings:

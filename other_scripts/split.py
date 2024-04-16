@@ -11,7 +11,7 @@ def main():
     df_ci = df.iloc[1::4]
     df_rs = df.iloc[2::4]
     df_mg = df.iloc[3::4]
-    
+
     df_tj.to_csv('tj.csv')
     df_ci.to_csv('ci.csv')
     df_rs.to_csv('rs.csv')
