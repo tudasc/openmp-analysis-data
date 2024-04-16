@@ -5,6 +5,7 @@ import os
 import subprocess
 import shutil
 from tqdm import tqdm
+tqdm.pandas()
 
 REPO_PATH = "./REPOS/"
 
@@ -38,7 +39,6 @@ def cloneRepo(repoUrl, path, commit_hash=None):
 
 
 def apply_dowload_repo(row):
-    print(row)
     h = None
     if pd.notna(row['usedHash']):
         h = row['usedHash']
@@ -48,20 +48,33 @@ def apply_dowload_repo(row):
 def main():
     df_full = pd.read_csv('tj.csv', index_col=0)
 
-    df = df_full.iloc[0:10]
-    df['usedHash'] = df.apply(apply_dowload_repo, axis=1)
+    # df = df_full.iloc[0:10]
+    df = df_full
+    df['usedHash'] = df.progress_apply(apply_dowload_repo, axis=1)
     df['expert'] = "tj"
 
     df.to_csv('tj_result.csv')
 
-    num = 0
-    for index, row in tqdm(df.iterrows(), total=df.shape[0]):
-        path = REPO_PATH + row["Code"].replace('/', '--')
-        if "CMakeLists.txt" in os.listdir(path):
-            print("Try compiling" + path)
-            if try_default_cmake_build(path):
-                num += 1
-    print("compiled: " + str(num))
+    df['use_cmake'] = df.progress_apply(has_cmake_list, axis=1)
+    df['DEFAULT_CMAKE_BUILDABLE'] = df.progress_apply(can_build_default_cmake, axis=1)
+    print(df['DEFAULT_CMAKE_BUILDABLE'].value_counts())
+    print(df['use_cmake'].value_counts())
+    df.to_csv('tj_result.csv')
+
+
+def has_cmake_list(row):
+    path = REPO_PATH + row["Code"].replace('/', '--')
+    if "CMakeLists.txt" in os.listdir(path):
+        return True
+    return False
+
+
+def can_build_default_cmake(row):
+    path = REPO_PATH + row["Code"].replace('/', '--')
+    if "CMakeLists.txt" in os.listdir(path):
+        if try_default_cmake_build(path):
+            return True
+    return False
 
 
 def try_default_cmake_build(path):
