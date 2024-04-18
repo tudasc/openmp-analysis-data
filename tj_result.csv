@@ -1,21 +1,21 @@
 ,Code,Language,PushDate,Stars,Type,URL,buildScript,build_script,expert,use_cmake,use_configure,usedHash,note
-7296.0,openwall/john,C,6061985,9222.0,git,https://github.com/openwall/john.git,,,,False,False,c8e21e81ea1e4d300c0036c6a2e7866c9e78d3e0
+7296.0,openwall/john,C,6061985,9222.0,git,https://github.com/openwall/john.git,,special_configure/john.sh,,False,False,c8e21e81ea1e4d300c0036c6a2e7866c9e78d3e0
 7273.0,stotko/stdgpu,C++,6101985,1072.0,git,https://github.com/stotko/stdgpu.git,,special_cmake/stdgpu.sh,,True,,965a29f7c3fa72dc123c5a1abc5ddbadf3c39815
 7947.0,ddemidov/amgcl,C++,4441985,702.0,git,https://github.com/ddemidov/amgcl.git,,default_cmake.sh,,True,,42ee9da2057153b1aef734e8e462c846a33aa805
-7937.0,DualSPHysics/DualSPHysics,C++,4481985,519.0,git,https://github.com/DualSPHysics/DualSPHysics.git,,,,False,False,ecf3e9a98fcc3957840dd11b9973c5c60e134065
+7937.0,DualSPHysics/DualSPHysics,C++,4481985,519.0,git,https://github.com/DualSPHysics/DualSPHysics.git,,special_configure/DualSPHysics.sh,,False,False,ecf3e9a98fcc3957840dd11b9973c5c60e134065
 7219.0,openmultiplayer/open.mp,C++,6151985,389.0,git,https://github.com/openmultiplayer/open.mp.git,,,,True,,abee9cd169a22df47632f4cf5506b0e581e72428,only supports clang
-7495.0,ekondis/mixbench,C++,5631985,330.0,git,https://github.com/ekondis/mixbench.git,,,,False,False,440a133a6423840ce613d1eaab43cd586effd389
+7495.0,ekondis/mixbench,C++,5631985,330.0,git,https://github.com/ekondis/mixbench.git,,special_cmake/mixbench.sh,,False,False,440a133a6423840ce613d1eaab43cd586effd389
 7220.0,kimwalisch/primecount,C++,6151985,302.0,git,https://github.com/kimwalisch/primecount.git,,default_cmake.sh,,True,,e7d9c71bb4c6cc2d7435f32e939787a2d78e4cb9
-7370.0,zchrissirhcz/cmake_examples,C++,5901985,272.0,git,https://github.com/zchrissirhcz/cmake_examples.git,,,,False,False,cb9e41a05c711f372e225651e9fb0eb797b40dcc
+7370.0,zchrissirhcz/cmake_examples,C++,5901985,272.0,git,https://github.com/zchrissirhcz/cmake_examples.git,,,,False,False,cb9e41a05c711f372e225651e9fb0eb797b40dcc,"examples to use build system, nothing to build?"
 7984.0,ricosjp/monolish,C++,4351985,189.0,git,https://github.com/ricosjp/monolish.git,,,,True,,a4bd3e6aedff26bbe91ea619ffb6425ce7687e12
 7393.0,InteractiveComputerGraphics/CompactNSearch,C++,5871985,148.0,git,https://github.com/InteractiveComputerGraphics/CompactNSearch.git,,default_cmake.sh,,True,,99fa1fe052f353b33957948f36e628500f1737f7
-5074.0,tgmattso/OpenMP_intro_tutorial,C,-6218015,114.0,git,https://github.com/tgmattso/OpenMP_intro_tutorial.git,,,,False,False,56a6b0160e3f5c0a5711658436e3f9657ee57b09
+5074.0,tgmattso/OpenMP_intro_tutorial,C,-6218015,114.0,git,https://github.com/tgmattso/OpenMP_intro_tutorial.git,,special_configure/OpenMP_intro_tutorial.sh,,False,False,56a6b0160e3f5c0a5711658436e3f9657ee57b09
 7790.0,MultithreadCorner/Hydra,C++,4841985,107.0,git,https://github.com/MultithreadCorner/Hydra.git,,,,True,,aac22ce260362e20e173594deec48d2dc2100910,header-only
-7083.0,OpenMP/sources,C,17.05.4068,96.0,git,https://github.com/OpenMP/sources.git,,,,False,False,c8fe3d234ddbd5949d39f295f42455f626fd4582
-6051.0,olmallet81/URT,C++,-2508015,87.0,git,https://github.com/olmallet81/URT.git,,,,False,False,eae7f72df7b99d291bb6a227f212c557a794558e
-7543.0,masadcv/FastGeodis,C++,5491985,80.0,git,https://github.com/masadcv/FastGeodis.git,,,,False,False,0f6cc1e6e104bee56e6eb9dfdd2cfd29c21a1a3e
-4337.0,ysh329/OpenMP-101,C,-3688015,74.0,git,https://github.com/ysh329/OpenMP-101.git,,,,False,False,74bba4818a945bfc7d2d66b27ed48486d4757509
-7899.0,tgmattso/OmpCommonCore,C,4601985,68.0,git,https://github.com/tgmattso/OmpCommonCore.git,,,,False,False,9874ef58dffb2cf615717039cda0847f3eeb4444
+7083.0,OpenMP/sources,C,17.05.4068,96.0,git,https://github.com/OpenMP/sources.git,,,,False,False,c8fe3d234ddbd5949d39f295f42455f626fd4582,header only
+6051.0,olmallet81/URT,C++,-2508015,87.0,git,https://github.com/olmallet81/URT.git,,,,False,False,eae7f72df7b99d291bb6a227f212c557a794558e,build error: missing std:: header include
+7543.0,masadcv/FastGeodis,C++,5491985,80.0,git,https://github.com/masadcv/FastGeodis.git,,special_configure/FastGeodis,,False,False,0f6cc1e6e104bee56e6eb9dfdd2cfd29c21a1a3e
+4337.0,ysh329/OpenMP-101,C,-3688015,74.0,git,https://github.com/ysh329/OpenMP-101.git,,,,False,False,74bba4818a945bfc7d2d66b27ed48486d4757509,OpenMP Tutorial: not clear what to build
+7899.0,tgmattso/OmpCommonCore,C,4601985,68.0,git,https://github.com/tgmattso/OmpCommonCore.git,,,,False,False,9874ef58dffb2cf615717039cda0847f3eeb4444,OpenMP Tutorial: not clear what to build
 8063.0,LLNL/dataracebench,C,4061985,66.0,git,https://github.com/LLNL/dataracebench.git,,,,False,False,e1bffc57f35f2751afea6c9379b5863e0b2abfd9
 7262.0,ROCm/rocALUTION,C++,6121985,62.0,git,https://github.com/ROCm/rocALUTION.git,,default_cmake.sh,,True,,aff9344fd5b7df8840593a64879e7e6bdd6217c2
 7826.0,ashvardanian/ParallelReductionsBenchmark,C++,4761985,59.0,git,https://github.com/ashvardanian/ParallelReductionsBenchmark.git,,default_cmake.sh,,True,,c2d7acd4e65490f12400ffb746475cb826e4ad39,needs cuda
@@ -197,7 +197,7 @@
 4640.0,apallath/parallel_algos,C,-4778015,2.0,git,https://github.com/apallath/parallel_algos.git,,,,True,,dd647033bd321d2f00e05ba60de6e277eb34df63
 1063.0,rlyerly/NUMA-ExtWorkload-OMP-Scheduler,C,-6457617,2.0,git,https://github.com/rlyerly/NUMA-ExtWorkload-OMP-Scheduler.git,,,,False,False,3679583b210084f2f295ca1fbb297a315117e869
 4582.0,NavSanya/Parallel_DFS_BFS_OpenMp,C++,-4608015,2.0,git,https://github.com/NavSanya/Parallel_DFS_BFS_OpenMp.git,,,,False,False,656d6a9270a7e70e5a4ecd4b80a50fc788edbf40
-4747.0,openwall/john-core,C,-5178015,2.0,git,https://github.com/openwall/john-core.git,,,,False,False,6492f52d556e98fd75e0a966fff17a9a4f526b05
+4747.0,openwall/john-core,C,-5178015,2.0,git,https://github.com/openwall/john-core.git,,,,False,False,6492f52d556e98fd75e0a966fff17a9a4f526b05,subset of other repo- can not build use openwall/john instead
 7501.0,JimCownie/CpuFun,C++,5621985,2.0,git,https://github.com/JimCownie/CpuFun.git,,,,False,False,c693f247f453b6e408ef610c86881fe1cf249486
 991.0,saifthe1/openfoam-openmp,C,-5537617,2.0,git,https://github.com/saifthe1/openfoam-openmp.git,,,,False,False,eca78a2fff372203c3f42cf1ed49a096b8455e2e
 4394.0,fastsolve/paracoder,C,-3968015,2.0,git,https://github.com/fastsolve/paracoder.git,,,,False,False,7b792de56f364bd3c94abf30ad741058e1d6492d
