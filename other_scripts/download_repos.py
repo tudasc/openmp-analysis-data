@@ -56,23 +56,19 @@ def main():
 
     # df['expert'] = "tj"
 
-    print(df['use_configure'].value_counts())
-
-    # print(df['DEFAULT_CMAKE_BUILDABLE'].value_counts())
-
     df.to_csv('tj_result.csv')
 
 
 def one_repo_at_a_time(row):
     path = REPO_PATH + row["Code"].replace('/', '--')
-    if row['use_cmake']:
+    if not (pd.isna(row['build_script']) and pd.isna(row['note'])):
+        # already found out the build script
         return row
 
     row['usedHash'] = apply_dowload_repo(row)
-    if "configure" in os.listdir(path):
-        row['use_configure'] = True
-        if try_build_script(path, "./scripts/default_configure.sh"):
-            row['build_script'] = "default_configure.sh"
+    if "Makefile" in os.listdir(path) or "makefile" in os.listdir(path):
+        if try_build_script(path, "/home/tim/repo_finder/openmp-usage-analysis-binaries/scripts/default_make.sh"):
+            row['build_script'] = "default_make.sh"
         else:
             pass
             # not buildable
@@ -86,9 +82,10 @@ def one_repo_at_a_time(row):
 def try_build_script(path, script):
     assert os.path.isfile(script)
     try:
-        output = subprocess.check_output(script, cwd=path,
+        output = subprocess.check_output("%s %s -O0"%(script,path), cwd=path,
                                          stderr=subprocess.STDOUT,
                                          shell=True, encoding='UTF-8')
+        #print(output)
         if "BUILD SUCCESSFUL" in output:
             return True
         else:
