@@ -7,7 +7,7 @@
 7495.0,ekondis/mixbench,C++,5631985,330.0,git,https://github.com/ekondis/mixbench.git,,special_cmake/mixbench.sh,,False,False,440a133a6423840ce613d1eaab43cd586effd389
 7220.0,kimwalisch/primecount,C++,6151985,302.0,git,https://github.com/kimwalisch/primecount.git,,default_cmake.sh,,True,,e7d9c71bb4c6cc2d7435f32e939787a2d78e4cb9
 7370.0,zchrissirhcz/cmake_examples,C++,5901985,272.0,git,https://github.com/zchrissirhcz/cmake_examples.git,,,,False,False,cb9e41a05c711f372e225651e9fb0eb797b40dcc,"examples to use build system, nothing to build?"
-7984.0,ricosjp/monolish,C++,4351985,189.0,git,https://github.com/ricosjp/monolish.git,,,,True,,a4bd3e6aedff26bbe91ea619ffb6425ce7687e12
+7984.0,ricosjp/monolish,C++,4351985,189.0,git,https://github.com/ricosjp/monolish.git,,,,True,,a4bd3e6aedff26bbe91ea619ffb6425ce7687e12,configure error finding blas libary
 7393.0,InteractiveComputerGraphics/CompactNSearch,C++,5871985,148.0,git,https://github.com/InteractiveComputerGraphics/CompactNSearch.git,,default_cmake.sh,,True,,99fa1fe052f353b33957948f36e628500f1737f7
 5074.0,tgmattso/OpenMP_intro_tutorial,C,-6218015,114.0,git,https://github.com/tgmattso/OpenMP_intro_tutorial.git,,special_configure/OpenMP_intro_tutorial.sh,,False,False,56a6b0160e3f5c0a5711658436e3f9657ee57b09
 7790.0,MultithreadCorner/Hydra,C++,4841985,107.0,git,https://github.com/MultithreadCorner/Hydra.git,,,,True,,aac22ce260362e20e173594deec48d2dc2100910,header-only
@@ -16,12 +16,12 @@
 7543.0,masadcv/FastGeodis,C++,5491985,80.0,git,https://github.com/masadcv/FastGeodis.git,,special_configure/FastGeodis,,False,False,0f6cc1e6e104bee56e6eb9dfdd2cfd29c21a1a3e
 4337.0,ysh329/OpenMP-101,C,-3688015,74.0,git,https://github.com/ysh329/OpenMP-101.git,,,,False,False,74bba4818a945bfc7d2d66b27ed48486d4757509,OpenMP Tutorial: not clear what to build
 7899.0,tgmattso/OmpCommonCore,C,4601985,68.0,git,https://github.com/tgmattso/OmpCommonCore.git,,,,False,False,9874ef58dffb2cf615717039cda0847f3eeb4444,OpenMP Tutorial: not clear what to build
-8063.0,LLNL/dataracebench,C,4061985,66.0,git,https://github.com/LLNL/dataracebench.git,,,,False,False,e1bffc57f35f2751afea6c9379b5863e0b2abfd9
+8063.0,LLNL/dataracebench,C,4061985,66.0,git,https://github.com/LLNL/dataracebench.git,,"",,False,False,e1bffc57f35f2751afea6c9379b5863e0b2abfd9,benchmark: not clear what to build
 7262.0,ROCm/rocALUTION,C++,6121985,62.0,git,https://github.com/ROCm/rocALUTION.git,,default_cmake.sh,,True,,aff9344fd5b7df8840593a64879e7e6bdd6217c2
 7826.0,ashvardanian/ParallelReductionsBenchmark,C++,4761985,59.0,git,https://github.com/ashvardanian/ParallelReductionsBenchmark.git,,default_cmake.sh,,True,,c2d7acd4e65490f12400ffb746475cb826e4ad39,needs cuda
-7478.0,cjmcv/hpc,C++,5681985,49.0,git,https://github.com/cjmcv/hpc.git,,,,False,False,4a72edd9ff88a14db61c63135220258b0f70d599
+7478.0,cjmcv/hpc,C++,5681985,49.0,git,https://github.com/cjmcv/hpc.git,,,,False,False,4a72edd9ff88a14db61c63135220258b0f70d599,tutorial: not clear what to build
 7365.0,eth-cscs/SpFFT,C++,5941985,47.0,git,https://github.com/eth-cscs/SpFFT.git,,special_cmake/spfft.sh,,True,,0a0a08c203b311d10d840444886e61c87e2d20f0
-2328.0,FeeZhu/ICP,C++,10422383,44.0,git,https://github.com/FeeZhu/ICP.git,,,,False,False,5a7deebaae67448b9271f995b6e2a91ec838e0aa
+2328.0,FeeZhu/ICP,C++,10422383,44.0,git,https://github.com/FeeZhu/ICP.git,,,,False,False,5a7deebaae67448b9271f995b6e2a91ec838e0aa,cant understand chinese build instructions
 4445.0,t-hishinuma/DD-AVX_v3,C++,-4168015,40.0,git,https://github.com/t-hishinuma/DD-AVX_v3.git,,,,False,False,7b97503b2ee9b5c8d80f48674578b0629cb8ad35
 2077.0,shreepads/pdfcrack-mp,C,29.11.8723,38.0,git,https://github.com/shreepads/pdfcrack-mp.git,,,,False,False,7b1201718784f0d3aa60ee1ce22b82a1b0997a9b
 4912.0,CyCTW/Parallel-MCTS,C++,-5758015,37.0,git,https://github.com/CyCTW/Parallel-MCTS.git,,,,True,,b346b964b2203cf8d7d9ca50e5d3a011b4bdc41d,build error: missing header include from std:: (additionally need to execute sed -i 's/master/main/g' ../CMakeLists.txt.in)
