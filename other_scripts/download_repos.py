@@ -8,7 +8,7 @@ from tqdm import tqdm
 
 tqdm.pandas()
 
-REPO_PATH = "./REPOS/"
+REPO_PATH = "/home/tim/repo_finder/openmp-usage-analysis-binaries/REPOS/"
 
 
 def cloneRepo(repoUrl, path, commit_hash=None):
