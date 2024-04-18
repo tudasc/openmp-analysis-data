@@ -3,7 +3,7 @@
 7273.0,stotko/stdgpu,C++,6101985,1072.0,git,https://github.com/stotko/stdgpu.git,,special_cmake/stdgpu.sh,,True,,965a29f7c3fa72dc123c5a1abc5ddbadf3c39815
 7947.0,ddemidov/amgcl,C++,4441985,702.0,git,https://github.com/ddemidov/amgcl.git,,default_cmake.sh,,True,,42ee9da2057153b1aef734e8e462c846a33aa805
 7937.0,DualSPHysics/DualSPHysics,C++,4481985,519.0,git,https://github.com/DualSPHysics/DualSPHysics.git,,,,False,False,ecf3e9a98fcc3957840dd11b9973c5c60e134065
-7219.0,openmultiplayer/open.mp,C++,6151985,389.0,git,https://github.com/openmultiplayer/open.mp.git,,,,True,,abee9cd169a22df47632f4cf5506b0e581e72428
+7219.0,openmultiplayer/open.mp,C++,6151985,389.0,git,https://github.com/openmultiplayer/open.mp.git,,,,True,,abee9cd169a22df47632f4cf5506b0e581e72428,only supports clang
 7495.0,ekondis/mixbench,C++,5631985,330.0,git,https://github.com/ekondis/mixbench.git,,,,False,False,440a133a6423840ce613d1eaab43cd586effd389
 7220.0,kimwalisch/primecount,C++,6151985,302.0,git,https://github.com/kimwalisch/primecount.git,,default_cmake.sh,,True,,e7d9c71bb4c6cc2d7435f32e939787a2d78e4cb9
 7370.0,zchrissirhcz/cmake_examples,C++,5901985,272.0,git,https://github.com/zchrissirhcz/cmake_examples.git,,,,False,False,cb9e41a05c711f372e225651e9fb0eb797b40dcc
@@ -45,7 +45,7 @@
 6146.0,esa-tu-darmstadt/daphne-benchmark,C++,-2798015,18.0,git,https://github.com/esa-tu-darmstadt/daphne-benchmark.git,,,,False,False,6df0108efa43971e89ad105a86a28c0349f5d54d
 7398.0,PhasicFlow/PhasicFlowPlus,C++,5861985,17.0,git,https://github.com/PhasicFlow/PhasicFlowPlus.git,,,,False,False,0adfb0d7c37166ee934cb22388b54020b77156eb
 1614.0,MultithreadCorner/MCBooster,C++,5092383,17.0,git,https://github.com/MultithreadCorner/MCBooster.git,,,,True,,87c6fef6a6105f16f85023b14865e72aed85a727,header only
-1544.0,KarypisLab/TriangleCounting,C,5402383,16.0,git,https://github.com/KarypisLab/TriangleCounting.git,,,,True,,7c1a0db20d4dca307bdb32c77d967d24bbca8ef6
+1544.0,KarypisLab/TriangleCounting,C,5402383,16.0,git,https://github.com/KarypisLab/TriangleCounting.git,,special_cmake/KarypisLab.sh,,True,,7c1a0db20d4dca307bdb32c77d967d24bbca8ef6
 2099.0,Obi-Wan/dwt,C++,23.03.8313,15.0,git,https://github.com/Obi-Wan/dwt.git,,,,False,False,da1523b6ffe8fbf18cce1cfa2e55f488b2b824df
 8055.0,AMDComputeLibraries/OpenMPApps,C,4101985,14.0,git,https://github.com/AMDComputeLibraries/OpenMPApps.git,,,,False,False,ffcdb85749f0a445c07993d0e3b3b44ba1d10c83
 1692.0,AlbaMustafaj/Parallel-Computing-Projetcs,C,4692383,14.0,git,https://github.com/AlbaMustafaj/Parallel-Computing-Projetcs.git,,,,False,False,ddf29edd73e79b8c4f2699ae47541b454838a133
@@ -56,9 +56,9 @@
 2766.0,lionell/pagerank,C++,8842383,13.0,git,https://github.com/lionell/pagerank.git,,,,False,False,334f6fc21c9b9425ae5fd38eb43790eb5cf2290a
 2555.0,arslansadiq/Parallel-Programming-TUM,C,9532383,12.0,git,https://github.com/arslansadiq/Parallel-Programming-TUM.git,,,,False,False,1206a685828be412bcae4b8036fb748fe180c6ae
 5854.0,jinaojakezhang/FEDFEM,C++,-1938015,12.0,git,https://github.com/jinaojakezhang/FEDFEM.git,,,,False,False,57368db0b2bb47216fea36851033da3f3bff639f
-1543.0,KarypisLab/K-Truss,C,5402383,12.0,git,https://github.com/KarypisLab/K-Truss.git,,,,True,,42ac2bf5d5407180fa487eb709b8104b45d99301
+1543.0,KarypisLab/K-Truss,C,5402383,12.0,git,https://github.com/KarypisLab/K-Truss.git,,special_cmake/KarypisLab.sh,,True,,42ac2bf5d5407180fa487eb709b8104b45d99301
 176.0,robeastham/png-parallel,C++,5792781,12.0,git,https://github.com/robeastham/png-parallel.git,,,,False,False,8e9afc5083fffdb413bb60344a00a60cb9368df9
-4641.0,ppg-uoi/OMPi,C,-4788015,11.0,git,https://github.com/ppg-uoi/OMPi.git,,,,False,True,eb8bf77a3650c26e99e27d3bcbdc056a1886625b
+4641.0,ppg-uoi/OMPi,C,-4788015,11.0,git,https://github.com/ppg-uoi/OMPi.git,,default_configure.sh,,False,True,eb8bf77a3650c26e99e27d3bcbdc056a1886625b
 5356.0,conradsnicta/armadillo-gmm,C++,-358015,11.0,git,https://github.com/conradsnicta/armadillo-gmm.git,,,,False,False,023ef6752d9aa7aa2e7a1d9ba239dc8e6b0b2034
 3501.0,DLopezMadrid/tracerr,C,-7878015,11.0,git,https://github.com/DLopezMadrid/tracerr.git,,,,True,,d8b607e2b02c8acab3a4214409d8cc2fe053288b
 4315.0,HxnDev/Password-Cracker-using-Brute-Force-Algorithm,C++,-3598015,10.0,git,https://github.com/HxnDev/Password-Cracker-using-Brute-Force-Algorithm.git,,,,False,False,6cd3f24b1cf8246091c49635b354cda6f155a41c
@@ -264,7 +264,7 @@
 8067.0,dormoyi/CME213,C++,4031985,2.0,git,https://github.com/dormoyi/CME213.git,,,,False,False,213ba96a67e3c52194c6e65430c30b69636c0659
 6853.0,bsc-pm/tacl,C++,05.06.6094,1.0,git,https://github.com/bsc-pm/tacl.git,,,,False,False,75bd9729c0913ee22508beadb675d866bcf6d68c
 2667.0,chander2207/Dijkstra-openmp,C,9212383,1.0,git,https://github.com/chander2207/Dijkstra-openmp.git,,,,False,False,5a7b7149cab967ab89db024c40945ec3e247db1a
-3485.0,philljj/ghf,C,-7818015,1.0,git,https://github.com/philljj/ghf.git,,,,False,True,3e16512c2861bad0e11dd6ade78b8f4cc91af7c4
+3485.0,philljj/ghf,C,-7818015,1.0,git,https://github.com/philljj/ghf.git,,special_configure/ghf.sh,,False,True,3e16512c2861bad0e11dd6ade78b8f4cc91af7c4
 1992.0,MNie/ComparisonOfOpenCLOpenMPMPI,C,3062383,1.0,git,https://github.com/MNie/ComparisonOfOpenCLOpenMPMPI.git,,,,False,False,6a2f1bbc0cd198655719633424fdf330d6634aba
 684.0,shahzebp/floyd_warshall_parallel,C++,-1777617,1.0,git,https://github.com/shahzebp/floyd_warshall_parallel.git,,,,False,False,cd35c2973780cb9bcc494d9c2e3666a1027e3fd8
 2733.0,Atulsingh92/HPC-Project,C++,8952383,1.0,git,https://github.com/Atulsingh92/HPC-Project.git,,,,False,False,a254b1f353e2991e261eb43c8627896834df34d3
@@ -1595,7 +1595,7 @@
 873.0,rlee32/omp_examples,C++,-3727617,0.0,git,https://github.com/rlee32/omp_examples.git,,,,False,False,e6b2472c094b209b0a94d6603c20c80f734a27bd
 868.0,varunpandeyengg/Parallel-Programming,C,-3607617,0.0,git,https://github.com/varunpandeyengg/Parallel-Programming.git,,,,False,False,84953b0930bc10fbf9e670f91e2f465c9347f737
 864.0,nikofil/convolution,C,-3527617,0.0,git,https://github.com/nikofil/convolution.git,,,,False,False,0ad3c2d5f03eac0622db7dba909b7075086e1409
-860.0,lmjakt/R-SOD,C++,-3517617,0.0,git,https://github.com/lmjakt/R-SOD.git,,,,False,True,f756fd6c4641099697b41d6cb932b11b42149651
+860.0,lmjakt/R-SOD,C++,-3517617,0.0,git,https://github.com/lmjakt/R-SOD.git,,,,False,True,f756fd6c4641099697b41d6cb932b11b42149651,Some R package?
 892.0,dwilbraham/openmp-tutorial,C,-4077617,0.0,git,https://github.com/dwilbraham/openmp-tutorial.git,,,,False,False,b1fcf39506efa2504c341fb6bfceb346eccfd113
 918.0,district10/tryopenmp,C,-4547617,0.0,git,https://github.com/district10/tryopenmp.git,,,,False,False,8e733a5415831691000a4c47085bbede43ce2d21
 913.0,yang0228/zombieApocalypse-MPI-OPENMP,C++,-4467617,0.0,git,https://github.com/yang0228/zombieApocalypse-MPI-OPENMP.git,,,,False,False,e19f5a44e1d560aa0127a00374438b3b1da034df
@@ -1632,7 +1632,7 @@
 3970.0,Kreagentle/openmp,C++,-9528015,0.0,git,https://github.com/Kreagentle/openmp.git,,,,False,False,f7587d023a2d81a413503e03559ec5dc092674a1
 3894.0,buchacha/openMPTasks,C++,-9208015,0.0,git,https://github.com/buchacha/openMPTasks.git,,,,False,False,7752e63fd48e56f674f9bd59f3f018bebe0dd365
 3889.0,alejandrosorolla/LU_OpenMP_MPI,,-9178015,0.0,git,https://github.com/alejandrosorolla/LU_OpenMP_MPI.git,,,,False,False,73c5ee0e7b507f913f07e21fb164280815fbc2ec
-3885.0,jwise77/enzo-openmp,C,-9158015,0.0,git,https://github.com/jwise77/enzo-openmp.git,,,,False,True,9a7ce1365f60fcb297c61a70e4baca1e36726dc2
+3885.0,jwise77/enzo-openmp,C,-9158015,0.0,git,https://github.com/jwise77/enzo-openmp.git,,,,False,True,9a7ce1365f60fcb297c61a70e4baca1e36726dc2,website where compilation instruction should be is 404
 3881.0,wilcoln/be-enseeiht-openmp,C,-9138015,0.0,git,https://github.com/wilcoln/be-enseeiht-openmp.git,,,,False,False,2828a2cefab233ef4adf2d7bcb24a6ded80906c5
 3877.0,salomoncadena/testchain_openmp,C++,-9108015,0.0,git,https://github.com/salomoncadena/testchain_openmp.git,,,,False,False,c9b491c82f6d6030a840a2a3f7a4b32243c809f8
 3873.0,marcelarosalesj-education/other.openmp-excercises,C,-9098015,0.0,git,https://github.com/marcelarosalesj-education/other.openmp-excercises.git,,,,False,False,99971d2fb8fb11e7d4aacabb536f7ed03b90cdfc
