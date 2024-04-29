@@ -14,7 +14,7 @@ tqdm.pandas()
 
 # REPO_PATH = "/home/tim/repo_finder/openmp-usage-analysis-binaries/REPOS/"
 REPO_PATH = "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/data/"
-
+SCRIPT_PATH = "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI"
 def cloneRepo(repoUrl, path, commit_hash=None):
     try:
         # remove any old repo
@@ -51,7 +51,7 @@ def apply_dowload_repo(row):
 
 
 def main():
-    if not (os.path.isfile('ci_results.partial.csv') or os.path.isfile('ci_results.csv')):
+    if not (os.path.isfile('ci_result.partial.csv') or os.path.isfile('ci_result.csv')):
         print("Using default input")
         df_full = pd.read_csv('ci.csv', index_col=0)
         try:
@@ -68,17 +68,17 @@ def main():
         df_full.insert(len(df_full.columns),"note",np.NaN)
         print(" .. done")
     else:
-        if os.path.isfile('ci_results.partial.csv'):
-            print("Using partial results")
-            if (os.path.isfile('ci_results.partial.csv_old')):
+        if os.path.isfile('ci_result.partial.csv'):
+            print("Using partial result")
+            if (os.path.isfile('ci_result.partial.csv_old')):
                 print("Old ci_result.partial.csv_old present, aborting; please move or delete that file")
                 return
-            df_full = pd.read_csv('ci_results.partial.csv', index_col=0)
+            df_full = pd.read_csv('ci_result.partial.csv', index_col=0)
     
         
         else:
-            if os.path.isfile('ci_results.csv'): 
-                df_full = pd.read_csv('ci_results.csv', index_col=0)
+            if os.path.isfile('ci_result.csv'): 
+                df_full = pd.read_csv('ci_result.csv', index_col=0)
             else:
                 print("Should not be here")
     
@@ -90,14 +90,15 @@ def main():
         #df = df.apply(intercept_exceptions, axis=1)
     except Exception as e:
         print("Failed with ",e)
-        os.rename('ci_results.partial.csv','ci_results.partial.csv_old')
-        df.to_csv('ci_results.partial.csv')
+        os.rename('ci_result.partial.csv','ci_result.partial.csv_old')
+        df.to_csv('ci_result.partial.csv')
         return
 
     if skip:
         print("*+*+* SKIP Called *+*+*")
-        os.rename('ci_results.partial.csv','ci_results.partial.csv_old')
-        df.to_csv('ci_results.partial.csv')
+        os.rename('ci_result.partial.csv','ci_result.partial.csv_old')
+        df.to_csv('ci_result.partial.csv')
+        print("Updated ci_result.partial.csv") 
     # df['expert'] = "tj"
 
     df.to_csv('ci_result.csv')
@@ -122,7 +123,17 @@ def one_repo_at_a_time(row):
     print("### Processing ",row["Code"].replace('/', '--')," ###")
     try:
         if not (pd.isna(row['build_script']) and pd.isna(row['note'])):
-            print (" -> Build script already discovered for "+row["Code"].replace('/', '--'),": ",row['build_script'])
+            if row['build_script'] == "autofail.sh":
+                customScriptFile= SCRIPT_PATH+"/"+row["Code"].replace('/', '--')+".sh"
+#                print("Checking file "+customScriptFile)
+                if os.path.isfile(customScriptFile):
+                    print(" -> Build script replaced with detected script file:"+"CI/"+row["Code"].replace('/', '--')+".sh")
+                    row['build_script']="CI/"+row["Code"].replace('/', '--')+".sh"
+                    row['note'] = "TODO:TestScript"
+                else:
+                    print(" -> Build script automatically derived from previous fail")
+            else:
+                print (" -> Build script already discovered for "+row["Code"].replace('/', '--'),": ",row['build_script'])
             # already found out the build script
             return row
     except KeyError:
@@ -133,6 +144,20 @@ def one_repo_at_a_time(row):
     row['usedHash'] = apply_dowload_repo(row)
  #   print("Downloaded repo with hash",row['usedHash'])
 #    print ("##### Attempting compile for ",row["Code"].replace('/', '--'),"###########")
+    if "Makefile" in os.listdir(path) or "makefile" in os.listdir(path):
+        #print("Makfile in ",path)
+        if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_make.sh"):
+            row['build_script'] = "default_make.sh"
+            row['use_configure'] = False
+            row['note']="Autobuild Success"
+            print (" -> Makefile successfull for ",row["Code"].replace('/', '--'))
+            
+            shutil.rmtree(path)
+            return row
+        else:
+            print("\t* Makefile failed") 
+    else:
+        print("\t* Makefile not available")
     if "CMakeLists.txt" in os.listdir(path):
         #print("cmake in ",path)
         if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_cmake.sh"):
@@ -159,20 +184,6 @@ def one_repo_at_a_time(row):
             print("\t* configure failed") 
     else:
         print("\t* configure not available")
-    if "Makefile" in os.listdir(path) or "makefile" in os.listdir(path):
-        #print("Makfile in ",path)
-        if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_make.sh"):
-            row['build_script'] = "default_make.sh"
-            row['use_configure'] = False
-            row['note']="Autobuild Success"
-            print (" -> Makefile successfull for ",row["Code"].replace('/', '--'))
-            
-            shutil.rmtree(path)
-            return row
-        else:
-            print("\t* Makefile failed") 
-    else:
-        print("\t* Makefile not available")
     # save storage space
     print (" -> TODO: autobuild failed for ",row["Code"].replace('/', '--'),"; provide scriptfile \".sh\"")
     row['note']="Autobuild Fail"
