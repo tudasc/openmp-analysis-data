@@ -87,81 +87,94 @@ def main():
     try:
         #df = df.progress_apply(one_repo_at_a_time, axis=1)
         df = df.progress_apply(intercept_exceptions, axis=1)
+        #df = df.apply(intercept_exceptions, axis=1)
     except Exception as e:
         print("Failed with ",e)
         os.rename('ci_results.partial.csv','ci_results.partial.csv_old')
         df.to_csv('ci_results.partial.csv')
         return
 
-
+    if skip:
+        print("*+*+* SKIP Called *+*+*")
+        os.rename('ci_results.partial.csv','ci_results.partial.csv_old')
+        df.to_csv('ci_results.partial.csv')
     # df['expert'] = "tj"
 
     df.to_csv('ci_result.csv')
 
 def intercept_exceptions(row):
     global skip
-    try:
-        if not skip:
-            return one_repo_at_a_time(row)
-    except KeyboardInterrupt:
-        skip=True
-        pass
+    if skip:
+        return skip_repos(row)
+    else:
+        try:
+            if not skip:
+                return one_repo_at_a_time(row)
+        except KeyboardInterrupt:
+            skip=True
+            return skip_repos(row)
+
+def skip_repos(row):
+    return row
 
 def one_repo_at_a_time(row):
     path = REPO_PATH + row["Code"].replace('/', '--')
-    
+    print("### Processing ",row["Code"].replace('/', '--')," ###")
     try:
         if not (pd.isna(row['build_script']) and pd.isna(row['note'])):
-            print (" -> Build script already discovered for "+row["Code"].replace('/', '--'))
+            print (" -> Build script already discovered for "+row["Code"].replace('/', '--'),": ",row['build_script'])
             # already found out the build script
             return row
     except KeyError:
         print ("KeyError: build_script or note unknown")
         
 
-    print ("##### Dowloading ",row["Code"].replace('/', '--'),"###########")
+    print ("\t* Dowloading ",row["Code"].replace('/', '--'))
     row['usedHash'] = apply_dowload_repo(row)
-    print("Downloaded repo with hash",row['usedHash'])
-    print ("##### Attempting compile for ",row["Code"].replace('/', '--'),"###########")
+ #   print("Downloaded repo with hash",row['usedHash'])
+#    print ("##### Attempting compile for ",row["Code"].replace('/', '--'),"###########")
     if "CMakeLists.txt" in os.listdir(path):
-        print("cmake in ",path)
+        #print("cmake in ",path)
         if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_cmake.sh"):
             row['build_script'] = "default_cmake.sh"
             row['use_configure'] = False
-            print ("##### cmake successfull for ",row["Code"].replace('/', '--'),"###########")
+            row['note']="Autobuild Success"
+            print (" -> cmake successfull for ",row["Code"].replace('/', '--'))
             shutil.rmtree(path)
             return row       
         else:
-            print("CMake failed") 
+            print("\t* CMake failed") 
     else:
-        print("Cmake not available")
+        print("\t* Cmake not available")
     if "configure" in os.listdir(path):
-        print("Configure in ",path)
+        #print("Configure in ",path)
         if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_configure.sh"):
             row['build_script'] = "default_configure.sh"
             row['use_configure'] = False
-            print ("##### configure & makefile successfull for ",row["Code"].replace('/', '--'),"###########")
+            row['note']="Autobuild Success"
+            print (" -> configure & makefile successfull for ",row["Code"].replace('/'))
             shutil.rmtree(path)
             return row
         else:
-            print("configure failed") 
+            print("\t* configure failed") 
     else:
-        print("configure not available")
+        print("\t* configure not available")
     if "Makefile" in os.listdir(path) or "makefile" in os.listdir(path):
-        print("Makfile in ",path)
+        #print("Makfile in ",path)
         if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_make.sh"):
             row['build_script'] = "default_make.sh"
             row['use_configure'] = False
-            print ("##### Makefile successfull for ",row["Code"].replace('/', '--'),"###########")
+            row['note']="Autobuild Success"
+            print (" -> Makefile successfull for ",row["Code"].replace('/', '--'))
             
             shutil.rmtree(path)
             return row
         else:
-            print("makefile failed") 
+            print("\t* Makefile failed") 
     else:
-        print("Makefile not available")
+        print("\t* Makefile not available")
     # save storage space
-    print ("#TODO: autobuild failed for ",row["Code"].replace('/', '--'),"; provide scriptfile \".sh\"")
+    print (" -> TODO: autobuild failed for ",row["Code"].replace('/', '--'),"; provide scriptfile \".sh\"")
     row['note']="Autobuild Fail"
     row['build_script']="autofail.sh"
     # Keep the repo for a manual build attempt
