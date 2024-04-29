@@ -131,7 +131,11 @@ def one_repo_at_a_time(row):
                     row['build_script']="CI/"+row["Code"].replace('/', '--')+".sh"
                     row['note'] = "TODO:TestScript"
                 else:
-                    print(" -> Build script automatically derived from previous fail")
+                    if os.path.isfile(SCRIPT_PATH+"/"+row["Code"].replace('/', '--')+".fail.sh"):
+                        row['build_script']="CI/"+row["Code"].replace('/', '--')+".fail.sh"
+                        row['note'] = "Confirmed Fail"
+                    else:
+                        print(" -> Build script automatically derived from previous fail")
             else:
                 print (" -> Build script already discovered for "+row["Code"].replace('/', '--'),": ",row['build_script'])
             # already found out the build script
