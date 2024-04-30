@@ -90,13 +90,15 @@ def main():
         #df = df.apply(intercept_exceptions, axis=1)
     except Exception as e:
         print("Failed with ",e)
-        os.rename('ci_result.partial.csv','ci_result.partial.csv_old')
+        if (os.path.isfile('ci_result.partial.csv_old')):
+            os.rename('ci_result.partial.csv','ci_result.partial.csv_old')
         df.to_csv('ci_result.partial.csv')
         return
 
     if skip:
         print("*+*+* SKIP Called *+*+*")
-        os.rename('ci_result.partial.csv','ci_result.partial.csv_old')
+        if (os.path.isfile('ci_result.partial.csv_old')):
+            os.rename('ci_result.partial.csv','ci_result.partial.csv_old')
         df.to_csv('ci_result.partial.csv')
         print("Updated ci_result.partial.csv") 
     # df['expert'] = "tj"
@@ -122,7 +124,8 @@ def one_repo_at_a_time(row):
     path = REPO_PATH + row["Code"].replace('/', '--')
     print("### Processing ",row["Code"].replace('/', '--')," ###")
     try:
-        if not (pd.isna(row['build_script']) and pd.isna(row['note'])):
+        # if there is already a script associated, or if there are build files ...
+        if not (pd.isna(row['build_script']) and pd.isna(row['note'])) or os.path.isfile(SCRIPT_PATH+"/"+row["Code"].replace('/', '--')+".sh") or os.path.isfile(SCRIPT_PATH+"/"+row["Code"].replace('/', '--')+".fail.sh"):
             if row['build_script'] == "autofail.sh":
                 customScriptFile= SCRIPT_PATH+"/"+row["Code"].replace('/', '--')+".sh"
 #                print("Checking file "+customScriptFile)
@@ -142,7 +145,6 @@ def one_repo_at_a_time(row):
             return row
     except KeyError:
         print ("KeyError: build_script or note unknown")
-        
 
     print ("\t* Dowloading ",row["Code"].replace('/', '--'))
     row['usedHash'] = apply_dowload_repo(row)
