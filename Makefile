@@ -1,4 +1,4 @@
-RESULT_FILE=ci_result.mk2.csv
+RESULT_FILE=ci_result.csv
 INTERMEDIATE_RESULTS=ci_result.intermediate.csv
 all:
 	./other_scripts/download_repos.py ci_result.csv --basePath='.' --repoPath='./data'  --csvOutput=ci_result.mk2.csv --expert=CI --intermediateResultsFile $(INTERMEDIATE_RESULTS)
