@@ -12,12 +12,27 @@ skip = False
 
 tqdm.pandas()
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+
 class RepoUnavailable(Exception):
-    pass
+    def __init__(self,errorCode):
+        self.errorCode = errorCode
+
+    def getCode(self):
+        return self.errorCode
 
 # REPO_PATH = "/home/tim/repo_finder/openmp-usage-analysis-binaries/REPOS/"
-REPO_PATH = "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/data/"
-SCRIPT_PATH = "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI"
+BASE_PATH= "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries"
+REPO_PATH   = BASE_PATH+"/data/"
+SCRIPT_PATH = BASE_PATH+"/scripts/CI"
 def cloneRepo(repoUrl, path, commit_hash=None):
     try:
         # remove any old repo
@@ -26,14 +41,15 @@ def cloneRepo(repoUrl, path, commit_hash=None):
             # download
             # check if URL is still available
             
-            server_status =subprocess.check_output("curl -S  --head --request GET {"+repoUrl+"} 2>/dev/null | head -n1 | awk '{print $2}'",shell=True,
+            server_status =subprocess.check_output("curl -S  --head --request GET "+repoUrl.rstrip(".git")+" 2>/dev/null | head -n1 | awk '{print $2}'",shell=True,
                                     encoding='UTF-8')
-            print ("Server status = ",server_status)
-            if server_status == "200":
-                subprocess.check_output(f'git clone --depth 1 {repoUrl} {path}', stderr=subprocess.STDOUT, shell=True,
-                                    encoding='UTF-8')
-            else:
+            #   print("Executed: "+"curl -S  --head --request GET "+repoUrl.rstrip(".git")+" 2>/dev/null | head -n1 | awk '{print $2}'")
+#            if server_status.startswith("4") or server_status == "301":
+            if int(server_status) != 200:
+                print("return code was ",int(server_status))
                 raise RepoUnavailable(server_status)
+            subprocess.check_output(f'git clone --depth 1 {repoUrl} {path}', stderr=subprocess.STDOUT, shell=True,
+                                    encoding='UTF-8')
         # get current hash, remove trailing \n
         current_hash = subprocess.check_output(f'git rev-parse --verify HEAD', cwd=path, stderr=subprocess.STDOUT,
                                                shell=True, encoding='UTF-8').strip()
@@ -63,25 +79,59 @@ def archive_prev_file(filename):
     if os.path.isfile(filename+".back"):
         archive_prev_file(filename+".back")
     os.rename(filename,filename+".back")
+
+def get_empty_rows(df):
+    indices = []
+    for i, code in df.iterrows():
+        if i == 3575:
+            print(i,":\n",code)
+ #       if code['Code'].isnull() or not ('Code' in code) or code['Code']==np.nan or code['Code']=="NaN":
+  #          print("Index ",i," has empty code")
+   #         indices.append(i)
+#        else:
+#            print("Index ",i," code = ",code['Code'])
+        if i ==3575 :
+            return indices
+    return indices
  
 def main():
+    global REPO_PATH
+    global BASE_PATH
+    global SCRIPT_PATH
     parser = argparse.ArgumentParser(
         prog="openmp repo downloader",
         description="CLI Tool for our OpenMP Study"
     )
     parser.add_argument("csvSource", type=str, default="ci.csv",help="CSV Repo to process")
+    parser.add_argument("--basePath",type=str,default=".",help="Set the Base path of the binary repository, default assumes current directory")
+    parser.add_argument("--repoPath",type=str,default="/tmp",help="Set the path where the repositories will be checked out, default is /tmp/ recommend setting a local scatch directory")
     parser.add_argument("--csvOutput", type=str, default="result.csv", help="The output file to write to (default: result.csv)")
     parser.add_argument(
         "--intermediateResultsFile","-i",default="result.incomplete.csv",help="FileName to store incomplete data in case of emergency"
     )
-    parser.add_argument("--doNotPromoteTableColumns", type = bool, default =False,help="Do not add columns")
+    parser.add_argument("--doNotPromoteTableColumns", type =str2bool, default =False,help="Do not add columns")
     parser.add_argument(
-        "--preserve", "-p", help="preserve previous output files", type=bool,default=True
+        "--preserve", "-p", help="preserve previous output files", type=str2bool,default=True
     )
-    parser.add_argument("--resume","-r",type = bool, default = True, help="Resumpe - if present - from previous incomplete.csv")
+    parser.add_argument("--resume","-r",type = str2bool, default = True, help="Resumpe - if present - from previous incomplete.csv")
     parser.add_argument("--expert","-e",type = str, default = "??", help="Expert Initials")
     parser.add_argument("--nextActionItem","-n",help="Stop and Print Next Action Item",action='store_true')
+    parser.add_argument("--verbose","-v",help="Verbose",action='store_true')
+    # parser.add_argument('--feature', default=True, action=argparse.BooleanOptionalAction)
+
+    # parser.add_argument('--feature', dest='feature', action='store_true')
+    # parser.add_argument('--no-feature', dest='feature', action='store_false')
+    # parser.set_defaults(feature=True)
     args = parser.parse_args()
+    
+    
+
+    if args.verbose:
+        print("resume = ",args.resume)
+
+    SCRIPT_PATH=BASE_PATH+"/scripts/"+ args.expert
+    if (args.verbose):
+        print("Script path is :",SCRIPT_PATH)
 
     global expertInitials
     expertInitials= args.expert
@@ -91,11 +141,12 @@ def main():
         df_full = pd.read_csv(args.csvSource, index_col=0)
     else:
         # not resuming, use given csv file
-        try:
-            df_full.rename(columns={"usedHash": "usedHasOriginal"})
-        except :
-            print("S.th. whent wrong")
-            return "Fail"
+        df_full = pd.read_csv(args.csvSource, index_col=0)
+    #    try:
+     #       df_full.rename(columns={"usedHash": "usedHasOriginal"})
+      #  except :
+       #     print("S.th. whent wrong")
+        #    return "Fail"
         if not args.doNotPromoteTableColumns:
             print("Expanding table")
             df_full.insert(len(df_full.columns),"build_script",np.NaN)
@@ -108,15 +159,18 @@ def main():
     # if preserve is set, secure previous intermediate Results            
     if args.preserve and os.path.isfile(args.intermediateResultsFile):
         archive_prev_file(args.intermediateResultsFile)
-       
- 
+    
     # df = df_full.iloc[0:2]
     df = df_full
+    df.dropna(subset=['Code'],inplace=True)
+ 
+
+
     if args.nextActionItem:
         print("Searching for next action item")
         for index, row in df.iterrows():
             #print("Index = ",index, "Row = ", row)
-            if pd.isna(row['build_script']) or "autofail.sh" in row['build_script']:
+            if (pd.isna(row['build_script']) or "autofail.sh" in row['build_script']) and not (os.path.isfile(SCRIPT_PATH+"/"+row["Code"].replace('/', '--')+".sh") or os.path.isfile(SCRIPT_PATH+"/"+row["Code"].replace('/', '--')+".fail.sh")):
                 print ("Next action item in row ", index,": ",row["Code"].replace('/', '--'),"\t Status:",row['build_script'])
                 return
     else:  
@@ -212,8 +266,8 @@ def one_repo_at_a_time(row):
     print ("\t* Dowloading ",row["Code"]," to ",row["Code"].replace('/', '--'))
     try:
         row['usedHash'] = apply_dowload_repo(row)
-    except RepoUnavailable:
-        print("Repository was deleted")
+    except RepoUnavailable as e:
+        print("Repository ",row["Code"]," was deleted, HTTPS code was ",e.getCode())
         return 
         pass
     except:
@@ -222,7 +276,7 @@ def one_repo_at_a_time(row):
     if not (pd.isna(row['build_script']) ):
         print("Updated hash, testing existing build script :",row['build_script'])
         # there is a custom build script and it is not a FAIL script, test it:
-        if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/"+row['build_script']):
+        if try_build_script(path, BASE_PATH+"/scripts/"+row['build_script']):
             #still works
             print("Added hash and build works")
         else:
@@ -248,7 +302,7 @@ def one_repo_at_a_time(row):
 #    print ("##### Attempting compile for ",row["Code"].replace('/', '--'),"###########")
     if "Makefile" in os.listdir(path) or "makefile" in os.listdir(path):
         #print("Makfile in ",path)
-        if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_make.sh"):
+        if try_build_script(path, BASE_PATH + "/scripts/default_make.sh"):
             row['build_script'] = "default_make.sh"
             row['use_configure'] = False
             row['note']="Autobuild Success"
@@ -262,7 +316,7 @@ def one_repo_at_a_time(row):
         print("\t* Makefile not available")
     if "CMakeLists.txt" in os.listdir(path):
         #print("cmake in ",path)
-        if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_cmake.sh"):
+        if try_build_script(path, BASE_PATH="/scripts/default_cmake.sh"):
             row['build_script'] = "default_cmake.sh"
             row['use_configure'] = False
             row['note']="Autobuild Success"
@@ -275,7 +329,7 @@ def one_repo_at_a_time(row):
         print("\t* Cmake not available")
     if "configure" in os.listdir(path):
         #print("Configure in ",path)
-        if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_configure.sh"):
+        if try_build_script(path, BASE_PATH="/scripts/default_configure.sh"):
             row['build_script'] = "default_configure.sh"
             row['use_configure'] = False
             row['note']="Autobuild Success"
