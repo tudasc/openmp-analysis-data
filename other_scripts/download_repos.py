@@ -12,8 +12,22 @@ skip = False
 
 tqdm.pandas()
 
+def str2bool(v):
+    if isinstance(v, bool):
+        return v
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+
 class RepoUnavailable(Exception):
-    pass
+    def __init__(self,errorCode):
+        self.errorCode = errorCode
+
+    def getCode(self):
+        return self.errorCode
 
 # REPO_PATH = "/home/tim/repo_finder/openmp-usage-analysis-binaries/REPOS/"
 REPO_PATH = "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/data/"
@@ -26,14 +40,15 @@ def cloneRepo(repoUrl, path, commit_hash=None):
             # download
             # check if URL is still available
             
-            server_status =subprocess.check_output("curl -S  --head --request GET {"+repoUrl+"} 2>/dev/null | head -n1 | awk '{print $2}'",shell=True,
+            server_status =subprocess.check_output("curl -S  --head --request GET "+repoUrl.rstrip(".git")+" 2>/dev/null | head -n1 | awk '{print $2}'",shell=True,
                                     encoding='UTF-8')
-            print ("Server status = ",server_status)
-            if server_status == "200":
-                subprocess.check_output(f'git clone --depth 1 {repoUrl} {path}', stderr=subprocess.STDOUT, shell=True,
-                                    encoding='UTF-8')
-            else:
+            #   print("Executed: "+"curl -S  --head --request GET "+repoUrl.rstrip(".git")+" 2>/dev/null | head -n1 | awk '{print $2}'")
+#            if server_status.startswith("4") or server_status == "301":
+            if int(server_status) != 200:
+                print("return code was ",int(server_status))
                 raise RepoUnavailable(server_status)
+            subprocess.check_output(f'git clone --depth 1 {repoUrl} {path}', stderr=subprocess.STDOUT, shell=True,
+                                    encoding='UTF-8')
         # get current hash, remove trailing \n
         current_hash = subprocess.check_output(f'git rev-parse --verify HEAD', cwd=path, stderr=subprocess.STDOUT,
                                                shell=True, encoding='UTF-8').strip()
@@ -63,6 +78,20 @@ def archive_prev_file(filename):
     if os.path.isfile(filename+".back"):
         archive_prev_file(filename+".back")
     os.rename(filename,filename+".back")
+
+def get_empty_rows(df):
+    indices = []
+    for i, code in df.iterrows():
+        if i == 3575:
+            print(i,":\n",code)
+ #       if code['Code'].isnull() or not ('Code' in code) or code['Code']==np.nan or code['Code']=="NaN":
+  #          print("Index ",i," has empty code")
+   #         indices.append(i)
+#        else:
+#            print("Index ",i," code = ",code['Code'])
+        if i ==3575 :
+            return indices
+    return indices
  
 def main():
     parser = argparse.ArgumentParser(
@@ -74,14 +103,23 @@ def main():
     parser.add_argument(
         "--intermediateResultsFile","-i",default="result.incomplete.csv",help="FileName to store incomplete data in case of emergency"
     )
-    parser.add_argument("--doNotPromoteTableColumns", type = bool, default =False,help="Do not add columns")
+    parser.add_argument("--doNotPromoteTableColumns", type =str2bool, default =False,help="Do not add columns")
     parser.add_argument(
-        "--preserve", "-p", help="preserve previous output files", type=bool,default=True
+        "--preserve", "-p", help="preserve previous output files", type=str2bool,default=True
     )
-    parser.add_argument("--resume","-r",type = bool, default = True, help="Resumpe - if present - from previous incomplete.csv")
+    parser.add_argument("--resume","-r",type = str2bool, default = True, help="Resumpe - if present - from previous incomplete.csv")
     parser.add_argument("--expert","-e",type = str, default = "??", help="Expert Initials")
     parser.add_argument("--nextActionItem","-n",help="Stop and Print Next Action Item",action='store_true')
+    parser.add_argument("--verbose","-v",help="Verbose",action='store_true')
+    # parser.add_argument('--feature', default=True, action=argparse.BooleanOptionalAction)
+
+    # parser.add_argument('--feature', dest='feature', action='store_true')
+    # parser.add_argument('--no-feature', dest='feature', action='store_false')
+    # parser.set_defaults(feature=True)
     args = parser.parse_args()
+    
+    if args.verbose:
+        print("resume = ",args.resume)
 
     global expertInitials
     expertInitials= args.expert
@@ -91,11 +129,12 @@ def main():
         df_full = pd.read_csv(args.csvSource, index_col=0)
     else:
         # not resuming, use given csv file
-        try:
-            df_full.rename(columns={"usedHash": "usedHasOriginal"})
-        except :
-            print("S.th. whent wrong")
-            return "Fail"
+        df_full = pd.read_csv(args.csvSource, index_col=0)
+    #    try:
+     #       df_full.rename(columns={"usedHash": "usedHasOriginal"})
+      #  except :
+       #     print("S.th. whent wrong")
+        #    return "Fail"
         if not args.doNotPromoteTableColumns:
             print("Expanding table")
             df_full.insert(len(df_full.columns),"build_script",np.NaN)
@@ -108,15 +147,18 @@ def main():
     # if preserve is set, secure previous intermediate Results            
     if args.preserve and os.path.isfile(args.intermediateResultsFile):
         archive_prev_file(args.intermediateResultsFile)
-       
- 
+    
     # df = df_full.iloc[0:2]
     df = df_full
+    df.dropna(subset=['Code'],inplace=True)
+ 
+
+
     if args.nextActionItem:
         print("Searching for next action item")
         for index, row in df.iterrows():
             #print("Index = ",index, "Row = ", row)
-            if pd.isna(row['build_script']) or "autofail.sh" in row['build_script']:
+            if (pd.isna(row['build_script']) or "autofail.sh" in row['build_script']) and not (os.path.isfile(SCRIPT_PATH+"/"+row["Code"].replace('/', '--')+".sh") or os.path.isfile(SCRIPT_PATH+"/"+row["Code"].replace('/', '--')+".fail.sh")):
                 print ("Next action item in row ", index,": ",row["Code"].replace('/', '--'),"\t Status:",row['build_script'])
                 return
     else:  
@@ -212,8 +254,8 @@ def one_repo_at_a_time(row):
     print ("\t* Dowloading ",row["Code"]," to ",row["Code"].replace('/', '--'))
     try:
         row['usedHash'] = apply_dowload_repo(row)
-    except RepoUnavailable:
-        print("Repository was deleted")
+    except RepoUnavailable as e:
+        print("Repository ",row["Code"]," was deleted, HTTPS code was ",e.getCode())
         return 
         pass
     except:
