@@ -30,8 +30,9 @@ class RepoUnavailable(Exception):
         return self.errorCode
 
 # REPO_PATH = "/home/tim/repo_finder/openmp-usage-analysis-binaries/REPOS/"
-REPO_PATH = "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/data/"
-SCRIPT_PATH = "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI"
+BASE_PATH= "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries"
+REPO_PATH   = BASE_PATH+"/data/"
+SCRIPT_PATH = BASE_PATH+"/scripts/CI"
 def cloneRepo(repoUrl, path, commit_hash=None):
     try:
         # remove any old repo
@@ -94,11 +95,16 @@ def get_empty_rows(df):
     return indices
  
 def main():
+    global REPO_PATH
+    global BASE_PATH
+    global SCRIPT_PATH
     parser = argparse.ArgumentParser(
         prog="openmp repo downloader",
         description="CLI Tool for our OpenMP Study"
     )
     parser.add_argument("csvSource", type=str, default="ci.csv",help="CSV Repo to process")
+    parser.add_argument("--basePath",type=str,default=".",help="Set the Base path of the binary repository, default assumes current directory")
+    parser.add_argument("--repoPath",type=str,default="/tmp",help="Set the path where the repositories will be checked out, default is /tmp/ recommend setting a local scatch directory")
     parser.add_argument("--csvOutput", type=str, default="result.csv", help="The output file to write to (default: result.csv)")
     parser.add_argument(
         "--intermediateResultsFile","-i",default="result.incomplete.csv",help="FileName to store incomplete data in case of emergency"
@@ -118,8 +124,14 @@ def main():
     # parser.set_defaults(feature=True)
     args = parser.parse_args()
     
+    
+
     if args.verbose:
         print("resume = ",args.resume)
+
+    SCRIPT_PATH=BASE_PATH+"/scripts/"+ args.expert
+    if (args.verbose):
+        print("Script path is :",SCRIPT_PATH)
 
     global expertInitials
     expertInitials= args.expert
@@ -264,7 +276,7 @@ def one_repo_at_a_time(row):
     if not (pd.isna(row['build_script']) ):
         print("Updated hash, testing existing build script :",row['build_script'])
         # there is a custom build script and it is not a FAIL script, test it:
-        if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/"+row['build_script']):
+        if try_build_script(path, BASE_PATH+"/scripts/"+row['build_script']):
             #still works
             print("Added hash and build works")
         else:
@@ -290,7 +302,7 @@ def one_repo_at_a_time(row):
 #    print ("##### Attempting compile for ",row["Code"].replace('/', '--'),"###########")
     if "Makefile" in os.listdir(path) or "makefile" in os.listdir(path):
         #print("Makfile in ",path)
-        if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_make.sh"):
+        if try_build_script(path, BASE_PATH + "/scripts/default_make.sh"):
             row['build_script'] = "default_make.sh"
             row['use_configure'] = False
             row['note']="Autobuild Success"
@@ -304,7 +316,7 @@ def one_repo_at_a_time(row):
         print("\t* Makefile not available")
     if "CMakeLists.txt" in os.listdir(path):
         #print("cmake in ",path)
-        if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_cmake.sh"):
+        if try_build_script(path, BASE_PATH="/scripts/default_cmake.sh"):
             row['build_script'] = "default_cmake.sh"
             row['use_configure'] = False
             row['note']="Autobuild Success"
@@ -317,7 +329,7 @@ def one_repo_at_a_time(row):
         print("\t* Cmake not available")
     if "configure" in os.listdir(path):
         #print("Configure in ",path)
-        if try_build_script(path, "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/default_configure.sh"):
+        if try_build_script(path, BASE_PATH="/scripts/default_configure.sh"):
             row['build_script'] = "default_configure.sh"
             row['use_configure'] = False
             row['note']="Autobuild Success"
