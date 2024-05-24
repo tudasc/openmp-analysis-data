@@ -1,35 +1,34 @@
 ,Code,Language,Type,URL,Stars,PushDate,build_script,expert,use_cmake,use_configure,usedHash,note
-7217,oneapi-src/oneDNN,C++,git,https://github.com/oneapi-src/oneDNN.git,3445.0,2024-04-15 19:06:30+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/oneapi-src--oneDNN.sh,CI,,,d0fdaa8d59ff9fe8ce084141efb0ee1e3b001147,
-7247,KratosMultiphysics/Kratos,C++,git,https://github.com/KratosMultiphysics/Kratos.git,954.0,2024-04-15 20:10:46+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/KratosMultiphysics--Kratos.sh,CI,,,f35cf49c77529ea91ab266d81dbdc4b8fd521ae6,
-5709,ddemidov/vexcl,C++,git,https://github.com/ddemidov/vexcl.git,694.0,2022-03-26 05:31:19+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/ddemidov--vexcl.fail.sh,CI,,,8e7312a26865d2cebdbaa1a4caeb8494a1796585,
-6413,kthohr/stats,C++,git,https://github.com/kthohr/stats.git,498.0,2023-05-14 13:04:46+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/kthohr--stats.fail.sh,CI,,,f8dcb15ae51cce7142b239805745a0de56aa509f,
+7217,oneapi-src/oneDNN,C++,git,https://github.com/oneapi-src/oneDNN.git,3445.0,2024-04-15 19:06:30+00:00,CI/oneapi-src--oneDNN.sh,CI,,,d0fdaa8d59ff9fe8ce084141efb0ee1e3b001147,User script
+7247,KratosMultiphysics/Kratos,C++,git,https://github.com/KratosMultiphysics/Kratos.git,954.0,2024-04-15 20:10:46+00:00,CI/KratosMultiphysics--Kratos.sh,CI,,,f35cf49c77529ea91ab266d81dbdc4b8fd521ae6,User script
+5709,ddemidov/vexcl,C++,git,https://github.com/ddemidov/vexcl.git,694.0,2022-03-26 05:31:19+00:00,CI/ddemidov--vexcl.fail.sh,CI,,,8e7312a26865d2cebdbaa1a4caeb8494a1796585,Confirmed Fail
+6413,kthohr/stats,C++,git,https://github.com/kthohr/stats.git,498.0,2023-05-14 13:04:46+00:00,CI/kthohr--stats.fail.sh,CI,,,f8dcb15ae51cce7142b239805745a0de56aa509f,Confirmed Fail
 7282,libocca/occa,C++,git,https://github.com/libocca/occa.git,378.0,2024-04-09 15:36:44+00:00,default_make.sh,CI,,False,3cba0841b2b87678da53e0b311cb7e162d781181,Autobuild Success
-7281,alpaka-group/alpaka,C++,git,https://github.com/alpaka-group/alpaka.git,320.0,2024-04-15 22:19:37+00:00,userscript_fail_after_fixing_githash.sh,CI,,,1b8146ef300259c1206a3a56341be3e64d96515d,
+7281,alpaka-group/alpaka,C++,git,https://github.com/alpaka-group/alpaka.git,320.0,2024-04-15 22:19:37+00:00,CI/alpaka-group--alpaka.sh,CI,,,1b8146ef300259c1206a3a56341be3e64d96515d,User script
 7609,sbeamer/gapbs,C++,git,https://github.com/sbeamer/gapbs.git,301.0,2024-01-23 20:43:21+00:00,default_make.sh,CI,,False,b5e3e19c2845f22fb338f4a4bc4b1ccee861d026,Autobuild Success
-6027,nanoant/DisableTurboBoost.kext,C,git,https://github.com/nanoant/DisableTurboBoost.kext.git,265.0,2021-12-07 20:43:46+00:00,autofail.sh,CI,,,4f493b1927e0b62d5fab1f068302386c02317bc6,Autobuild Fail
-7259,zjin-lcf/HeCBench,C++,git,https://github.com/zjin-lcf/HeCBench.git,171.0,2024-04-11 21:02:33+00:00,autofail.sh,CI,,,fcff2dcc102258de25659eb6dda7e028dd4d5141,Autobuild Fail
-7143,parallel-runtimes/lomp,C++,git,https://github.com/parallel-runtimes/lomp.git,148.0,2022-10-04 06:31:03+00:00,userscript_fail_after_fixing_githash.sh,CI,,,b755162c253b268691d5cf9b3832a8f8d23590dd,
-7894,UoB-HPC/openmp-tutorial,C,git,https://github.com/UoB-HPC/openmp-tutorial.git,111.0,2023-11-13 00:05:48+00:00,autofail.sh,CI,,,1a0561b479be40c20acd748b8859f8c3b3a3e94c,Autobuild Fail
+6027,nanoant/DisableTurboBoost.kext,C,git,https://github.com/nanoant/DisableTurboBoost.kext.git,265.0,2021-12-07 20:43:46+00:00,CI/nanoant--DisableTurboBoost.kext.fail.sh,CI,,,4f493b1927e0b62d5fab1f068302386c02317bc6,Confirmed Fail
+7259,zjin-lcf/HeCBench,C++,git,https://github.com/zjin-lcf/HeCBench.git,171.0,2024-04-11 21:02:33+00:00,CI/zjin-lcf--HeCBench.fail.sh,CI,,,fcff2dcc102258de25659eb6dda7e028dd4d5141,Confirmed Fail
+7143,parallel-runtimes/lomp,C++,git,https://github.com/parallel-runtimes/lomp.git,148.0,2022-10-04 06:31:03+00:00,CI/parallel-runtimes--lomp.sh,CI,,,b755162c253b268691d5cf9b3832a8f8d23590dd,User script
+7894,UoB-HPC/openmp-tutorial,C,git,https://github.com/UoB-HPC/openmp-tutorial.git,111.0,2023-11-13 00:05:48+00:00,CI/UoB-HPC--openmp-tutorial.sh,CI,,,1a0561b479be40c20acd748b8859f8c3b3a3e94c,User script
 7264,intel/yask,C++,git,https://github.com/intel/yask.git,102.0,2024-04-11 15:34:03+00:00,default_make.sh,CI,,False,553e8255de89f35a0f5ba7b3125f19151004c6cd,Autobuild Success
-5922,prip-lab/MSU-LatentAFIS,C++,git,https://github.com/prip-lab/MSU-LatentAFIS.git,93.0,2022-01-07 21:32:22+00:00,autofail.sh,CI,,,6dd2dab9767dce3940689150e73b072c30ec08e1,Autobuild Fail
-5833,yzhaiustc/Optimizing-DGEMM-on-Intel-CPUs-with-AVX512F,C,git,https://github.com/yzhaiustc/Optimizing-DGEMM-on-Intel-CPUs-with-AVX512F.git,87.0,2022-02-03 21:52:47+00:00,autofail.sh,CI,,,fd62398ae788ee3adbf96aa95e119d98c5d71779,Autobuild Fail
-7224,csc-training/summerschool,C++,git,https://github.com/csc-training/summerschool.git,78.0,2024-04-15 14:13:55+00:00,userscript_fail_after_fixing_githash.sh,CI,,,e2cbc89fcef4289703aee3080a027e4ddc1348e3,
+5922,prip-lab/MSU-LatentAFIS,C++,git,https://github.com/prip-lab/MSU-LatentAFIS.git,93.0,2022-01-07 21:32:22+00:00,CI/prip-lab--MSU-LatentAFIS.fail.sh,CI,,,6dd2dab9767dce3940689150e73b072c30ec08e1,Confirmed Fail
+5833,yzhaiustc/Optimizing-DGEMM-on-Intel-CPUs-with-AVX512F,C,git,https://github.com/yzhaiustc/Optimizing-DGEMM-on-Intel-CPUs-with-AVX512F.git,87.0,2022-02-03 21:52:47+00:00,CI/yzhaiustc--Optimizing-DGEMM-on-Intel-CPUs-with-AVX512F.fail.sh,CI,,,fd62398ae788ee3adbf96aa95e119d98c5d71779,Confirmed Fail
+7224,csc-training/summerschool,C++,git,https://github.com/csc-training/summerschool.git,78.0,2024-04-15 14:13:55+00:00,CI/csc-training--summerschool.sh,CI,,,e2cbc89fcef4289703aee3080a027e4ddc1348e3,User script
 816,lagodiuk/raytracing-render,C,git,https://github.com/lagodiuk/raytracing-render.git,73.0,2015-11-22 01:40:43+00:00,default_make.sh,CI,,False,86bb967f6ec4cd1cd4c676912720dd193d7ed903,Autobuild Success
-7855,bsc-pm/mcxx,C,git,https://github.com/bsc-pm/mcxx.git,68.0,2023-11-21 11:57:12+00:00,autofail.sh,CI,,,f136f09bf868ad2e419f89a13e47d4c91eb941e7,Autobuild Fail
-5242,,,,,,,,,,,,
-3338,PRUNERS/archer,C,git,https://github.com/PRUNERS/archer.git,60.0,2020-08-19 11:04:16+00:00,autofail.sh,CI,,,5b37681fddd4e9426c1443d55bf4336823c6611d,Autobuild Fail
+7855,bsc-pm/mcxx,C,git,https://github.com/bsc-pm/mcxx.git,68.0,2023-11-21 11:57:12+00:00,CI/bsc-pm--mcxx.fail.sh,CI,,,f136f09bf868ad2e419f89a13e47d4c91eb941e7,Confirmed Fail
+3338,PRUNERS/archer,C,git,https://github.com/PRUNERS/archer.git,60.0,2020-08-19 11:04:16+00:00,CI/PRUNERS--archer.fail.sh,CI,,,5b37681fddd4e9426c1443d55bf4336823c6611d,Confirmed Fail
 5377,mperlet/matrix_multiplication,C,git,https://github.com/mperlet/matrix_multiplication.git,53.0,2022-06-27 17:23:37+00:00,default_make.sh,CI,,False,fc08492183fde5dcacc422c29d1123b6e126b344,Autobuild Success
-7611,lreis2415/SEIMS,C++,git,https://github.com/lreis2415/SEIMS.git,48.0,2024-04-12 13:01:30+00:00,userscript_fail_after_fixing_githash.sh,CI,,,8d216be7a7750d05d9b0c641c535a302b71e3db2,
-5195,bprail/contech,C++,git,https://github.com/bprail/contech.git,47.0,2020-10-20 16:56:11+00:00,autofail.sh,CI,,,b2cfe502a8dd21eb048bc96c961d95d3e497485f,Autobuild Fail
-2253,bsc-pm/bots,C,git,https://github.com/bsc-pm/bots.git,43.0,2019-09-20 14:14:18+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/bsc-pm--bots.sh,CI,,,2607a695128727a3f6c98754367705443663136d,
-4305,GMAP/NPB-CPP,C++,git,https://github.com/GMAP/NPB-CPP.git,40.0,2021-08-21 18:45:19+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/GMAP--NPB-CPP.sh,CI,,,2f77a1bce83c4efda56c4bafb555bcf9abe85dd2,
-4309,bsc-pm/nanox,C++,git,https://github.com/bsc-pm/nanox.git,38.0,2021-08-18 19:16:37+00:00,autofail.sh,CI,,,a9df6936128ebe10374350c719a0fba74bc89803,Autobuild Fail
+7611,lreis2415/SEIMS,C++,git,https://github.com/lreis2415/SEIMS.git,48.0,2024-04-12 13:01:30+00:00,CI/lreis2415--SEIMS.sh,CI,,,8d216be7a7750d05d9b0c641c535a302b71e3db2,User script
+5195,bprail/contech,C++,git,https://github.com/bprail/contech.git,47.0,2020-10-20 16:56:11+00:00,CI/bprail--contech.fail.sh,CI,,,b2cfe502a8dd21eb048bc96c961d95d3e497485f,Confirmed Fail
+2253,bsc-pm/bots,C,git,https://github.com/bsc-pm/bots.git,43.0,2019-09-20 14:14:18+00:00,CI/bsc-pm--bots.sh,CI,,,2607a695128727a3f6c98754367705443663136d,User script
+4305,GMAP/NPB-CPP,C++,git,https://github.com/GMAP/NPB-CPP.git,40.0,2021-08-21 18:45:19+00:00,CI/GMAP--NPB-CPP.sh,CI,,,2f77a1bce83c4efda56c4bafb555bcf9abe85dd2,User script
+4309,bsc-pm/nanox,C++,git,https://github.com/bsc-pm/nanox.git,38.0,2021-08-18 19:16:37+00:00,CI/bsc-pm--nanox.fail.sh,CI,,,a9df6936128ebe10374350c719a0fba74bc89803,Confirmed Fail
 5409,kimwalisch/primesum,C++,git,https://github.com/kimwalisch/primesum.git,36.0,2022-06-17 19:21:33+00:00,default_cmake.sh,CI,,False,ac22b966a560a42c1872c02beb8ac4d00d8d88d4,Autobuild Success
-6038,brightskiesinc/Reverse_Time_Migration,C++,git,https://github.com/brightskiesinc/Reverse_Time_Migration.git,33.0,2021-12-05 14:53:18+00:00,autofail.sh,CI,,,587300264576ab91c98f9148534e0d2c7f5ee9cf,Autobuild Fail
-3245,imsure/parallel-programming,C,git,https://github.com/imsure/parallel-programming.git,32.0,2020-10-01 14:40:43+00:00,autofail.sh,CI,,,f5d2cca507ffecb073d4fde93ca7f3ff46b596c7,Autobuild Fail
+6038,brightskiesinc/Reverse_Time_Migration,C++,git,https://github.com/brightskiesinc/Reverse_Time_Migration.git,33.0,2021-12-05 14:53:18+00:00,CI/brightskiesinc--Reverse_Time_Migration.fail.sh,CI,,,587300264576ab91c98f9148534e0d2c7f5ee9cf,Confirmed Fail
+3245,imsure/parallel-programming,C,git,https://github.com/imsure/parallel-programming.git,32.0,2020-10-01 14:40:43+00:00,CI/imsure--parallel-programming.sh,CI,,,f5d2cca507ffecb073d4fde93ca7f3ff46b596c7,TODO:TestScript
 8150,feltor-dev/feltor,C++,git,https://github.com/feltor-dev/feltor.git,30.0,2023-08-09 09:09:14+00:00,autofail.sh,CI,,,cafe7d194f149e28b8e9c644a187132af95ecc0c,Autobuild Fail
 1302,olcf/Serial-to-Parallel--Monte-Carlo-Pi,C,git,https://github.com/olcf/Serial-to-Parallel--Monte-Carlo-Pi.git,28.0,2018-06-27 12:50:21+00:00,autofail.sh,CI,,,900738c7a77050cfc8a198b3c26d368ef3351bb9,Autobuild Fail
-7280,LLNL/mpibind,C,git,https://github.com/LLNL/mpibind.git,27.0,2024-04-09 21:51:18+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/LLNL--mpibind.fail.sh,CI,,,1432427224ae4435d16046420bcc969456c7d941,
+7280,LLNL/mpibind,C,git,https://github.com/LLNL/mpibind.git,27.0,2024-04-09 21:51:18+00:00,CI/LLNL--mpibind.fail.sh,CI,,,1432427224ae4435d16046420bcc969456c7d941,Confirmed Fail
 6068,openmps/openmps,C++,git,https://github.com/openmps/openmps.git,26.0,2021-11-28 12:14:55+00:00,autofail.sh,CI,,,86da127f27aff518650f4b1dc5bd67c191652d03,Autobuild Fail
 6784,VRGroupRWTH/astray,C++,git,https://github.com/VRGroupRWTH/astray.git,25.0,2023-01-26 21:06:16+00:00,autofail.sh,CI,,,d9d4e1120cc1b4ae70390ead5b5592eb6e66d211,Autobuild Fail
 7269,WitsHPC/HPC-InterestGroup,C,git,https://github.com/WitsHPC/HPC-InterestGroup.git,24.0,2024-04-10 11:47:01+00:00,autofail.sh,CI,,,f37fa24cd54b17efc9d677f6a441570855881f9d,Autobuild Fail
@@ -40,22 +39,21 @@
 1762,Keylost/BilinearImageResize,C++,git,https://github.com/Keylost/BilinearImageResize.git,20.0,2017-12-12 02:18:22+00:00,autofail.sh,CI,,,a9585062da250d0d978317acb8d655a86499b98c,Autobuild Fail
 7873,bsc-pm/nanos6,C++,git,https://github.com/bsc-pm/nanos6.git,20.0,2023-11-17 10:55:52+00:00,autofail.sh,CI,,,4fdddf67b573fbe624bf64b92c0a9b4e344b9dd3,Autobuild Fail
 4506,digint/openmptl,C++,git,https://github.com/digint/openmptl.git,19.0,2021-05-27 22:10:12+00:00,autofail.sh,CI,,,017807807e1fed41040af200afa4046740135939,Autobuild Fail
-5065,yoch/sparse-som,C++,git,https://github.com/yoch/sparse-som.git,18.0,2020-11-27 13:17:20+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/yoch--sparse-som.fail.sh,CI,,,b893b91722c4fdde704bf74306eaed3482a34af0,
+5065,yoch/sparse-som,C++,git,https://github.com/yoch/sparse-som.git,18.0,2020-11-27 13:17:20+00:00,CI/yoch--sparse-som.fail.sh,CI,,,b893b91722c4fdde704bf74306eaed3482a34af0,Confirmed Fail
 8151,tgmattso/OpenMP_Common_Core,C,git,https://github.com/tgmattso/OpenMP_Common_Core.git,18.0,2023-08-08 23:28:09+00:00,autofail.sh,CI,,,9f938044c080350dab6f69d566386305312618bc,Autobuild Fail
 5674,nulidangxueshen/CSR2,C++,git,https://github.com/nulidangxueshen/CSR2.git,18.0,2022-04-04 15:54:41+00:00,autofail.sh,CI,,,085c37179f34a6af4fdeec4266800d7b1bd71da5,Autobuild Fail
 1759,tcoppex/cpu-gbfilter,C++,git,https://github.com/tcoppex/cpu-gbfilter.git,17.0,2017-12-12 14:43:19+00:00,default_cmake.sh,CI,,False,4add37e36ae38110efbe59517c9950643d8cb84b,Autobuild Success
 2798,GoogleBot42/Tracer,C++,git,https://github.com/GoogleBot42/Tracer.git,17.0,2019-02-19 02:19:22+00:00,autofail.sh,CI,,,5aea41ffc7c6583a8ca5d3672a648a87f759f19c,Autobuild Fail
 6872,ANL-CESAR/SimpleMOC,C,git,https://github.com/ANL-CESAR/SimpleMOC.git,16.0,2023-01-04 04:24:19+00:00,autofail.sh,CI,,,4c51b8cb820cde735b79bd3496b34b1aa18537f2,Autobuild Fail
 58,adilansari/luDecomposition,C,git,https://github.com/adilansari/luDecomposition.git,15.0,2013-10-16 23:01:19+00:00,autofail.sh,CI,,,75c83eb639f7e546bfa5316a343cda5d8e546628,Autobuild Fail
-6842,1100110/OpenMPI,C,git,https://github.com/1100110/OpenMPI.git,14.0,2023-01-11 10:46:59+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/1100110--OpenMPI.fail.sh,CI,,,d012ec51f833f9bb5c72c4e2ab6a15616d9b9e3d,
+6842,1100110/OpenMPI,C,git,https://github.com/1100110/OpenMPI.git,14.0,2023-01-11 10:46:59+00:00,CI/1100110--OpenMPI.fail.sh,CI,,,d012ec51f833f9bb5c72c4e2ab6a15616d9b9e3d,Confirmed Fail
 6075,spectre900/Parallel-Strassen-Algorithm,C++,git,https://github.com/spectre900/Parallel-Strassen-Algorithm.git,14.0,2021-11-27 08:47:34+00:00,autofail.sh,CI,,,fad30ae69fd8b9d20c6462c029f292d2f2f273b5,Autobuild Fail
-919,,,,,,,,,,,,
 4667,csl-8bit/canny-edge-parallel,C++,git,https://github.com/csl-8bit/canny-edge-parallel.git,14.0,2021-04-08 11:33:41+00:00,autofail.sh,CI,,,8ed8d7c30cce4bb5152d13a204859b4ac2ab5793,Autobuild Fail
 52,puneetar/Parallel-LU-Factorization-with-OpenMP-MPI,C,git,https://github.com/puneetar/Parallel-LU-Factorization-with-OpenMP-MPI.git,14.0,2013-10-26 08:47:32+00:00,autofail.sh,CI,,,0315840674779008399d151b8d302e062bf9e98d,Autobuild Fail
 5229,ema2159/Equirectangular-CubeMapTransform,C++,git,https://github.com/ema2159/Equirectangular-CubeMapTransform.git,13.0,2022-08-30 06:42:09+00:00,autofail.sh,CI,,,701077146ff32fb27d64b75c3704b0b5f24b1d57,Autobuild Fail
-2770,giorgospan/Game-Of-Life,C,git,https://github.com/giorgospan/Game-Of-Life.git,13.0,2019-03-05 16:32:05+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/giorgospan--Game-Of-Life.sh,CI,,,fc891645d4db5f5073ff14c15602b32d955b4c9a,
+2770,giorgospan/Game-Of-Life,C,git,https://github.com/giorgospan/Game-Of-Life.git,13.0,2019-03-05 16:32:05+00:00,CI/giorgospan--Game-Of-Life.sh,CI,,,fc891645d4db5f5073ff14c15602b32d955b4c9a,User script
 4809,CPBridge/RIFeatures,C++,git,https://github.com/CPBridge/RIFeatures.git,12.0,2021-02-12 05:41:56+00:00,autofail.sh,CI,,,ca0a2d56e3c6d840b523572728bdc1bcf8284c4b,Autobuild Fail
-1884,blackcata/Poisson_Equation,C,git,https://github.com/blackcata/Poisson_Equation.git,12.0,2017-10-25 08:37:36+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/blackcata--Poisson_Equation.sh,CI,,,66672d638b7f0db5e5eaddd96306d625323a367e,
+1884,blackcata/Poisson_Equation,C,git,https://github.com/blackcata/Poisson_Equation.git,12.0,2017-10-25 08:37:36+00:00,CI/blackcata--Poisson_Equation.sh,CI,,,66672d638b7f0db5e5eaddd96306d625323a367e,User script
 7583,niksterg/openmp-course,C,git,https://github.com/niksterg/openmp-course.git,12.0,2024-01-28 21:36:49+00:00,autofail.sh,CI,,,ad006beacfbd6bb2c59ce5a6ad0108036f9e5611,Autobuild Fail
 7323,ProteinDF/ProteinDF,C++,git,https://github.com/ProteinDF/ProteinDF.git,12.0,2024-03-31 12:17:18+00:00,autofail.sh,CI,,,eaa24c2e7ad95deccc1d077a8bacb105ace4db9a,Autobuild Fail
 6190,tgmattso/ParProgCourse,C,git,https://github.com/tgmattso/ParProgCourse.git,11.0,2021-10-18 19:44:51+00:00,autofail.sh,CI,,,5e2a29a544a0d6a04a4f389d69802ac444b29b1b,Autobuild Fail
@@ -72,11 +70,9 @@
 4650,georgegito/vertexwise-triangle-counting,C++,git,https://github.com/georgegito/vertexwise-triangle-counting.git,9.0,2021-04-15 13:53:52+00:00,autofail.sh,CI,,,a63b5032e96dbdc1fbca343c2b2dd88cb96799d2,Autobuild Fail
 4910,Usmankhujaev/Bayer-Interpolation-for-RAW-format-images-using-OPENMP_library,C++,git,https://github.com/Usmankhujaev/Bayer-Interpolation-for-RAW-format-images-using-OPENMP_library.git,9.0,2021-01-11 06:59:22+00:00,autofail.sh,CI,,,ae0a4db1eed3e6570b7f61c7a647db1b2bab31c6,Autobuild Fail
 7550,berenger-eu/tbfmm,C++,git,https://github.com/berenger-eu/tbfmm.git,8.0,2024-02-07 10:27:49+00:00,default_cmake.sh,CI,,False,6243ae1a82e9bc98a9895abf7a7325fb6483c96d,Autobuild Success
-5794,,,,,,,,,,,,
-6567,,,,,,,,,,,,
 2973,tgolubev/Conjugate_Gradient_with_MPI_and_OpenMP,C++,git,https://github.com/tgolubev/Conjugate_Gradient_with_MPI_and_OpenMP.git,8.0,2018-12-08 07:11:28+00:00,autofail.sh,CI,,,77caff9817c6dac107f03bd5e92c309ab93ec55f,Autobuild Fail
 7652,DeveloperMindset-com/openmp-mobile,C++,git,https://github.com/DeveloperMindset-com/openmp-mobile.git,8.0,2024-01-09 13:49:24+00:00,autofail.sh,CI,,,06ebe6ac77da8e50557bfe5a5bca5a8acc7678b1,Autobuild Fail
-2023,ek9852/faceldp,C++,git,https://github.com/ek9852/faceldp.git,8.0,2017-07-16 23:37:53+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/ek9852--faceldp.sh,CI,,,2d724bbf80196a258c572283c4079c53893f07dc,
+2023,ek9852/faceldp,C++,git,https://github.com/ek9852/faceldp.git,8.0,2017-07-16 23:37:53+00:00,CI/ek9852--faceldp.sh,CI,,,2d724bbf80196a258c572283c4079c53893f07dc,User script
 4450,amitsingh19975/OpenMP-BLAS,C++,git,https://github.com/amitsingh19975/OpenMP-BLAS.git,8.0,2021-06-15 12:35:06+00:00,autofail.sh,CI,,,5c1d11e72aed97b01cc36e94a54368b942d9c12d,Autobuild Fail
 1636,iapafoto/CubeEvol,C++,git,https://github.com/iapafoto/CubeEvol.git,7.0,2018-02-15 13:30:11+00:00,autofail.sh,CI,,,e9c4ce1f0c22474035b583d1146fc3909c4e3fbf,Autobuild Fail
 2451,temp3rr0r/InfectiousDiseaseModelling,C++,git,https://github.com/temp3rr0r/InfectiousDiseaseModelling.git,7.0,2019-06-16 18:19:09+00:00,autofail.sh,CI,,,4aa3cb90a2bcc00d710a79c81a54c426bd9d9632,Autobuild Fail
@@ -85,7 +81,7 @@
 2743,GuilloteauQ/omp-logs,C,git,https://github.com/GuilloteauQ/omp-logs.git,7.0,2019-03-16 01:52:19+00:00,default_make.sh,CI,,False,2ff01335f02825f237609b363c072bab60d756b5,Autobuild Success
 2823,eragp/mandelbrot,C++,git,https://github.com/eragp/mandelbrot.git,7.0,2019-02-08 19:48:41+00:00,autofail.sh,CI,,,e2739cbbeec92d786c4a176ffad0d77f481c865b,Autobuild Fail
 6638,sudden6/m-queens,C,git,https://github.com/sudden6/m-queens.git,7.0,2023-03-13 19:39:30+00:00,default_cmake.sh,CI,,False,93a53fe066766735a1251160d4dbb843a7b33203,Autobuild Success
-7293,Dudejoe870/godot-openmpt,C++,git,https://github.com/Dudejoe870/godot-openmpt.git,7.0,2024-04-08 20:27:25+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/Dudejoe870--godot-openmpt.fail.sh,CI,,,67a7c39f8d634678eb1ed491544f1320a3303adc,
+7293,Dudejoe870/godot-openmpt,C++,git,https://github.com/Dudejoe870/godot-openmpt.git,7.0,2024-04-08 20:27:25+00:00,CI/Dudejoe870--godot-openmpt.fail.sh,CI,,,67a7c39f8d634678eb1ed491544f1320a3303adc,Confirmed Fail
 7559,fweig/xpu,C++,git,https://github.com/fweig/xpu.git,7.0,2024-03-04 10:47:05+00:00,default_cmake.sh,CI,,False,f444797545b010923688dcb364003b3e4e1e2275,Autobuild Success
 272,liuguiyangnwpu/parallel,C++,git,https://github.com/liuguiyangnwpu/parallel.git,7.0,2017-03-16 03:49:34+00:00,autofail.sh,CI,,,ff76b8ee9c149262426bcf0d9bbe570bae9f87d2,Autobuild Fail
 5578,vlkale/OpenMP-tutorial,C++,git,https://github.com/vlkale/OpenMP-tutorial.git,7.0,2022-05-01 20:49:46+00:00,autofail.sh,CI,,,8490d0e3e2961246c859c063a2a64be5586d9b95,Autobuild Fail
@@ -117,7 +113,6 @@
 5511,cspiegel/qmmp-openmpt,C++,git,https://github.com/cspiegel/qmmp-openmpt.git,5.0,2022-05-18 19:44:02+00:00,autofail.sh,CI,,,41bcf578fac766d471e0cdb496184a1409255611,Autobuild Fail
 346,Baltoli/skeletons,C++,git,https://github.com/Baltoli/skeletons.git,5.0,2017-01-31 13:02:33+00:00,autofail.sh,CI,,,642438778d1657a69e84ed4bf93fd8646c4fe7ed,Autobuild Fail
 3666,Shubodh/Optimizing-LSTMs-on-GPU,C++,git,https://github.com/Shubodh/Optimizing-LSTMs-on-GPU.git,5.0,2020-05-05 12:29:43+00:00,autofail.sh,CI,,,36eac58d6344be8cc5379706e9ec5c1cec6df834,Autobuild Fail
-3575,,,,,,,,,,,,
 5283,yasahi-hpc/P3-miniapps,C++,git,https://github.com/yasahi-hpc/P3-miniapps.git,4.0,2022-08-04 03:02:10+00:00,autofail.sh,CI,,,c1b946b91b608929ac7306e95e01222f726cdb5d,Autobuild Fail
 7056,Chang-LeHung/openmp-C-snippet,C,git,https://github.com/Chang-LeHung/openmp-C-snippet.git,4.0,2022-11-09 08:41:19+00:00,autofail.sh,CI,,,67a1f65976ca1391b95d06551d63aeb00ca83c7c,Autobuild Fail
 4752,648trindade/SBAC-PAD-marathon-problems,C++,git,https://github.com/648trindade/SBAC-PAD-marathon-problems.git,4.0,2021-03-07 23:53:36+00:00,autofail.sh,CI,,,fefa378871f3754eb07f99ddef117ab968cf3807,Autobuild Fail
@@ -174,13 +169,11 @@
 2195,abhishekgupta-1/Parallel-Computing-Assignment,C,git,https://github.com/abhishekgupta-1/Parallel-Computing-Assignment.git,3.0,2017-04-19 03:28:35+00:00,autofail.sh,CI,,,920aa8be3493033eee3f8303105047226c35ccf4,Autobuild Fail
 2969,NikiforovAll/JacobiEigenvalueAlgorithm,C,git,https://github.com/NikiforovAll/JacobiEigenvalueAlgorithm.git,3.0,2018-12-09 17:26:42+00:00,autofail.sh,CI,,,8a39036ffad2fbdc808442eada54130bbc111f87,Autobuild Fail
 6222,keshav-06/Apriori-algorithm-using-OpenMP,C++,git,https://github.com/keshav-06/Apriori-algorithm-using-OpenMP.git,3.0,2023-07-10 20:20:22+00:00,autofail.sh,CI,,,e18cd730090f7e6afe108eb4ba95ded50b83f313,Autobuild Fail
-2577,zzaym/Parallel-SGD,C++,git,https://github.com/zzaym/Parallel-SGD.git,3.0,2019-05-08 21:58:32+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/zzaym--Parallel-SGD.sh,CI,,,02004030c450d4fbbec5032efbd3aa3a8990ac5c,
+2577,zzaym/Parallel-SGD,C++,git,https://github.com/zzaym/Parallel-SGD.git,3.0,2019-05-08 21:58:32+00:00,CI/zzaym--Parallel-SGD.sh,CI,,,02004030c450d4fbbec5032efbd3aa3a8990ac5c,User script
 3318,happyOlaf/ISODATA-Cluster,C++,git,https://github.com/happyOlaf/ISODATA-Cluster.git,3.0,2020-08-29 01:48:52+00:00,autofail.sh,CI,,,6b38f3ef5e894c0841ea135304bc0d011d490034,Autobuild Fail
 6423,ArslanRasheed60/Matrix-Operation-Using-OpenMP-Multithreaded,C++,git,https://github.com/ArslanRasheed60/Matrix-Operation-Using-OpenMP-Multithreaded.git,3.0,2023-05-13 07:51:29+00:00,autofail.sh,CI,,,ef0b8d4a8c0175ea374e323c809f026d79e81d9e,Autobuild Fail
 2443,WireFisher/PatCC,C++,git,https://github.com/WireFisher/PatCC.git,3.0,2019-06-19 07:54:54+00:00,autofail.sh,CI,,,f708101a60834c5ab508367f9631785ae84f7687,Autobuild Fail
-425,,,,,,,,,,,,
 2378,shrgrl/parallelImageFiltering,C++,git,https://github.com/shrgrl/parallelImageFiltering.git,3.0,2019-07-18 19:57:33+00:00,autofail.sh,CI,,,b24a2ba278d495520dd5cf0320e7125faaeae429,Autobuild Fail
-2942,,,,,,,,,,,,
 457,JiyanBlack/MPI-HPC-Project2,C++,git,https://github.com/JiyanBlack/MPI-HPC-Project2.git,3.0,2016-11-16 03:04:41+00:00,autofail.sh,CI,,,f6b727d2b41c6978ef58bc42da762e51f71821fb,Autobuild Fail
 3018,arthurhoch/des-cipher-openmp-openmpi,C,git,https://github.com/arthurhoch/des-cipher-openmp-openmpi.git,3.0,2018-11-20 22:17:59+00:00,autofail.sh,CI,,,aaccdb9961a6dae01f6fbdd358259f146add5747,Autobuild Fail
 7331,davidzwei/Parallel-Programming-NCTU,C++,git,https://github.com/davidzwei/Parallel-Programming-NCTU.git,2.0,2024-03-29 14:02:57+00:00,autofail.sh,CI,,,bf1905ecc44008ffbec2be62faf63a149d27ac3e,Autobuild Fail
@@ -191,8 +184,6 @@
 3132,polimi-mt-acg/DEBS-2013-soccer-monitoring,C++,git,https://github.com/polimi-mt-acg/DEBS-2013-soccer-monitoring.git,2.0,2018-10-04 09:44:46+00:00,autofail.sh,CI,,,c8203d814ba4641e641887246fea6458fa8aaa17,Autobuild Fail
 4322,zeeshanmahar007/Matrix-Matrix-Multiplication-in-Parallel,C,git,https://github.com/zeeshanmahar007/Matrix-Matrix-Multiplication-in-Parallel.git,2.0,2021-08-10 18:40:10+00:00,autofail.sh,CI,,,ebe6741cbbacc258365da289187ccfe0459a37c0,Autobuild Fail
 1278,jcksber/CMU_15-418_hw3,C++,git,https://github.com/jcksber/CMU_15-418_hw3.git,2.0,2018-07-13 00:18:40+00:00,autofail.sh,CI,,,9e62a04fcda665e2c763fab64f227457a8d468d5,Autobuild Fail
-5016,,,,,,,,,,,,
-7473,,,,,,,,,,,,
 4614,Slava2001/Platformer,C,git,https://github.com/Slava2001/Platformer.git,2.0,2021-04-26 12:49:48+00:00,autofail.sh,CI,,,6f51499369cd3962ca511be7006a2d46dc23cbad,Autobuild Fail
 6193,Amagnum/Parallel-CYK-CFG-Parser-OMP,C++,git,https://github.com/Amagnum/Parallel-CYK-CFG-Parser-OMP.git,2.0,2021-10-18 09:53:04+00:00,autofail.sh,CI,,,9da91379cec7afc9cd0baabe23890380c50e3f73,Autobuild Fail
 2933,Dhanya-Abhirami/Parallel-and-Distributed-Computing-Lab,C,git,https://github.com/Dhanya-Abhirami/Parallel-and-Distributed-Computing-Lab.git,2.0,2018-12-27 14:32:14+00:00,autofail.sh,CI,,,5ca36ed4125154ae95576a861c09650cba56971a,Autobuild Fail
@@ -215,7 +206,6 @@
 3729,alecsmirnov/nstu-parallel-programming,C,git,https://github.com/alecsmirnov/nstu-parallel-programming.git,2.0,2020-04-16 09:34:35+00:00,autofail.sh,CI,,,ad274caa3c0eee612f340a2924c0919c414b86a7,Autobuild Fail
 1691,sd12832/High-Performance-Computing-Files,C,git,https://github.com/sd12832/High-Performance-Computing-Files.git,2.0,2018-01-17 09:50:19+00:00,autofail.sh,CI,,,aaa13f2373acb0862a77c07898cd3fa4ab4347c3,Autobuild Fail
 7015,code-mj12/Multithreaded-Codes,C++,git,https://github.com/code-mj12/Multithreaded-Codes.git,2.0,2022-11-23 07:28:00+00:00,autofail.sh,CI,,,1593c0a82b0c90a744aec3add15edcd30de23be2,Autobuild Fail
-1649,,,,,,,,,,,,
 3674,purvilmehta06/High-Performance-Computing,C,git,https://github.com/purvilmehta06/High-Performance-Computing.git,2.0,2020-05-03 05:10:29+00:00,autofail.sh,CI,,,b9f4d4833bda045e3a9c25cd82820c099eae4fe4,Autobuild Fail
 5607,toorajtaraz/mpche,C++,git,https://github.com/toorajtaraz/mpche.git,2.0,2022-04-23 19:54:16+00:00,autofail.sh,CI,,,cec6ad2d5a9001b38987ecbdf7d39fb366a4218c,Autobuild Fail
 3563,GiovanniSorice/ParallelAssigment,C++,git,https://github.com/GiovanniSorice/ParallelAssigment.git,2.0,2020-05-29 08:53:12+00:00,autofail.sh,CI,,,66d44422acf463e31d17e1de663aaae1342027ce,Autobuild Fail
@@ -265,7 +255,7 @@
 2741,p-burgess/TCP-and-parallel,C,git,https://github.com/p-burgess/TCP-and-parallel.git,1.0,2019-03-16 15:10:28+00:00,autofail.sh,CI,,,a278d8c92ef68b1d5c8d53f3dd770669a185a1da,Autobuild Fail
 3496,zhanghaoyu9931/HinesAlgorithm-OpenMP,,git,https://github.com/zhanghaoyu9931/HinesAlgorithm-OpenMP.git,1.0,2020-06-15 06:44:55+00:00,autofail.sh,CI,,,a417ba55f8e792b3dcf6b06ef823306c9ff504e8,Autobuild Fail
 1878,bhavin192/ecb-des,C,git,https://github.com/bhavin192/ecb-des.git,1.0,2017-10-27 14:17:28+00:00,autofail.sh,CI,,,a9ee8822d1fa1e73057e855c56b2b4fefe93ed1e,Autobuild Fail
-685,joao-lima/bots-omp4,C,git,https://github.com/joao-lima/bots-omp4.git,1.0,2016-04-08 20:25:45+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/joao-lima--bots-omp4.sh,CI,,,0d907b61ac1c566a8f5f5d8e07a60c341da736a0,
+685,joao-lima/bots-omp4,C,git,https://github.com/joao-lima/bots-omp4.git,1.0,2016-04-08 20:25:45+00:00,CI/joao-lima--bots-omp4.sh,CI,,,0d907b61ac1c566a8f5f5d8e07a60c341da736a0,User script
 4086,tictaqqn/laser-optical-simulation,C++,git,https://github.com/tictaqqn/laser-optical-simulation.git,1.0,2019-11-23 12:08:05+00:00,autofail.sh,CI,,,5b5edca5861af68f976e7d58a4c59fb83e3d38d9,Autobuild Fail
 4013,hckr/matrix-multiplication,C++,git,https://github.com/hckr/matrix-multiplication.git,1.0,2023-12-15 20:29:10+00:00,default_cmake.sh,CI,,False,91daf492d252ae3a88172453b2a8caa7b968fc5e,Autobuild Success
 4116,jwahn37/OpenMPI,C,git,https://github.com/jwahn37/OpenMPI.git,1.0,2019-11-12 22:34:01+00:00,default_make.sh,CI,,False,810a8593a2a5798f5976c8fa88e0cf4baf492c12,Autobuild Success
@@ -323,14 +313,11 @@
 702,a12e/openmp-labyrinth,C,git,https://github.com/a12e/openmp-labyrinth.git,1.0,2016-03-19 08:35:59+00:00,default_make.sh,CI,,False,6b926b297c3bb309eaed4c92bece77b43b75187f,Autobuild Success
 6200,LShun/LUDParallel-OpenMP,C++,git,https://github.com/LShun/LUDParallel-OpenMP.git,1.0,2021-10-14 01:16:16+00:00,autofail.sh,CI,,,005d8de4ae773ae48487370227f6ed0e5327113f,Autobuild Fail
 1756,rustyriedel/openMPI_censusData,C++,git,https://github.com/rustyriedel/openMPI_censusData.git,1.0,2017-12-14 17:59:55+00:00,default_make.sh,CI,,False,791365887d69282439fe44270023444b045193a9,Autobuild Success
-5702,,,,,,,,,,,,
 4185,brunotrbr/gameOfLife_OpenMP,C,git,https://github.com/brunotrbr/gameOfLife_OpenMP.git,1.0,2019-10-21 18:46:56+00:00,autofail.sh,CI,,,a69009ffd23ad97ad06a75f2f7c015036ae20715,Autobuild Fail
 6208,Atrebas/pmdr,C,git,https://github.com/Atrebas/pmdr.git,1.0,2021-10-10 09:49:22+00:00,autofail.sh,CI,,,410731ff4cc4b97d8b0d2af7adc6ae8780604c7e,Autobuild Fail
-5691,,,,,,,,,,,,
 5141,gomathi18/parallel-counting-sort,,git,https://github.com/gomathi18/parallel-counting-sort.git,1.0,2020-11-02 05:36:49+00:00,autofail.sh,CI,,,a04c77a49cbfb57cf0f09e0defa3051ebb08d116,Autobuild Fail
 1776,abhin-kakkad/SteadyStateHeatEquation,C,git,https://github.com/abhin-kakkad/SteadyStateHeatEquation.git,1.0,2017-12-09 11:06:32+00:00,autofail.sh,CI,,,e5b168635070243ec2e87323f1d271a5a371f39c,Autobuild Fail
 4165,danrol/Parallel_Perceptron_MPI_CUDA_openMP,C++,git,https://github.com/danrol/Parallel_Perceptron_MPI_CUDA_openMP.git,1.0,2019-10-29 11:16:22+00:00,autofail.sh,CI,,,56727620294a0daed18166cb85fdcc768e0d52e8,Autobuild Fail
-5431,,,,,,,,,,,,
 6388,joaomhmpereira/Parallel-and-Distributed-Computing,C++,git,https://github.com/joaomhmpereira/Parallel-and-Distributed-Computing.git,1.0,2023-05-19 17:32:40+00:00,autofail.sh,CI,,,97662b4a28bfe5deae1b23621f8d2369c48cc9a4,Autobuild Fail
 2298,james750267/cpp-parallel-fractal-generator,,git,https://github.com/james750267/cpp-parallel-fractal-generator.git,1.0,2019-08-25 12:24:51+00:00,autofail.sh,CI,,,0bfeaafcdb3bb22ad8e684ec5c7d3b441e90c976,Autobuild Fail
 2294,krishnajaju/Sudoku-Solver,C++,git,https://github.com/krishnajaju/Sudoku-Solver.git,1.0,2019-08-27 17:22:07+00:00,autofail.sh,CI,,,8ecb26a6bb76efd5cd58dd91f5f63e3ab1093946,Autobuild Fail
@@ -358,7 +345,6 @@
 6456,aymane-eljerari/bfs,C,git,https://github.com/aymane-eljerari/bfs.git,1.0,2023-05-06 02:11:06+00:00,default_make.sh,CI,,False,ac24f9f1ea529e3431c1ccf89741fe1e082234a4,Autobuild Success
 2467,jimlinntu/Parallel-Programming-2019,C,git,https://github.com/jimlinntu/Parallel-Programming-2019.git,1.0,2019-06-11 09:16:21+00:00,autofail.sh,CI,,,6b6f810b3734ed84e4b6e575be059d39f3396ba4,Autobuild Fail
 5528,AnikChaudhuri/Variational-Bayes-with-OpenMP,C++,git,https://github.com/AnikChaudhuri/Variational-Bayes-with-OpenMP.git,1.0,2022-05-16 03:51:31+00:00,autofail.sh,CI,,,1760c3e0e171633c83a184580aca78a573b21a8a,Autobuild Fail
-3733,,,,,,,,,,,,
 2504,ReinhartC/Parallel-RSA-on-Raspberry-Pi,C++,git,https://github.com/ReinhartC/Parallel-RSA-on-Raspberry-Pi.git,1.0,2019-05-30 11:19:53+00:00,autofail.sh,CI,,,c546ef0cb23b32ff0dcf94b8e7cb366c80d166b3,Autobuild Fail
 220,ananthsuresh/eecs438-hw7,C,git,https://github.com/ananthsuresh/eecs438-hw7.git,1.0,2017-04-05 19:24:20+00:00,default_make.sh,CI,,False,90a7cf62443e46c5062b45451080009442b3e331,Autobuild Success
 5453,FedosCucumber/OpenMPSchedulingTest,C++,git,https://github.com/FedosCucumber/OpenMPSchedulingTest.git,1.0,2022-06-05 19:48:44+00:00,autofail.sh,CI,,,6a63684ae0c2e99340cdfd8cf93943aeba866250,Autobuild Fail
@@ -370,7 +356,6 @@
 2234,federhub/HPC-MPI-OpenMP-,C,git,https://github.com/federhub/HPC-MPI-OpenMP-.git,1.0,2019-10-01 17:23:18+00:00,autofail.sh,CI,,,964711654ee5d7aa67d1e0ebba0dec14415de627,Autobuild Fail
 2630,Ariel1986/openMp,C++,git,https://github.com/Ariel1986/openMp.git,1.0,2019-04-24 09:20:33+00:00,autofail.sh,CI,,,4e56b1ca5f150ec14f1456c3233c42c639804b2e,Autobuild Fail
 3568,omarkahol/Parallel-PDE-solvers,C++,git,https://github.com/omarkahol/Parallel-PDE-solvers.git,1.0,2020-05-28 16:56:24+00:00,autofail.sh,CI,,,02e0ce0d12b39e0670b56df53132264c80558976,Autobuild Fail
-633,,,,,,,,,,,,
 2636,alperencubuk/sequence-alignment-with-nw-algorithm,C,git,https://github.com/alperencubuk/sequence-alignment-with-nw-algorithm.git,1.0,2019-04-23 14:36:10+00:00,autofail.sh,CI,,,71f4f34cf83570014f429bebe631c9038354ded4,Autobuild Fail
 6686,miguelcollazo/ParZagros,C++,git,https://github.com/miguelcollazo/ParZagros.git,1.0,2023-02-27 22:40:59+00:00,default_make.sh,CI,,False,31bf1a8e145f7ea0ff119bd484382748eb52e764,Autobuild Success
 3926,theopaid/Parallel-Image-Convolution-using-MPI-OPENMP-and-CUDA,C,git,https://github.com/theopaid/Parallel-Image-Convolution-using-MPI-OPENMP-and-CUDA.git,1.0,2020-01-15 09:57:00+00:00,autofail.sh,CI,,,8449b3e38372b911c25cfee3c60c36c0f7d01b37,Autobuild Fail
@@ -413,7 +398,6 @@
 7302,gmateesc/ScientificComputing,C,git,https://github.com/gmateesc/ScientificComputing.git,1.0,2024-04-05 04:14:43+00:00,autofail.sh,CI,,,2169eb1158b86fe22a68ecc25dade9e935720c89,Autobuild Fail
 3287,maitreyeepaliwal/OpenMP,C,git,https://github.com/maitreyeepaliwal/OpenMP.git,1.0,2020-09-11 20:00:41+00:00,autofail.sh,CI,,,f443606a14ce3fcb155a89cf872781030e745a30,Autobuild Fail
 5829,BorhaneddineHamadou/Gausse-Jordan-Algorithm,C,git,https://github.com/BorhaneddineHamadou/Gausse-Jordan-Algorithm.git,1.0,2022-02-05 01:07:08+00:00,autofail.sh,CI,,,d46d81d8c3f2befd3f637b1d5c97b6c055c7c4f4,Autobuild Fail
-7599,,,,,,,,,,,,
 7339,jeffreypersons/RayTracer,C++,git,https://github.com/jeffreypersons/RayTracer.git,1.0,2024-03-27 13:50:38+00:00,autofail.sh,CI,,,a785464b72f7c9241485f4a33ec16e6688ea6f16,Autobuild Fail
 3067,gmelodie/parallel-programming,C,git,https://github.com/gmelodie/parallel-programming.git,1.0,2018-11-01 12:40:24+00:00,autofail.sh,CI,,,03d1933fee85a0d947abcf5d6b552ce7e869325a,Autobuild Fail
 4566,ZwFink/ParRay,C++,git,https://github.com/ZwFink/ParRay.git,1.0,2021-05-08 23:58:31+00:00,autofail.sh,CI,,,c1bad0a8b056e621e93948aa19fcd9f93dc9d767,Autobuild Fail
@@ -457,7 +441,6 @@
 983,thenno/DiningPhilosophersProblem,C++,git,https://github.com/thenno/DiningPhilosophersProblem.git,1.0,2015-04-08 14:10:40+00:00,autofail.sh,CI,,,23c038c337dc24d16ebb8d06e794ba9e4cf4a5fc,Autobuild Fail
 978,glentner/EhrenfestModel,C++,git,https://github.com/glentner/EhrenfestModel.git,1.0,2015-04-14 14:54:41+00:00,default_make.sh,CI,,False,9579ec51acf3e4061ce7d95c2742a35dd358d3d0,Autobuild Success
 3167,romeubertho/openmpi,C,git,https://github.com/romeubertho/openmpi.git,1.0,2018-09-22 00:10:48+00:00,autofail.sh,CI,,,be31e467b9aa8aa448ace91c92d12e369112fc86,Autobuild Fail
-4745,,,,,,,,,,,,
 7529,albertoscala/string-matching,C,git,https://github.com/albertoscala/string-matching.git,1.0,2024-02-13 11:19:58+00:00,autofail.sh,CI,,,bf537142a70ebc4444ae179ae1d194d6c012f52b,Autobuild Fail
 7504,aks-cs5211004/Pthread_OpenMP_LU_Decomp,C++,git,https://github.com/aks-cs5211004/Pthread_OpenMP_LU_Decomp.git,1.0,2024-02-21 05:24:51+00:00,autofail.sh,CI,,,0efa0dd02cd43bfa0339c25808bd598ae057dab1,Autobuild Fail
 3220,andrewpap22/Conway_sGameOfLife,C,git,https://github.com/andrewpap22/Conway_sGameOfLife.git,1.0,2020-10-11 12:45:46+00:00,autofail.sh,CI,,,0d9257e10072f67f1720c0dba119c68d822b0b40,Autobuild Fail
@@ -541,7 +524,6 @@
 5725,mario21ic/openmpi-demos,C++,git,https://github.com/mario21ic/openmpi-demos.git,0.0,2022-03-21 04:43:47+00:00,autofail.sh,CI,,,92d0c36c95aad851116b92a93ed0f33012149d65,Autobuild Fail
 8051,Shuwei16/OpenMPBellmanFord,C++,git,https://github.com/Shuwei16/OpenMPBellmanFord.git,0.0,2023-09-24 13:55:05+00:00,autofail.sh,CI,,,30b68be4d6d64c5f2a816bc4473ddcff944524d9,Autobuild Fail
 7967,2002nov/bucket_sorting-using-openMP,C,git,https://github.com/2002nov/bucket_sorting-using-openMP.git,0.0,2023-10-21 13:28:38+00:00,autofail.sh,CI,,,b6631a1ea5af1ef5df75a53e2a09772cb3b119fb,Autobuild Fail
-8056,,,,,,,,,,,,
 5887,GREYXXX/Matrix-Operation,C,git,https://github.com/GREYXXX/Matrix-Operation.git,0.0,2022-01-16 17:20:58+00:00,default_make.sh,CI,,False,af78a0375d963ad9ab3f700f31fbb1fdb458baaf,Autobuild Success
 5751,johnMinelli/Parallel-KMeans,C++,git,https://github.com/johnMinelli/Parallel-KMeans.git,0.0,2022-03-10 08:19:58+00:00,autofail.sh,CI,,,7dd31e59f6ecdc4080acc903d50bf25eb4942476,Autobuild Fail
 8009,valberrya/ParallelProgrammingTask4,C++,git,https://github.com/valberrya/ParallelProgrammingTask4.git,0.0,2023-10-07 11:11:44+00:00,autofail.sh,CI,,,a2d7ac51ef19b23e11dd62fbacd3c5fc508a8444,Autobuild Fail
@@ -595,7 +577,6 @@
 5584,vsklamm/OpenCLCourse,C,git,https://github.com/vsklamm/OpenCLCourse.git,0.0,2022-04-30 16:20:12+00:00,default_cmake.sh,CI,,False,d55a1f47c532439c8d306891b8ac7d17fdf91f28,Autobuild Success
 5704,AndreP-git/Kmeans-OpenMP,C,git,https://github.com/AndreP-git/Kmeans-OpenMP.git,0.0,2022-03-27 10:43:04+00:00,autofail.sh,CI,,,b2b0f3b3200ad1f7a86027d8dff625364c3241e0,Autobuild Fail
 5860,WeamMez/sequence-alignment,C,git,https://github.com/WeamMez/sequence-alignment.git,0.0,2022-01-25 17:51:20+00:00,autofail.sh,CI,,,b490b58831cd221f6f384dd9259bb6f40e45d971,Autobuild Fail
-5579,,,,,,,,,,,,
 5698,goshantiy/threadLab6,C++,git,https://github.com/goshantiy/threadLab6.git,0.0,2022-03-28 07:53:58+00:00,autofail.sh,CI,,,43bc7caa8a78d604ef856700d471294d1701a797,Autobuild Fail
 5857,Eliah7/OpenMP-Intro,C,git,https://github.com/Eliah7/OpenMP-Intro.git,0.0,2022-01-26 18:00:45+00:00,autofail.sh,CI,,,97ac91efd812d02171b1cbc9e7ffb392f35844fc,Autobuild Fail
 5696,francescortu/Parallel-kd-tree,C,git,https://github.com/francescortu/Parallel-kd-tree.git,0.0,2022-03-28 17:32:22+00:00,default_make.sh,CI,,False,c8043eb9963caeaf12a4e987f950538ecd710ceb,Autobuild Success
@@ -645,7 +626,6 @@
 5103,nicspalla/openmpi_centos_x86_64,C,git,https://github.com/nicspalla/openmpi_centos_x86_64.git,0.0,2020-11-13 09:49:41+00:00,autofail.sh,CI,,,bb00de24c262d4ee75555c6cd050be5a38cf65fe,Autobuild Fail
 5099,YShoun/matrix-mul,C++,git,https://github.com/YShoun/matrix-mul.git,0.0,2020-11-14 14:34:09+00:00,autofail.sh,CI,,,5b4ac5f2cfbbcd8d25efb58073f2405c7cace8d8,Autobuild Fail
 5096,Francisneibl/processamento_paralelo_imagens,C,git,https://github.com/Francisneibl/processamento_paralelo_imagens.git,0.0,2020-11-17 22:23:24+00:00,autofail.sh,CI,,,4afc400e3294b8ace1af1998b255fba02a527cb0,Autobuild Fail
-5094,,,,,,,,,,,,
 8137,ShwetaNIT/Parallel_Strassen_Multiplication,C,git,https://github.com/ShwetaNIT/Parallel_Strassen_Multiplication.git,0.0,2023-08-15 22:34:08+00:00,autofail.sh,CI,,,c4b44619cc44bd0681c0614cc90663476020daa9,Autobuild Fail
 5060,Coursal/OpenMP-Multisort,C,git,https://github.com/Coursal/OpenMP-Multisort.git,0.0,2020-11-29 16:44:37+00:00,autofail.sh,CI,,,17b12c7d2a4637b2156a184bf2397286062f17c4,Autobuild Fail
 5033,michaelmcs/metodos-de-ordenamiento-OPENMP,C++,git,https://github.com/michaelmcs/metodos-de-ordenamiento-OPENMP.git,0.0,2020-12-03 02:01:32+00:00,autofail.sh,CI,,,c4aef30b90dbcf26042bc62cadd1dc31e8ad90dc,Autobuild Fail
@@ -702,7 +682,6 @@
 4866,burneyh/parallel-convolution,C,git,https://github.com/burneyh/parallel-convolution.git,0.0,2021-01-22 15:02:26+00:00,autofail.sh,CI,,,5e3d009fab690dd5e1c5d4f623fdfef81e42d284,Autobuild Fail
 4862,ZulNaar/MPCrypt,C,git,https://github.com/ZulNaar/MPCrypt.git,0.0,2021-01-23 13:10:30+00:00,autofail.sh,CI,,,11a9bb56a34a22cf6ff422c558b58bc413183c1d,Autobuild Fail
 8181,SWeissenberger/CSC410-openmp1-v1,C,git,https://github.com/SWeissenberger/CSC410-openmp1-v1.git,0.0,2023-07-24 16:40:09+00:00,autofail.sh,CI,,,b2c58560d3da7cf0d4fc1bc4607f9559150518f0,Autobuild Fail
-4855,,,,,,,,,,,,
 5106,krummelur/n-queens_openMP,C++,git,https://github.com/krummelur/n-queens_openMP.git,0.0,2020-11-12 23:16:30+00:00,autofail.sh,CI,,,29f24ff30b5d910482f02ebeda23a82b343b37af,Autobuild Fail
 5385,pangoso/OpenMP-Bitonic-Sort,C,git,https://github.com/pangoso/OpenMP-Bitonic-Sort.git,0.0,2022-06-25 10:08:45+00:00,autofail.sh,CI,,,9e5ec399920975a53e53a3f29caeff6c88c28e5a,Autobuild Fail
 5379,R-A-Khan/Parallel-Prog-Projects,C,git,https://github.com/R-A-Khan/Parallel-Prog-Projects.git,0.0,2022-06-27 10:54:33+00:00,autofail.sh,CI,,,7f4d49a34d7b5860c995320100aaedf28a6aa65e,Autobuild Fail
@@ -906,9 +885,7 @@
 7576,jerempir/Openmp,C++,git,https://github.com/jerempir/Openmp.git,0.0,2024-01-30 12:07:23+00:00,autofail.sh,CI,,,b094b713e984865c99f5389c2d9818db4747cf92,Autobuild Fail
 7349,Swanand58/LU_Decomposition_OPENMP,C++,git,https://github.com/Swanand58/LU_Decomposition_OPENMP.git,0.0,2024-03-26 03:53:47+00:00,autofail.sh,CI,,,537c8ae037657e95659616032d0fb00edcd1d969,Autobuild Fail
 7343,cmse822/project-4-openmp-intro-team-3,C++,git,https://github.com/cmse822/project-4-openmp-intro-team-3.git,0.0,2024-03-26 23:28:43+00:00,autofail.sh,CI,,,3badc4860922d18682fec4c5798f91d26ad37652,Autobuild Fail
-7355,,,,,,,,,,,,
 7592,agalin1/OpenMP,C++,git,https://github.com/agalin1/OpenMP.git,0.0,2024-01-27 14:51:26+00:00,autofail.sh,CI,,,b68f42fe8297eb8c7117d4d363a223c14b4ca02f,Autobuild Fail
-7329,,,,,,,,,,,,
 7377,BerriJ/rcpptimer,C++,git,https://github.com/BerriJ/rcpptimer.git,0.0,2024-03-26 10:24:08+00:00,autofail.sh,CI,,,9eb3bd73d386f3b526498c5c3c0639940ce9606b,Autobuild Fail
 7374,Sami-h-h/Parallel_Bucket_Sort,C,git,https://github.com/Sami-h-h/Parallel_Bucket_Sort.git,0.0,2024-03-20 15:42:06+00:00,autofail.sh,CI,,,e0e626750d1d01e5741ee3d6db0bd511c1c62063,Autobuild Fail
 7369,cran/rcpptimer,C++,git,https://github.com/cran/rcpptimer.git,0.0,2024-03-21 02:33:49+00:00,autofail.sh,CI,,,67cabf327cf749e3ba02a3077643e611441be419,Autobuild Fail
@@ -917,7 +894,6 @@
 7584,LuisAngelFonseca-IMT/Tarea1.Programacion-de-una-solucion-paralela,C++,git,https://github.com/LuisAngelFonseca-IMT/Tarea1.Programacion-de-una-solucion-paralela.git,0.0,2024-01-28 03:53:07+00:00,autofail.sh,CI,,,e8797e05bf531442f38684faaa55ee9d37507433,Autobuild Fail
 7429,YosiBs/Parallel_Computation_MPI_OpenMP_CUDA,C,git,https://github.com/YosiBs/Parallel_Computation_MPI_OpenMP_CUDA.git,0.0,2024-03-10 18:01:14+00:00,autofail.sh,CI,,,a8fa667a632c9d0fb229eb96f90882781ceb0b39,Autobuild Fail
 7494,prajak002/Parallelism,C,git,https://github.com/prajak002/Parallelism.git,0.0,2024-02-24 09:58:31+00:00,autofail.sh,CI,,,c6e9438f5ff04446277e6b49e870e946d4ca82f2,Autobuild Fail
-7532,EdmundGoodman/openmp-mpi-nondeterminism,C++,git,https://github.com/EdmundGoodman/openmp-mpi-nondeterminism.git,0.0,2024-02-12 23:40:54+00:00,autofail.sh,CI,,,,Autobuild Fail
 7499,K1llshot007/testing_openmp,C,git,https://github.com/K1llshot007/testing_openmp.git,0.0,2024-02-23 00:30:03+00:00,autofail.sh,CI,,,5469a2318a2ddc81ed2f3f409b51def323b66161,Autobuild Fail
 7534,danielenapo/parallel-bellman-ford,C,git,https://github.com/danielenapo/parallel-bellman-ford.git,0.0,2024-02-12 16:38:12+00:00,autofail.sh,CI,,,1631462b4bc8a2c9ea7a3327d8ef455532eddd97,Autobuild Fail
 7535,RayneDuarte/atividade-5-openmp,C++,git,https://github.com/RayneDuarte/atividade-5-openmp.git,0.0,2024-02-12 12:38:21+00:00,autofail.sh,CI,,,d4303637c17fc61618f7bfe9bc9856e3a341befd,Autobuild Fail
@@ -960,14 +936,11 @@
 7173,yashpandhare/Implement-OpenMP-hello-sum,C,git,https://github.com/yashpandhare/Implement-OpenMP-hello-sum.git,0.0,2022-09-24 16:09:13+00:00,autofail.sh,CI,,,71e6c7475262bd2f532ca757ec914d653f48b762,Autobuild Fail
 7167,xi-liu-cs/mpi-openmp-cuda,C,git,https://github.com/xi-liu-cs/mpi-openmp-cuda.git,0.0,2022-09-25 23:01:58+00:00,autofail.sh,CI,,,806e28009284eb1e763155e938cb23918ab5c465,Autobuild Fail
 7163,guicarboneti/Parallelization-with-OpenMP,C,git,https://github.com/guicarboneti/Parallelization-with-OpenMP.git,0.0,2022-09-26 13:03:13+00:00,default_make.sh,CI,,False,cdf88757d1ba197f56cc7daf25c6673e3af40a75,Autobuild Success
-7151,,,,,,,,,,,,
 7156,farazayaz55/OPENMP-PROGRAM-TO-PRINT-NUMBER-OF-THREADS,C++,git,https://github.com/farazayaz55/OPENMP-PROGRAM-TO-PRINT-NUMBER-OF-THREADS.git,0.0,2022-09-30 19:10:53+00:00,autofail.sh,CI,,,4173513ef7b2399675d712c175eb442129706c4d,Autobuild Fail
 7153,Isurika1998/matrix-multiplication-pthread-and-openmp,C,git,https://github.com/Isurika1998/matrix-multiplication-pthread-and-openmp.git,0.0,2022-10-01 17:55:02+00:00,autofail.sh,CI,,,e5240a65d2434ba7ca63b54cf2f28254e11251e4,Autobuild Fail
 7325,Yamo412/Parallel-Image-Processing-OpenMP-Library,C++,git,https://github.com/Yamo412/Parallel-Image-Processing-OpenMP-Library.git,0.0,2024-03-31 00:07:11+00:00,autofail.sh,CI,,,9cd0181db864801150b34e8c1c4328e69be1afc8,Autobuild Fail
 7298,jcheng2020-github/Sobel-Edge-Detector,C,git,https://github.com/jcheng2020-github/Sobel-Edge-Detector.git,0.0,2024-04-05 22:35:39+00:00,autofail.sh,CI,,,2943f13918b297b13213b2c874f6c44bcf86c1d0,Autobuild Fail
-7615,,,,,,,,,,,,
 7303,PsimonL/ParallelProgrammingClasses,C,git,https://github.com/PsimonL/ParallelProgrammingClasses.git,0.0,2024-04-04 20:35:05+00:00,autofail.sh,CI,,,0da761ed255bbc094ff73adc76debec84c0e2ee9,Autobuild Fail
-7618,,,,,,,,,,,,
 7621,ducminhhoang/Parallel_KNN_With_OpenMP_MPI,C++,git,https://github.com/ducminhhoang/Parallel_KNN_With_OpenMP_MPI.git,0.0,2024-01-18 02:27:36+00:00,autofail.sh,CI,,,8cdab0759ccfc04ac8e2f5c971294aac2d9a4a28,Autobuild Fail
 7622,UvA-FNWI/parallel-demo,C,git,https://github.com/UvA-FNWI/parallel-demo.git,0.0,2024-01-17 22:12:00+00:00,default_make.sh,CI,,False,e09c4966af0e4d8c7ae35574ff1b5edf797947fe,Autobuild Success
 7322,IliaTrofimov/fox-parallel-algorithm,C++,git,https://github.com/IliaTrofimov/fox-parallel-algorithm.git,0.0,2024-03-31 13:36:57+00:00,autofail.sh,CI,,,46906864f67ff17c2c0c235e3956b0febe6115db,Autobuild Fail
@@ -1045,7 +1018,6 @@
 6004,javiervela/tsp-genalg-parallel,C++,git,https://github.com/javiervela/tsp-genalg-parallel.git,0.0,2021-12-14 15:31:06+00:00,autofail.sh,CI,,,b6278c265d3349122937e17dc9267820740ae3e2,Autobuild Fail
 6000,MohamedAbdelAzeem/openMPI,C++,git,https://github.com/MohamedAbdelAzeem/openMPI.git,0.0,2021-12-14 18:32:26+00:00,autofail.sh,CI,,,ce9232b7f7d695bd7f7e761e7de304940b4654e5,Autobuild Fail
 5996,archie230/parprog_2021,C++,git,https://github.com/archie230/parprog_2021.git,0.0,2021-12-14 23:55:28+00:00,autofail.sh,CI,,,bacf98cb8c44087dfafd9671ad5f1170d32fcdf0,Autobuild Fail
-5992,,,,,,,,,,,,
 5988,shaharhikri/Sequence_Allignment-Parallel_implementation,C,git,https://github.com/shaharhikri/Sequence_Allignment-Parallel_implementation.git,0.0,2021-12-16 13:00:22+00:00,autofail.sh,CI,,,d485e5552b0b854511d5079a9d862667b45a4b8f,Autobuild Fail
 5954,tunnellm/OpenMP-Crystal-Growth,C++,git,https://github.com/tunnellm/OpenMP-Crystal-Growth.git,0.0,2021-12-26 02:40:44+00:00,autofail.sh,CI,,,e439589c10482b30765af0ec17f6383d46eed303,Autobuild Fail
 5926,stephenstengel/hpc-lab2,C,git,https://github.com/stephenstengel/hpc-lab2.git,0.0,2022-01-06 02:15:04+00:00,default_make.sh,CI,,False,0a3978744cd16df1cddc4847f99dcec0ebd983c3,Autobuild Success
@@ -1202,15 +1174,12 @@
 1531,TyropeDeMotorChope/Homework-3-OpenMP-,C++,git,https://github.com/TyropeDeMotorChope/Homework-3-OpenMP-.git,0.0,2018-04-05 16:36:18+00:00,autofail.sh,CI,,,110f426993379a22593736d9d0cdf6726b8b1387,Autobuild Fail
 1563,ChristopherRobberts/particle_sim_openmp,C++,git,https://github.com/ChristopherRobberts/particle_sim_openmp.git,0.0,2018-03-22 01:19:00+00:00,autofail.sh,CI,,,1aea7a6b19c93401107e474fd67e740c1794c411,Autobuild Fail
 1591,KamalovRuslan/Parallel-Computations,C++,git,https://github.com/KamalovRuslan/Parallel-Computations.git,0.0,2018-03-10 14:12:46+00:00,default_make.sh,CI,,False,8b8d44636694807ad62361e6ad59c47ade5baa97,Autobuild Success
-1586,,,,,,,,,,,,
 1581,shiva49814/OpenMPLoop,C++,git,https://github.com/shiva49814/OpenMPLoop.git,0.0,2018-03-14 23:13:46+00:00,autofail.sh,CI,,,2eae008f0baa815869d239d9685ddde06d42d531,Autobuild Fail
 1575,neasatang/concurrent-systems,C,git,https://github.com/neasatang/concurrent-systems.git,0.0,2018-03-16 22:19:06+00:00,default_make.sh,CI,,False,5b412ca32d2202eb6fc32254b94e35c042938f4e,Autobuild Success
 1571,dengxu/offical_openmp,C++,git,https://github.com/dengxu/offical_openmp.git,0.0,2018-03-18 13:54:33+00:00,default_cmake.sh,CI,,False,6c36b1dce0ac36a8c2b28949a00a9b3aa12446f9,Autobuild Success
 1567,cattaneo-riccardo/ExactMVA_OpenMP,C++,git,https://github.com/cattaneo-riccardo/ExactMVA_OpenMP.git,0.0,2018-03-20 15:00:30+00:00,default_make.sh,CI,,False,34d115634c8e6bef97841b61ed66c7dfa1c5461f,Autobuild Success
 1525,gvintux/openmp_example,C++,git,https://github.com/gvintux/openmp_example.git,0.0,2018-04-09 14:47:15+00:00,default_cmake.sh,CI,,False,d6512f9e2b3a50f73ad5e77751c3d615ce68c512,Autobuild Success
 1777,jaxondk/cs324-openMP,C,git,https://github.com/jaxondk/cs324-openMP.git,0.0,2017-12-09 00:33:24+00:00,autofail.sh,CI,,,ff0f93a09dcfce5c6e6e39ba9ec98ff2820e8d0d,Autobuild Fail
-1771,,,,,,,,,,,,
-1766,,,,,,,,,,,,
 1761,npredey/OpenMPSudoku,C++,git,https://github.com/npredey/OpenMPSudoku.git,0.0,2017-12-12 03:25:19+00:00,default_make.sh,CI,,False,633cc47575cf30a51d9b4425c1f2c8ae51d47f62,Autobuild Success
 1754,RetinaInc/QuickSortParallelOpenMP,C,git,https://github.com/RetinaInc/QuickSortParallelOpenMP.git,0.0,2017-12-15 04:17:32+00:00,default_cmake.sh,CI,,False,c92f234d7a23c46071f73d0caf09f1dd02b72c73,Autobuild Success
 1749,lkmokadam/TFIDF_MPI_OpenMP,C,git,https://github.com/lkmokadam/TFIDF_MPI_OpenMP.git,0.0,2017-12-16 06:57:39+00:00,default_make.sh,CI,,False,99584821263a1799a55652df3ec45858290c7135,Autobuild Success
@@ -1245,7 +1214,6 @@
 1386,JimmyWorks/Parallel_Sorting_with_Regular_Sampling_MPI_OpenMP,C,git,https://github.com/JimmyWorks/Parallel_Sorting_with_Regular_Sampling_MPI_OpenMP.git,0.0,2018-05-26 21:16:45+00:00,autofail.sh,CI,,,deb28c51597ee8eb40784d4b1e831fccd3d648c7,Autobuild Fail
 1381,aaronweeden/pi2018-hybrid-examples,C,git,https://github.com/aaronweeden/pi2018-hybrid-examples.git,0.0,2018-05-28 20:52:44+00:00,autofail.sh,CI,,,284084ff2326d16ebc296cdec9870bf9f92d84b6,Autobuild Fail
 1376,shwetha-krishnamurthy/OpenMP,C,git,https://github.com/shwetha-krishnamurthy/OpenMP.git,0.0,2018-05-30 11:24:29+00:00,autofail.sh,CI,,,ca45ebd87e6a06da7c5008c28690b8cc7a597ca3,Autobuild Fail
-1372,,,,,,,,,,,,
 1363,tseignette/lejeudelavie,C,git,https://github.com/tseignette/lejeudelavie.git,0.0,2018-06-01 17:58:18+00:00,autofail.sh,CI,,,e506f13cd79859c95bff10334cb36ed0deb978e7,Autobuild Fail
 1359,balazshorvath/hitbox_openmpi,C,git,https://github.com/balazshorvath/hitbox_openmpi.git,0.0,2018-06-02 08:56:37+00:00,default_make.sh,CI,,False,bf583541dbf1932dd3631b1bd756219774a3fb59,Autobuild Success
 1317,ichaparroc/convolution-matrix-filter-openmp,C,git,https://github.com/ichaparroc/convolution-matrix-filter-openmp.git,0.0,2018-06-18 22:24:22+00:00,autofail.sh,CI,,,4056a637cc05ad9682ba33b60e516fad363204f7,Autobuild Fail
@@ -1293,7 +1261,6 @@
 2233,skalogerakis/TUC_Parallel_Computer_Architecture,C,git,https://github.com/skalogerakis/TUC_Parallel_Computer_Architecture.git,0.0,2019-10-01 19:47:16+00:00,autofail.sh,CI,,,ba2ccd5aef4857d2db89a4ef6847db018ecf0c89,Autobuild Fail
 2227,hughnatt/blas-library-openmp,C,git,https://github.com/hughnatt/blas-library-openmp.git,0.0,2019-10-03 15:24:26+00:00,autofail.sh,CI,,,c7b7fcbba1612c9667a9990ab4835585037788b2,Autobuild Fail
 2222,davidbejarcaceres/OpenMP-Matrix-Multiplication,C,git,https://github.com/davidbejarcaceres/OpenMP-Matrix-Multiplication.git,0.0,2019-10-06 12:00:00+00:00,autofail.sh,CI,,,432daaa1f0d9c8116811d9bbede4a93909a747eb,Autobuild Fail
-2217,,,,,,,,,,,,
 2210,NickLekkas01/Heat-Transfer-Simulation,C,git,https://github.com/NickLekkas01/Heat-Transfer-Simulation.git,0.0,2019-10-13 10:54:27+00:00,autofail.sh,CI,,,576e5d7e46a1e36c93a23afc5e942a320f79648d,Autobuild Fail
 2203,trdiaz/OpenMp_Lab2,C,git,https://github.com/trdiaz/OpenMp_Lab2.git,0.0,2017-04-14 13:23:44+00:00,autofail.sh,CI,,,633a27b79bc8ce11dd44c121d9dd42c98981cc31,Autobuild Fail
 2242,arghasarkar/high-performance-computing,C,git,https://github.com/arghasarkar/high-performance-computing.git,0.0,2019-09-30 10:55:29+00:00,autofail.sh,CI,,,8e5a9d6332971e6b0d2cadad1e0339c2ea05da99,Autobuild Fail
@@ -1306,7 +1273,6 @@
 2159,rakeshsinha/TravellingSalesman---OpenMPI-Multi-Threading,C++,git,https://github.com/rakeshsinha/TravellingSalesman---OpenMPI-Multi-Threading.git,0.0,2017-05-05 20:37:22+00:00,autofail.sh,CI,,,c5c3c56aad6914c68db35a6c8da39c9ba79bcff0,Autobuild Fail
 2153,itgsod/OpenMPI,C,git,https://github.com/itgsod/OpenMPI.git,0.0,2017-05-08 14:21:52+00:00,autofail.sh,CI,,,5728c6d733a4072f294e94af2187e16795fafa56,Autobuild Fail
 2147,DindoW/omplib,C++,git,https://github.com/DindoW/omplib.git,0.0,2017-05-10 15:02:07+00:00,autofail.sh,CI,,,831b466b3b1a8d5b1538ce468c3ab1a4fd40a6b6,Autobuild Fail
-2143,,,,,,,,,,,,
 2137,shashankcheruku/OpenMP-Threading-Performance-for-Merge-Sort-Algorithm,C,git,https://github.com/shashankcheruku/OpenMP-Threading-Performance-for-Merge-Sort-Algorithm.git,0.0,2017-05-16 10:23:44+00:00,autofail.sh,CI,,,8f2954ede9fe1d39688b1f3d4a89cdd13a31d144,Autobuild Fail
 2132,sagidM/Coursework1_OpenMP,C++,git,https://github.com/sagidM/Coursework1_OpenMP.git,0.0,2017-05-17 21:46:22+00:00,autofail.sh,CI,,,30edc4be5033e73c199cd118e52dac007f0e1957,Autobuild Fail
 2162,knal1992/Pearson-Correlation-OpenMP,C,git,https://github.com/knal1992/Pearson-Correlation-OpenMP.git,0.0,2017-05-04 21:49:17+00:00,autofail.sh,CI,,,1beb0eb435abf23d9836725e57dda6ae375f663e,Autobuild Fail
@@ -1316,7 +1282,6 @@
 2176,Justmalhar/Parallelized-Image-Compression,C++,git,https://github.com/Justmalhar/Parallelized-Image-Compression.git,0.0,2017-04-30 05:35:16+00:00,autofail.sh,CI,,,9c929e6e1349ae5fc5d82ddd5b2eb17b228178f0,Autobuild Fail
 2170,rbaasland/parallel-merge-sort,C++,git,https://github.com/rbaasland/parallel-merge-sort.git,0.0,2017-05-02 00:19:00+00:00,autofail.sh,CI,,,7a28225d8fcf055a707d4a353acc5a1de7c078f3,Autobuild Fail
 2166,snyderdan/ParallelSpellChecker,C,git,https://github.com/snyderdan/ParallelSpellChecker.git,0.0,2017-05-02 20:24:59+00:00,default_make.sh,CI,,False,b5b845d8921efb02b58c3e7f4cebfc9615f734a0,Autobuild Success
-2124,,,,,,,,,,,,
 2386,GeovanaS/IPPD,C,git,https://github.com/GeovanaS/IPPD.git,0.0,2019-07-13 19:25:32+00:00,autofail.sh,CI,,,f41d7b84d7e8702644a056560a6217b056e51ab6,Autobuild Fail
 2379,pooyasf/Prims_Algorithm,C++,git,https://github.com/pooyasf/Prims_Algorithm.git,0.0,2019-07-17 07:57:57+00:00,autofail.sh,CI,,,c9845df4c9cc21acd0722277134dea0147d48e53,Autobuild Fail
 2373,pulaksahoo/Prefix-Sum-Parallel-Programming,C,git,https://github.com/pulaksahoo/Prefix-Sum-Parallel-Programming.git,0.0,2019-07-20 12:12:44+00:00,autofail.sh,CI,,,84b64ffcc8405d8f25cab7b325b28aed0a13eb25,Autobuild Fail
@@ -1409,7 +1374,6 @@
 472,mikejcooper/openMPI-examples,C,git,https://github.com/mikejcooper/openMPI-examples.git,0.0,2016-11-08 17:56:23+00:00,autofail.sh,CI,,,4993ea9a08a8d4fc2b431b45774365062c9969a9,Autobuild Fail
 467,sagarbhatt0904/OpenMP,C++,git,https://github.com/sagarbhatt0904/OpenMP.git,0.0,2016-11-13 00:23:39+00:00,autofail.sh,CI,,,1461807f4313d07871e912b71c6f65e741d8b9d4,Autobuild Fail
 463,mnahmad12/PasswordCracking-PThreads-OpenMP,C,git,https://github.com/mnahmad12/PasswordCracking-PThreads-OpenMP.git,0.0,2016-11-14 20:00:27+00:00,default_make.sh,CI,,False,7e6703ef1fee6059d732b4975066c4466a3a5b48,Autobuild Success
-458,,,,,,,,,,,,
 448,trailblazing/openmp-dev,C,git,https://github.com/trailblazing/openmp-dev.git,0.0,2016-11-22 11:23:14+00:00,default_cmake.sh,CI,,False,7ca47d5c846d6d152b4c35589604f452ccd634e3,Autobuild Success
 407,diegoloya/Hybrid_OMP_CUDA,C++,git,https://github.com/diegoloya/Hybrid_OMP_CUDA.git,0.0,2016-12-13 00:25:03+00:00,autofail.sh,CI,,,3c8ce75c28df1b14c5b46d3c1e582561b78795d8,Autobuild Fail
 359,kpiotrowski/parallel_processing_OpenMP,C++,git,https://github.com/kpiotrowski/parallel_processing_OpenMP.git,0.0,2017-01-18 23:05:13+00:00,autofail.sh,CI,,,75ca10c3984de3474e507365268c82fc1bae9bcd,Autobuild Fail
@@ -1472,7 +1436,6 @@
 19,pterolex/MandelbrotConsole,C++,git,https://github.com/pterolex/MandelbrotConsole.git,0.0,2013-12-27 10:05:23+00:00,autofail.sh,CI,,,d50044cba0b03ea4ddfd3ae551ebd9a41d02416e,Autobuild Fail
 11,davestampf/OpenMPTutorialFull,C,git,https://github.com/davestampf/OpenMPTutorialFull.git,0.0,2014-01-23 20:12:56+00:00,default_make.sh,CI,,False,c20ebe207a4c9c2d38274229c349d391d9572571,Autobuild Success
 7,adeel1234/Capstone,,git,https://github.com/adeel1234/Capstone.git,0.0,2014-02-04 02:15:56+00:00,autofail.sh,CI,,,9a69471d71254c8484493afc5ddd4573440e9b75,Autobuild Fail
-2,,,,,,,,,,,,
 41,schdomin/diffusion_openmp,C++,git,https://github.com/schdomin/diffusion_openmp.git,0.0,2013-11-19 19:22:02+00:00,default_make.sh,CI,,False,f41fd9ebb8ff60e422722e89ac4aaad8e3f1958b,Autobuild Success
 73,Dani7B/CPD,C,git,https://github.com/Dani7B/CPD.git,0.0,2013-09-02 19:16:58+00:00,autofail.sh,CI,,,4eb84751eedfece4381b7b1f309a0321611ff107,Autobuild Fail
 63,moritz-wundke/Mandle,C++,git,https://github.com/moritz-wundke/Mandle.git,0.0,2013-10-06 21:34:55+00:00,autofail.sh,CI,,,f61472c092328593e42f0001efbf00ab5d0ac0ec,Autobuild Fail
@@ -1556,7 +1519,6 @@
 1102,mpre/p-whap,C++,git,https://github.com/mpre/p-whap.git,0.0,2014-10-07 12:58:55+00:00,default_make.sh,CI,,False,c38369f560b2756126b49f80576b914944a790ca,Autobuild Success
 1130,Boussetta/Introduction-to-OpenMP,C++,git,https://github.com/Boussetta/Introduction-to-OpenMP.git,0.0,2014-07-30 03:30:03+00:00,autofail.sh,CI,,,97989a7c9237981c4b6e3539480dc8fa4ef69305,Autobuild Fail
 1164,BTHgruppen/OpenMPDV2544project,C,git,https://github.com/BTHgruppen/OpenMPDV2544project.git,0.0,2014-05-21 14:40:03+00:00,autofail.sh,CI,,,15146bf71955cf5ebdf432d0b5a36c9af1902535,Autobuild Fail
-1160,,,,,,,,,,,,
 1155,dkefalos/Spectral-Unmixing,C,git,https://github.com/dkefalos/Spectral-Unmixing.git,0.0,2014-06-05 19:37:13+00:00,autofail.sh,CI,,,8ea8e2d1b7436cdf3238729d7d1ad3adf9bf4cd3,Autobuild Fail
 1147,srinivasrvaidya/Sobel-filter,C++,git,https://github.com/srinivasrvaidya/Sobel-filter.git,0.0,2014-06-19 20:28:42+00:00,autofail.sh,CI,,,6022dda0f887fe8c485d1bcc14d6ab19d9516512,Autobuild Fail
 1142,KaliszAd/OpenACC_OpenMP,C,git,https://github.com/KaliszAd/OpenACC_OpenMP.git,0.0,2014-07-07 15:08:02+00:00,autofail.sh,CI,,,9fe87561390337f95250ea97da0cbb40e19ce1f5,Autobuild Fail
@@ -1630,7 +1592,6 @@
 3978,Zhsc92157/OpenMPTest,C++,git,https://github.com/Zhsc92157/OpenMPTest.git,0.0,2019-12-27 04:15:04+00:00,autofail.sh,CI,,,70b0a1740bf90b823a379ac19af960f3e6608e79,Autobuild Fail
 3974,feperessim/counting-sort-parallel-openmp,C,git,https://github.com/feperessim/counting-sort-parallel-openmp.git,0.0,2019-12-29 00:15:48+00:00,autofail.sh,CI,,,e3a1f43bafbb563dcf23767e28dd49dd81d017ef,Autobuild Fail
 3937,ziwu14/OpenMP,C,git,https://github.com/ziwu14/OpenMP.git,0.0,2020-01-12 01:14:38+00:00,autofail.sh,CI,,,af7eb772c49d1559cd190cfa2820478c0c948bc4,Autobuild Fail
-3892,,,,,,,,,,,,
 3888,ivaneduardomv/OpenMPTest,C,git,https://github.com/ivaneduardomv/OpenMPTest.git,0.0,2020-02-03 16:15:41+00:00,autofail.sh,CI,,,b53b2f8a8b898ca004e605d24c29f955ab0dd3e5,Autobuild Fail
 3884,jwise77/openmp-bw,C,git,https://github.com/jwise77/openmp-bw.git,0.0,2020-02-05 20:31:26+00:00,autofail.sh,CI,,,3f1a5b319280be81257a02a3c802daed86a69eb0,Autobuild Fail
 3880,cran/RcppProgress,C++,git,https://github.com/cran/RcppProgress.git,0.0,2020-02-07 09:50:54+00:00,autofail.sh,CI,,,f63f3f9b9ba4d01c45c44e778607c641fc884c54,Autobuild Fail
@@ -1676,8 +1637,7 @@
 3682,m3zai6i/Matrix-Vector-Algo-OpenMP-Threading,C,git,https://github.com/m3zai6i/Matrix-Vector-Algo-OpenMP-Threading.git,0.0,2020-04-30 13:05:53+00:00,autofail.sh,CI,,,21eb4024ffef41801874bd095f6fbd0e12a15038,Autobuild Fail
 3677,abhinav-vaishya/Parallel-Computing---MPI-OpenMP-CUDA,C++,git,https://github.com/abhinav-vaishya/Parallel-Computing---MPI-OpenMP-CUDA.git,0.0,2020-05-01 23:20:33+00:00,autofail.sh,CI,,,99dd9a051e3f55e41a258ae678307b8e218dab8b,Autobuild Fail
 3671,Sxndrx/MatrixMultiplicationOpenMP,C++,git,https://github.com/Sxndrx/MatrixMultiplicationOpenMP.git,0.0,2020-05-04 10:15:56+00:00,autofail.sh,CI,,,a6eddad06e916831880adcd22a195643c7ff6bd3,Autobuild Fail
-3667,vilas897/Parallel-Graph-Coloring-with-OpenMP-and-CUDA,C++,git,https://github.com/vilas897/Parallel-Graph-Coloring-with-OpenMP-and-CUDA.git,0.0,2020-05-05 05:00:45+00:00,autofail.sh,CI,,,,Autobuild Fail
-3695,,,,,,,,,,,,
+3667,vilas897/Parallel-Graph-Coloring-with-OpenMP-and-CUDA,C++,git,https://github.com/vilas897/Parallel-Graph-Coloring-with-OpenMP-and-CUDA.git,0.0,2020-05-05 05:00:45+00:00,userscript_fail_after_fixing_githash.sh,CI,,,3930a2d9f67a229fa847f3f4857dc394789937b2,Autobuild Fail
 3721,iarchanaa/Large_Matrix_Multiplication_Using_openMP,C,git,https://github.com/iarchanaa/Large_Matrix_Multiplication_Using_openMP.git,0.0,2020-04-19 16:51:39+00:00,autofail.sh,CI,,,8bbc08d72e2020a1870fba959d43295d1cd9a884,Autobuild Fail
 3716,zhuangsc/bitpack,C++,git,https://github.com/zhuangsc/bitpack.git,0.0,2020-04-21 19:59:58+00:00,autofail.sh,CI,,,5b0aba73954f807c8950dd364f3f77bec36a22a8,Autobuild Fail
 3712,rzambre/ebms,C,git,https://github.com/rzambre/ebms.git,0.0,2020-04-23 19:37:42+00:00,autofail.sh,CI,,,d6b235dc62a3cf503adacd26537b207b1ab4bffa,Autobuild Fail
@@ -1692,10 +1652,9 @@
 3597,josemonsalve2/openmp_microbench,C,git,https://github.com/josemonsalve2/openmp_microbench.git,0.0,2020-05-22 05:06:39+00:00,autofail.sh,CI,,,a67af6a2b63a5935421c19666fd80e1faa970d00,Autobuild Fail
 3593,Shay9000/Genetic-Algorithm-Sudoku-Solver,C++,git,https://github.com/Shay9000/Genetic-Algorithm-Sudoku-Solver.git,0.0,2020-05-22 23:46:25+00:00,autofail.sh,CI,,,01d62a9239ab83f86a3ed934d4acefbe37f831c5,Autobuild Fail
 3628,aminegaizi/Parallel_Programming_OpenMP,C++,git,https://github.com/aminegaizi/Parallel_Programming_OpenMP.git,0.0,2020-05-13 20:28:01+00:00,autofail.sh,CI,,,24738cf8c3e72a1c8879eac3d28ce4a405573213,Autobuild Fail
-3654,lydiaastrella/Parallel-Dijkstra-OpenMPI,C,git,https://github.com/lydiaastrella/Parallel-Dijkstra-OpenMPI.git,0.0,2020-05-07 15:44:08+00:00,/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-binaries/scripts/CI/lydiaastrella--Parallel-Dijkstra-OpenMPI.fail.sh,CI,,,68f904662496fb14a08068090cc30b38a11297a1,
+3654,lydiaastrella/Parallel-Dijkstra-OpenMPI,C,git,https://github.com/lydiaastrella/Parallel-Dijkstra-OpenMPI.git,0.0,2020-05-07 15:44:08+00:00,CI/lydiaastrella--Parallel-Dijkstra-OpenMPI.fail.sh,CI,,,68f904662496fb14a08068090cc30b38a11297a1,Confirmed Fail
 3650,scott50301/Dense-matrix-multiplication-OpenMP-,C++,git,https://github.com/scott50301/Dense-matrix-multiplication-OpenMP-.git,0.0,2020-05-07 22:32:06+00:00,autofail.sh,CI,,,3bb081ca42827d707e7e08079e1b36024a9a6547,Autobuild Fail
 3641,JanSvejda/par,C++,git,https://github.com/JanSvejda/par.git,0.0,2020-05-09 19:43:38+00:00,autofail.sh,CI,,,3bf8697beacf930bf89b35cdecbf57e44c67997b,Autobuild Fail
-3636,,,,,,,,,,,,
 3632,BenQuickDeNN/Special_OpenMP_Examples,C++,git,https://github.com/BenQuickDeNN/Special_OpenMP_Examples.git,0.0,2020-05-12 11:05:29+00:00,autofail.sh,CI,,,f4da33aa5dba5b301c8db3d598959663c47962a2,Autobuild Fail
 3724,BloodyRainRage/OpenMP,C++,git,https://github.com/BloodyRainRage/OpenMP.git,0.0,2020-04-18 18:34:43+00:00,autofail.sh,CI,,,f898d054590d6b25e3033bef399d0d7db3f32f7f,Autobuild Fail
 3822,koushikkarmakar/IN2190,C++,git,https://github.com/koushikkarmakar/IN2190.git,0.0,2020-02-29 21:44:33+00:00,autofail.sh,CI,,,e67142b39570558961f5ee629c3eb1850764e128,Autobuild Fail
@@ -1708,8 +1667,6 @@
 3860,hejohns/kmeans,C,git,https://github.com/hejohns/kmeans.git,0.0,2020-02-14 23:01:38+00:00,autofail.sh,CI,,,ae53c55c156dac8719648878ffb08f027e23af0e,Autobuild Fail
 3852,lonkenzo/Article_OpenMP,C,git,https://github.com/lonkenzo/Article_OpenMP.git,0.0,2020-02-18 15:34:50+00:00,autofail.sh,CI,,,0a7a0776b3eb14ed9a3f6103c1c151788a322c11,Autobuild Fail
 3847,jeffyjahfar/TSP_GeneticAlgorithm_openMP,C++,git,https://github.com/jeffyjahfar/TSP_GeneticAlgorithm_openMP.git,0.0,2020-02-20 19:38:34+00:00,autofail.sh,CI,,,24e693b3f232644d2d18a83f1fe3390dd5a803dc,Autobuild Fail
-3842,,,,,,,,,,,,
-3838,,,,,,,,,,,,
 3833,joshtburris/CS-475-PA1,C,git,https://github.com/joshtburris/CS-475-PA1.git,0.0,2020-02-25 08:58:35+00:00,autofail.sh,CI,,,ff0f02e30b68f9503566dbc811eb36fb132fa6a7,Autobuild Fail
 3790,kamilkolodziejski/put-openmp,C++,git,https://github.com/kamilkolodziejski/put-openmp.git,0.0,2020-03-11 18:33:59+00:00,autofail.sh,CI,,,f16ea0c31c3edfc9689c6aa1feb064b91af636f6,Autobuild Fail
 3754,christopher-dabrowski/parallel-prime-search,C,git,https://github.com/christopher-dabrowski/parallel-prime-search.git,0.0,2020-04-03 08:23:03+00:00,autofail.sh,CI,,,d8781f296c9c233a82e7e90ba6dfac20e47d1764,Autobuild Fail
@@ -1724,25 +1681,20 @@
 3773,LonghuaHu/openmp,C,git,https://github.com/LonghuaHu/openmp.git,0.0,2020-03-20 12:01:32+00:00,autofail.sh,CI,,,a4ba5f5c60ca6bb7b464c8b752186631a71b4b9a,Autobuild Fail
 3768,BuzzHari/openmp-notes,C,git,https://github.com/BuzzHari/openmp-notes.git,0.0,2020-03-25 16:20:22+00:00,autofail.sh,CI,,,0fffc76950920c85bad1438decf4290a33150ac6,Autobuild Fail
 3764,artme-uni/OpenMP,C,git,https://github.com/artme-uni/OpenMP.git,0.0,2020-03-29 03:20:56+00:00,autofail.sh,CI,,,670c807731926bc6c30e2420cae9746fd1bdb995,Autobuild Fail
-3760,,,,,,,,,,,,
 4527,Alex-Differential/Lab2_Parallel_OpenMP,C++,git,https://github.com/Alex-Differential/Lab2_Parallel_OpenMP.git,0.0,2021-05-20 16:10:06+00:00,autofail.sh,CI,,,0ce248fed88c45458363429721415d2a0d2c97ce,Autobuild Fail
-4538,,,,,,,,,,,,
-4532,,,,,,,,,,,,
 4526,LuccaMilano/PDP-Benchmark-OpenMPxMPI,C,git,https://github.com/LuccaMilano/PDP-Benchmark-OpenMPxMPI.git,0.0,2021-05-21 08:44:46+00:00,autofail.sh,CI,,,d59607672f65847859ce66a214ac30017ad5d9e2,Autobuild Fail
 4523,0scari/Parralel-programmin-pratice,C++,git,https://github.com/0scari/Parralel-programmin-pratice.git,0.0,2021-05-22 10:45:06+00:00,autofail.sh,CI,,,10ae5afc7356d850c10e4a0a14e9fec1d3459a35,Autobuild Fail
 4518,m7azeem/HPC-openMP-Distributed-Memory,C,git,https://github.com/m7azeem/HPC-openMP-Distributed-Memory.git,0.0,2021-05-24 08:48:56+00:00,autofail.sh,CI,,,49219eab7cb821db9e01993e7937a8a2455c3373,Autobuild Fail
 4513,chunhualiao/homp-demo,C,git,https://github.com/chunhualiao/homp-demo.git,0.0,2021-05-25 13:32:45+00:00,autofail.sh,CI,,,0fc2842b1c93bce2bae81de00e3573f43e1ab9f1,Autobuild Fail
 4550,Shreyas-Gururaj/HPC_PNLA_Library_OpenMP,C++,git,https://github.com/Shreyas-Gururaj/HPC_PNLA_Library_OpenMP.git,0.0,2021-05-14 17:33:58+00:00,default_cmake.sh,CI,,False,325b208f72611f34d9fb8054d280864ffa56d868,Autobuild Success
 4576,Thepnathi/aerosol-parallelism,C,git,https://github.com/Thepnathi/aerosol-parallelism.git,0.0,2021-05-06 12:58:15+00:00,autofail.sh,CI,,,9fca6c7595ac08ceb15ee56b32c2b6ac675c990b,Autobuild Fail
-4569,ajaykvala/Single-threads,C++,git,https://github.com/ajaykvala/Single-threads.git,0.0,2021-05-08 12:55:38+00:00,autofail.sh,CI,,,,Autobuild Fail
+4569,ajaykvala/Single-threads,C++,git,https://github.com/ajaykvala/Single-threads.git,0.0,2021-05-08 12:55:38+00:00,userscript_fail_after_fixing_githash.sh,CI,,,1224a5def654d8cbeca9876c5d789bc699dd066c,Autobuild Fail
 4564,mmorykan/ConwaysGameOfLife,C,git,https://github.com/mmorykan/ConwaysGameOfLife.git,0.0,2021-05-10 02:43:57+00:00,autofail.sh,CI,,,e9b17231ed2d51490286844799c0d4405f3f1785,Autobuild Fail
 4559,Wicz3k/MPR_OpenMP,C,git,https://github.com/Wicz3k/MPR_OpenMP.git,0.0,2021-05-11 13:41:15+00:00,autofail.sh,CI,,,fb82eaa7c00a14fc077fffcfa35f1a86087e5954,Autobuild Fail
 4555,cmybiubiu/Shared-Memory-OpenMP,C,git,https://github.com/cmybiubiu/Shared-Memory-OpenMP.git,0.0,2021-05-13 16:48:57+00:00,default_make.sh,CI,,False,2fcd9bd26bfed9fb16abf40115a6b43f280056fc,Autobuild Success
 4512,kaseidis/julia-set-openMPI,C,git,https://github.com/kaseidis/julia-set-openMPI.git,0.0,2021-05-26 07:39:43+00:00,default_cmake.sh,CI,,False,536390a70203e0ab5d51fe7e523f3a90cf689733,Autobuild Success
 4473,chelseamariehicks/Volume-of-superquadratic,C++,git,https://github.com/chelseamariehicks/Volume-of-superquadratic.git,0.0,2021-06-06 17:54:57+00:00,autofail.sh,CI,,,dce5ceb3d9f15c6deca9f397dc896d6660da4ecc,Autobuild Fail
 4468,tigran-kocharyan/cpp_openmp_coplanar_vectors,C++,git,https://github.com/tigran-kocharyan/cpp_openmp_coplanar_vectors.git,0.0,2021-06-09 11:39:17+00:00,autofail.sh,CI,,,cd891602d53dce43e6754eac04af930df8859685,Autobuild Fail
-4464,,,,,,,,,,,,
-4457,,,,,,,,,,,,
 4451,pawellski/parallel-wire-world,C,git,https://github.com/pawellski/parallel-wire-world.git,0.0,2021-06-14 21:49:40+00:00,default_make.sh,CI,,False,d2b98b00b044375d5a65546d2ef2033bcc36d6a8,Autobuild Success
 4444,cristinacrs/progparalela,C,git,https://github.com/cristinacrs/progparalela.git,0.0,2021-06-18 21:53:42+00:00,autofail.sh,CI,,,ea3e7ab0ed77036de5971c7ce3b35b8eae5ea525,Autobuild Fail
 4477,abhijna3/Huffman-Image-compression-in-OpenMP,C++,git,https://github.com/abhijna3/Huffman-Image-compression-in-OpenMP.git,0.0,2021-06-03 06:11:58+00:00,autofail.sh,CI,,,c91ab109d1a11b14892ea5afffb265197d832683,Autobuild Fail
@@ -1756,7 +1708,6 @@
 4683,desaimihir12/Relational-Algebra-Premitives-Using-OpenMP,C++,git,https://github.com/desaimihir12/Relational-Algebra-Premitives-Using-OpenMP.git,0.0,2021-04-02 09:20:40+00:00,autofail.sh,CI,,,6ad7a26eddf55567404cff01f6a85e0f4ca767e3,Autobuild Fail
 4679,etson32/Algoritmos-Paralelos-y-Distribuidos,C++,git,https://github.com/etson32/Algoritmos-Paralelos-y-Distribuidos.git,0.0,2021-04-04 00:57:10+00:00,autofail.sh,CI,,,0813752248ff3857c24619e8db56317829a934f2,Autobuild Fail
 4675,yeshwanth495/Parallelizing-Apriori-Algorithm,C++,git,https://github.com/yeshwanth495/Parallelizing-Apriori-Algorithm.git,0.0,2021-04-06 12:45:56+00:00,autofail.sh,CI,,,85de3cd83278ec9b1cd821a5cadd92c4525483eb,Autobuild Fail
-4671,,,,,,,,,,,,
 4665,Denovocto/dockerized-OpenMP,C,git,https://github.com/Denovocto/dockerized-OpenMP.git,0.0,2021-04-08 16:53:28+00:00,autofail.sh,CI,,,91b08427d1443838bda0067c2662be0d9d080e98,Autobuild Fail
 4660,startere/some-OpenMP-benchmarks,C++,git,https://github.com/startere/some-OpenMP-benchmarks.git,0.0,2021-04-11 12:01:52+00:00,autofail.sh,CI,,,121f2fd2a3c567ff59978b5dc01846722ce712cb,Autobuild Fail
 4689,Roberto-Hoo/2_5GaussSeidel,C++,git,https://github.com/Roberto-Hoo/2_5GaussSeidel.git,0.0,2021-03-31 18:37:25+00:00,autofail.sh,CI,,,43453ff548466c58b31e5f7bda84a350d5b58999,Autobuild Fail
@@ -1767,7 +1718,6 @@
 4696,JuliusMbaziira/CPP-Numerical-Computing-Samples,C++,git,https://github.com/JuliusMbaziira/CPP-Numerical-Computing-Samples.git,0.0,2021-03-28 12:16:49+00:00,autofail.sh,CI,,,96054e2561cb7e8e0513eaa1c2195cfc241120ed,Autobuild Fail
 4691,Shaokun-X/openmp_archive,C,git,https://github.com/Shaokun-X/openmp_archive.git,0.0,2021-03-31 07:01:18+00:00,autofail.sh,CI,,,c38391c5de3f17c237b09811ec4ee30c5b1b70d8,Autobuild Fail
 4617,EternalNeophyte/mpi-labs,C++,git,https://github.com/EternalNeophyte/mpi-labs.git,0.0,2021-04-25 05:27:51+00:00,autofail.sh,CI,,,8c4fb76f047addb4dcccc3d50fddec4846600f44,Autobuild Fail
-4609,,,,,,,,,,,,
 4604,bicycleman15/openmp-parallel,C,git,https://github.com/bicycleman15/openmp-parallel.git,0.0,2021-04-28 09:21:31+00:00,autofail.sh,CI,,,3083862c9d55d60650b658a4b7dc32ecf76a41ec,Autobuild Fail
 4600,Diwakar98/COL380-A2-Crout-Decomposition-Using-OpenMP-And-MPI,C,git,https://github.com/Diwakar98/COL380-A2-Crout-Decomposition-Using-OpenMP-And-MPI.git,0.0,2021-04-28 15:32:11+00:00,default_make.sh,CI,,False,11717f64e041a95f82293f230257298b3a37e7c5,Autobuild Success
 4595,davidmallasen/Hello_OpenMP,C,git,https://github.com/davidmallasen/Hello_OpenMP.git,0.0,2021-04-30 18:44:45+00:00,autofail.sh,CI,,,b28ce90059751afc5589f8229481ccae4c328fd7,Autobuild Fail
@@ -1779,7 +1729,6 @@
 4632,ALKovalev/OpenMP,C++,git,https://github.com/ALKovalev/OpenMP.git,0.0,2021-04-20 09:32:15+00:00,autofail.sh,CI,,,fa8585c7a7c8c5a0b9b0ff16f7bbac2ba728c35b,Autobuild Fail
 4627,ShaunJorstad/Hybrid-parallelized-thermal-conduction,C,git,https://github.com/ShaunJorstad/Hybrid-parallelized-thermal-conduction.git,0.0,2021-04-21 21:25:33+00:00,autofail.sh,CI,,,3cb6717e0ff7a54d210341717a250eede205270c,Autobuild Fail
 4622,OrtinPaler/openmp,C++,git,https://github.com/OrtinPaler/openmp.git,0.0,2021-04-23 14:51:22+00:00,autofail.sh,CI,,,8dc0669ab0a86b43aaae32a3325e5977276ea4d8,Autobuild Fail
-4439,,,,,,,,,,,,
 4242,myctu1138/Samples,C++,git,https://github.com/myctu1138/Samples.git,0.0,2021-09-24 14:30:21+00:00,autofail.sh,CI,,,9a8b5b92e77bd4c87c32766bee296a521f053036,Autobuild Fail
 4238,PamplemousseMR/OPENMPNGINE,C++,git,https://github.com/PamplemousseMR/OPENMPNGINE.git,0.0,2021-09-26 13:21:42+00:00,default_cmake.sh,CI,,False,0afdd6c813cc43c800c53e3e71ed2c116825cc80,Autobuild Success
 4234,PashalisTsirts/Pi-Calculation-MPI-OpenMP,C,git,https://github.com/PashalisTsirts/Pi-Calculation-MPI-OpenMP.git,0.0,2021-09-27 19:54:40+00:00,autofail.sh,CI,,,4c771e03569a91c775a173924b82df1ee48f69f9,Autobuild Fail
@@ -1788,12 +1737,10 @@
 4215,AhmedSam3r/parallel-processing-assignments,C,git,https://github.com/AhmedSam3r/parallel-processing-assignments.git,0.0,2021-10-06 12:54:37+00:00,autofail.sh,CI,,,1968037733a1198e15911def722fae407c243718,Autobuild Fail
 4247,invernoe/openMP-Assignments,C++,git,https://github.com/invernoe/openMP-Assignments.git,0.0,2021-09-20 23:34:36+00:00,autofail.sh,CI,,,dd2d9c1fd093a068f8d53b11c1a170bbb6c76f65,Autobuild Fail
 4274,DanJbk/Parallel-Binary-Classification,C++,git,https://github.com/DanJbk/Parallel-Binary-Classification.git,0.0,2021-09-06 19:30:30+00:00,autofail.sh,CI,,,591824d5fae356d2736ce17962e584c5da3e745e,Autobuild Fail
-4270,,,,,,,,,,,,
 4265,openmpf/openmpf-component-archive,C,git,https://github.com/openmpf/openmpf-component-archive.git,0.0,2021-09-10 15:53:27+00:00,autofail.sh,CI,,,640384eab66f28083dcd181f4216bfef8530f206,Autobuild Fail
 4261,luigifusco/CChess,C,git,https://github.com/luigifusco/CChess.git,0.0,2021-09-12 16:05:57+00:00,autofail.sh,CI,,,0b51ae3a65a0f0a2ed707a6cc293edd60b9c50af,Autobuild Fail
 4256,nehuenpereyra/Sistemas-Distribuidos-y-Paralelos-Optimizacion,C,git,https://github.com/nehuenpereyra/Sistemas-Distribuidos-y-Paralelos-Optimizacion.git,0.0,2021-09-15 17:29:51+00:00,autofail.sh,CI,,,5e407ec8cae453d97dbad4253671e1e1244c3f20,Autobuild Fail
 4251,jonahb13/conways-game-of-life,C,git,https://github.com/jonahb13/conways-game-of-life.git,0.0,2021-09-15 20:59:59+00:00,autofail.sh,CI,,,430c94e3a917361ef1f2f8cf9d4efeddfc01e809,Autobuild Fail
-4210,,,,,,,,,,,,
 4166,alaw-private/CS110C-ParProg-OpenMP,C++,git,https://github.com/alaw-private/CS110C-ParProg-OpenMP.git,0.0,2019-10-28 23:32:30+00:00,default_make.sh,CI,,False,8daa200ee358e3fca360e61ff47e9cddd267a133,Autobuild Success
 4158,JingruGao09/OpenMP_Performance,C,git,https://github.com/JingruGao09/OpenMP_Performance.git,0.0,2019-10-31 23:10:21+00:00,autofail.sh,CI,,,650573c882d2dfa998056977eeeba9664f19d7bf,Autobuild Fail
 4153,sharangKulkarni2/tree-communication-in-openmpi-,C,git,https://github.com/sharangKulkarni2/tree-communication-in-openmpi-.git,0.0,2019-11-01 20:38:05+00:00,autofail.sh,CI,,,f2235a5d41f1277cb056a37b8aea5120960d5eed,Autobuild Fail
@@ -1805,40 +1752,27 @@
 4197,kshitij-r/Dynamic-Workload-Prediction-Tool,C++,git,https://github.com/kshitij-r/Dynamic-Workload-Prediction-Tool.git,0.0,2019-10-16 20:18:03+00:00,autofail.sh,CI,,,8414da3afd8c60afd0e672d8350ffaaa77b22841,Autobuild Fail
 4193,aurelienspnll/matrix-mult-ring-rotation,C,git,https://github.com/aurelienspnll/matrix-mult-ring-rotation.git,0.0,2019-10-17 13:30:11+00:00,autofail.sh,CI,,,504b7db77f66557d9ad00b95625c4c6eaf6fef28,Autobuild Fail
 4184,alaxalves/matrix,C,git,https://github.com/alaxalves/matrix.git,0.0,2019-10-22 12:12:31+00:00,autofail.sh,CI,,,d617b9495d50a924a897a5b91b025c988d87fc41,Autobuild Fail
-4178,,,,,,,,,,,,
 4279,emreyilmaztr/Parallelism-on-Intel-Architecture-Assignments,C++,git,https://github.com/emreyilmaztr/Parallelism-on-Intel-Architecture-Assignments.git,0.0,2021-09-05 10:28:49+00:00,autofail.sh,CI,,,617a4fddc2ec12d2f9383e539741225bcfa40657,Autobuild Fail
-4405,,,,,,,,,,,,
-4401,,,,,,,,,,,,
 4395,Langoyo/multithreading-photo-filters,C++,git,https://github.com/Langoyo/multithreading-photo-filters.git,0.0,2021-07-07 16:31:24+00:00,autofail.sh,CI,,,1e29c89cec6f515fc9b52d8ece9a5cf34a961700,Autobuild Fail
-4282,,,,,,,,,,,,
 4386,chandankds/OMPWKSP,C++,git,https://github.com/chandankds/OMPWKSP.git,0.0,2021-07-13 06:46:29+00:00,autofail.sh,CI,,,6d5f95877c19a1aacc16e01f8d02a00d6a22f85e,Autobuild Fail
 4375,ujaineel/Multithreading-Gravitational-N-Body,C,git,https://github.com/ujaineel/Multithreading-Gravitational-N-Body.git,0.0,2021-07-18 19:42:43+00:00,autofail.sh,CI,,,401aed059ff96cd62cb48005a8a3b4c135527739,Autobuild Fail
-4406,,,,,,,,,,,,
 4437,amal-meer/Gaussian-Elimination-Parallelism-using-OpenMP-and-MPI,C++,git,https://github.com/amal-meer/Gaussian-Elimination-Parallelism-using-OpenMP-and-MPI.git,0.0,2021-06-21 13:55:18+00:00,autofail.sh,CI,,,9b2e0990d634f02d9c872a937001d522bef24c80,Autobuild Fail
 4433,alerosales1/CI1316-Programacao-Paralela,C,git,https://github.com/alerosales1/CI1316-Programacao-Paralela.git,0.0,2021-06-23 00:02:48+00:00,autofail.sh,CI,,,2f87a86da0c35a3d7d2bb638230a04cee5c72d76,Autobuild Fail
 4428,DN612/Parallel-implementation-of-longest-common-subsequence,C,git,https://github.com/DN612/Parallel-implementation-of-longest-common-subsequence.git,0.0,2021-06-23 14:10:31+00:00,autofail.sh,CI,,,717306aca11e63815adbba964272f2f8859d9313,Autobuild Fail
-4423,,,,,,,,,,,,
-4419,,,,,,,,,,,,
 4415,VumGualnam/2019S2_C_I_T_S_3_4_0_2__HPC_Project1,C,git,https://github.com/VumGualnam/2019S2_C_I_T_S_3_4_0_2__HPC_Project1.git,0.0,2021-06-29 09:23:21+00:00,default_make.sh,CI,,False,c7ddc95cb49b331cb26fe4bdbb56e6360320dc00,Autobuild Success
 4369,CarlaNunes/Trabalho-1---CAD-2021,C,git,https://github.com/CarlaNunes/Trabalho-1---CAD-2021.git,0.0,2021-07-22 22:35:50+00:00,default_make.sh,CI,,False,67705ee848f7cffb0b32dfb3e27a3522f6ccdf13,Autobuild Success
 4316,xstupi00/Artificial-neural-network,C++,git,https://github.com/xstupi00/Artificial-neural-network.git,0.0,2021-08-13 09:40:08+00:00,autofail.sh,CI,,,52947d629bc5e34e2a83e913421c73006643c64c,Autobuild Fail
 4311,pamugk/hpc,C++,git,https://github.com/pamugk/hpc.git,0.0,2021-08-16 07:38:44+00:00,autofail.sh,CI,,,240bf2c96c8d6c6d636afd75cb004ba7a5a5553d,Autobuild Fail
 4302,MichailXenakis/OpenMP,C,git,https://github.com/MichailXenakis/OpenMP.git,0.0,2021-08-25 17:41:11+00:00,autofail.sh,CI,,,4f3135295143bbbe4345e8d56ea47250012995b9,Autobuild Fail
 4298,franBec/SDyP-OpenMP,C,git,https://github.com/franBec/SDyP-OpenMP.git,0.0,2021-08-26 18:27:58+00:00,autofail.sh,CI,,,806e78a38d1d3ee6b7ea0a1bc5570c29956fb83d,Autobuild Fail
-4290,,,,,,,,,,,,
 4285,10Kaiser10/OpenMP-Learn,C++,git,https://github.com/10Kaiser10/OpenMP-Learn.git,0.0,2021-09-01 10:42:13+00:00,autofail.sh,CI,,,7a5f3ea918fe580f1bdf32dcc13e9c9f966e4dd6,Autobuild Fail
 4366,krbruner86/OpenMP_Reduction_Ex,C++,git,https://github.com/krbruner86/OpenMP_Reduction_Ex.git,0.0,2021-07-25 02:51:48+00:00,autofail.sh,CI,,,4c845f22afb00ca131e6b2a40c317eb7a2026a3e,Autobuild Fail
 4361,khcsce/OPENMP_Parallel,C,git,https://github.com/khcsce/OPENMP_Parallel.git,0.0,2021-07-25 22:13:51+00:00,autofail.sh,CI,,,2717e96ff986d938106cfb8d7b487852f1681689,Autobuild Fail
-4355,,,,,,,,,,,,
 4350,KhadidjaHbl/Game_Of_Life,C,git,https://github.com/KhadidjaHbl/Game_Of_Life.git,0.0,2021-07-30 11:08:55+00:00,autofail.sh,CI,,,86882c9b8d8105a6ae8ea7ba6ff44571e5a5aa5f,Autobuild Fail
-4345,,,,,,,,,,,,
-4336,,,,,,,,,,,,
 4331,ashwinikumar2/Parallel-Merge-Quick-and-Radix-Sort-using-OpenMP,C++,git,https://github.com/ashwinikumar2/Parallel-Merge-Quick-and-Radix-Sort-using-OpenMP.git,0.0,2021-08-07 21:29:50+00:00,default_make.sh,CI,,False,3c2f117de03141773b67d4f45d21ed81cbb9011d,Autobuild Success
 2818,sosezzu/openmp-practice,C,git,https://github.com/sosezzu/openmp-practice.git,0.0,2019-02-10 21:06:51+00:00,autofail.sh,CI,,,ed5253babc9074335c8410f1f6ad7b0334372d24,Autobuild Fail
-2827,,,,,,,,,,,,
 2822,hpc-course-spring2019/openmp-hello-world-hyu88,C,git,https://github.com/hpc-course-spring2019/openmp-hello-world-hyu88.git,0.0,2019-02-09 03:30:46+00:00,autofail.sh,CI,,,1e5ba0ed7a976d7ac7f9a84a538dc543007719e5,Autobuild Fail
 2816,hpc-course-spring2019/openmp-hello-world-jlin248,C,git,https://github.com/hpc-course-spring2019/openmp-hello-world-jlin248.git,0.0,2019-02-11 01:32:21+00:00,autofail.sh,CI,,,1e5ba0ed7a976d7ac7f9a84a538dc543007719e5,Autobuild Fail
-2813,,,,,,,,,,,,
 2806,onkar-omr/Reader-Writer-s-Synchronisation-Problem-using-OpenMP,C,git,https://github.com/onkar-omr/Reader-Writer-s-Synchronisation-Problem-using-OpenMP.git,0.0,2019-02-15 01:49:17+00:00,autofail.sh,CI,,,0d2a126a497596bfa8f0da07aec942a81dec985c,Autobuild Fail
 2801,hpc-course-spring2019/openmp-hello-world-jma78,C,git,https://github.com/hpc-course-spring2019/openmp-hello-world-jma78.git,0.0,2019-02-16 03:22:52+00:00,autofail.sh,CI,,,1e5ba0ed7a976d7ac7f9a84a538dc543007719e5,Autobuild Fail
 2834,Pyhro36/TD2-OpenMP,C++,git,https://github.com/Pyhro36/TD2-OpenMP.git,0.0,2019-02-05 23:35:55+00:00,default_cmake.sh,CI,,False,bc1da4888aa01613f19604736b48a9073ae8044d,Autobuild Success
@@ -1850,9 +1784,6 @@
 2799,JFcoZC/PrimMSTParallelOpenMP,C++,git,https://github.com/JFcoZC/PrimMSTParallelOpenMP.git,0.0,2019-02-18 07:13:21+00:00,autofail.sh,CI,,,5c1c559aa04740456f78548c239fe3d42e550a29,Autobuild Fail
 2758,mrouni/openMP,C,git,https://github.com/mrouni/openMP.git,0.0,2019-03-10 13:50:58+00:00,autofail.sh,CI,,,b8b5306b8c95d3d515ddf7ecbdaec863e2f5d978,Autobuild Fail
 2753,WikGru/ParallelOpenMP,C++,git,https://github.com/WikGru/ParallelOpenMP.git,0.0,2019-03-11 23:14:41+00:00,autofail.sh,CI,,,b2ab7579e8efde78775f146fef3009d5fd5784f4,Autobuild Fail
-2749,,,,,,,,,,,,
-2737,,,,,,,,,,,,
-2731,,,,,,,,,,,,
 2727,yash98/parallelized-principal-component-analysis,C,git,https://github.com/yash98/parallelized-principal-component-analysis.git,0.0,2019-03-19 17:54:43+00:00,default_make.sh,CI,,False,fbea76a7ea0c3de4046f94bd33b62d36cd21926a,Autobuild Success
 2762,kadyrov-ruslan/BMSTU_Master_ParallelProcesses,C++,git,https://github.com/kadyrov-ruslan/BMSTU_Master_ParallelProcesses.git,0.0,2019-03-08 20:49:50+00:00,autofail.sh,CI,,,b7428a693091dce976f36d9c87314370cbdc8134,Autobuild Fail
 2793,Lexxeous/omp_hello,C++,git,https://github.com/Lexxeous/omp_hello.git,0.0,2019-02-20 05:07:32+00:00,autofail.sh,CI,,,4d6169a8cb1d2c0538663b12204e364abc250ed8,Autobuild Fail
@@ -1888,7 +1819,6 @@
 2916,tianyizhangcs/hpxMP_performance,C,git,https://github.com/tianyizhangcs/hpxMP_performance.git,0.0,2019-01-04 15:37:50+00:00,autofail.sh,CI,,,acde060680ea5eda30541f7d79a6e6777f4a56a8,Autobuild Fail
 2912,dmeckley/OpenMP,C,git,https://github.com/dmeckley/OpenMP.git,0.0,2019-01-06 00:54:20+00:00,autofail.sh,CI,,,f90e943be3bddb63ec67f6d305fb8fbacbe59fb4,Autobuild Fail
 2908,passlab/homp,C,git,https://github.com/passlab/homp.git,0.0,2019-01-07 04:20:11+00:00,autofail.sh,CI,,,54d5a11c36debb414354e429a6295aeb1acda6e6,Autobuild Fail
-2720,,,,,,,,,,,,
 2534,walidovich/Pi-calculation-in-Qt-C-and-OpenMP,C++,git,https://github.com/walidovich/Pi-calculation-in-Qt-C-and-OpenMP.git,0.0,2019-05-21 13:24:01+00:00,autofail.sh,CI,,,3f8e2d30b21fe4a8899a9572e91f639cca8b1aa8,Autobuild Fail
 2526,jow105/PARALLELIZING-BORUVKA-S-ALGORITHM,C++,git,https://github.com/jow105/PARALLELIZING-BORUVKA-S-ALGORITHM.git,0.0,2019-05-24 00:30:38+00:00,autofail.sh,CI,,,dca772e048459c1e57a7f8831e31f4698f4a14ff,Autobuild Fail
 2521,StrayLamb2/OpenMP-acceleration-of-Smith-Waterman-algorithm-in-C,C,git,https://github.com/StrayLamb2/OpenMP-acceleration-of-Smith-Waterman-algorithm-in-C.git,0.0,2019-05-25 05:07:53+00:00,autofail.sh,CI,,,c970aa83a04b81e1f5b1c9bef1e877244486b576,Autobuild Fail
@@ -1897,15 +1827,10 @@
 2508,ElrikPiro/sobel,C++,git,https://github.com/ElrikPiro/sobel.git,0.0,2019-05-29 11:17:38+00:00,autofail.sh,CI,,,576e3b446932a4b62ec1a44570dacd5a88f12ac7,Autobuild Fail
 2537,RaoulChartreuse/fractal,C++,git,https://github.com/RaoulChartreuse/fractal.git,0.0,2019-05-21 08:17:35+00:00,autofail.sh,CI,,,ca577b255d447e0ef7773f0fbec693a7bb822aef,Autobuild Fail
 2570,SayaliThorat17/TimSort-Algorithm-Using-OpenMP,C,git,https://github.com/SayaliThorat17/TimSort-Algorithm-Using-OpenMP.git,0.0,2019-05-10 17:27:30+00:00,autofail.sh,CI,,,3dbf1918c3baef5072476d10b9b1d12bb7fd45d5,Autobuild Fail
-2566,,,,,,,,,,,,
 2562,szymczykk/OpenMP_cwiczenia,C++,git,https://github.com/szymczykk/OpenMP_cwiczenia.git,0.0,2019-05-13 06:38:31+00:00,autofail.sh,CI,,,015423de691e31553162bccdff5d6b4b67e1ed43,Autobuild Fail
-2557,,,,,,,,,,,,
 2551,k2Pastor/OpenMPAlgorithmOfGlobalSearch,C++,git,https://github.com/k2Pastor/OpenMPAlgorithmOfGlobalSearch.git,0.0,2019-05-16 18:15:30+00:00,autofail.sh,CI,,,a1607b53a4e077076395a6ce959e6e3517025a63,Autobuild Fail
-2545,,,,,,,,,,,,
-2499,,,,,,,,,,,,
 2456,Funck-Felipe97/quicksort_omp,C++,git,https://github.com/Funck-Felipe97/quicksort_omp.git,0.0,2019-06-14 12:02:08+00:00,autofail.sh,CI,,,9d047a83511c43933890a57cf0035c28e6f33507,Autobuild Fail
 2452,nullkatar/MPI_OpenMP,C,git,https://github.com/nullkatar/MPI_OpenMP.git,0.0,2019-06-16 10:55:56+00:00,autofail.sh,CI,,,acf4461140da28ad163e0f180aacbb5385b03b17,Autobuild Fail
-2446,,,,,,,,,,,,
 2440,YCJ708705/parallel_OpenMP,C++,git,https://github.com/YCJ708705/parallel_OpenMP.git,0.0,2019-06-20 06:12:11+00:00,autofail.sh,CI,,,a6e32ecae2e399404ea321ef62d15908cf903a06,Autobuild Fail
 2435,CarpenterD/parallel-game-of-life,C,git,https://github.com/CarpenterD/parallel-game-of-life.git,0.0,2019-06-21 10:19:36+00:00,autofail.sh,CI,,,c22a0dfc7667366e2596cfd13dfaf9b83dad445a,Autobuild Fail
 2431,alexanderflegontov/OpenMPAnalyzer,C++,git,https://github.com/alexanderflegontov/OpenMPAnalyzer.git,0.0,2019-06-22 05:13:05+00:00,autofail.sh,CI,,,609ad47699384b802b4d8307fab55b63e749f84c,Autobuild Fail
@@ -1916,31 +1841,20 @@
 2477,Omama-mostafa/parallel-OpenMP-Matrix-Vector-Multiplication,C,git,https://github.com/Omama-mostafa/parallel-OpenMP-Matrix-Vector-Multiplication.git,0.0,2019-06-07 22:23:53+00:00,autofail.sh,CI,,,d1c7541cc746063bdf8d7ca9bb0070dd296b5459,Autobuild Fail
 2473,rahcor/openmp-fem,C,git,https://github.com/rahcor/openmp-fem.git,0.0,2019-06-09 17:34:43+00:00,default_make.sh,CI,,False,97932153e396ebca8263238495f7e5c2ad01827d,Autobuild Success
 2572,rajashah33/openMP-linear-search,C,git,https://github.com/rajashah33/openMP-linear-search.git,0.0,2019-05-10 14:57:55+00:00,autofail.sh,CI,,,6a9d5dbb8b540932d4926a7292a5037c6c06e1cf,Autobuild Fail
-2680,,,,,,,,,,,,
 2675,katelyn18/Simple-OpenMP,C,git,https://github.com/katelyn18/Simple-OpenMP.git,0.0,2019-04-05 22:57:04+00:00,autofail.sh,CI,,,294db1e16002245c3bb8366fa3bd0467ad264ae1,Autobuild Fail
-2671,,,,,,,,,,,,
 2576,izham-sugita/clang-openmp-gpu-offload,C++,git,https://github.com/izham-sugita/clang-openmp-gpu-offload.git,0.0,2019-05-09 04:55:14+00:00,autofail.sh,CI,,,c43d06f2395aea0c3aab5501f10345f806296db8,Autobuild Fail
 2659,jordi002/Project_OpenMP,C,git,https://github.com/jordi002/Project_OpenMP.git,0.0,2019-04-15 17:40:37+00:00,autofail.sh,CI,,,7d3af06f008959c2d5c9ffeabf3324c7b7520b7e,Autobuild Fail
 2652,AurelienGauffre/HPC,C++,git,https://github.com/AurelienGauffre/HPC.git,0.0,2019-04-17 08:53:39+00:00,autofail.sh,CI,,,b97ce92801c538c601f49dcf39479dda4f6a9bf9,Autobuild Fail
 2681,rahul-iitd/PCA_and_SVD_using_OpenMP,C,git,https://github.com/rahul-iitd/PCA_and_SVD_using_OpenMP.git,0.0,2019-04-05 07:45:22+00:00,autofail.sh,CI,,,df06fe8818db1c6e3a7aec68fc4fd6250b92d380,Autobuild Fail
 2717,dmarzzz/OpenMPTests,C++,git,https://github.com/dmarzzz/OpenMPTests.git,0.0,2019-03-25 00:01:16+00:00,autofail.sh,CI,,,bb026824833941d90497f0669668efcdba080ec0,Autobuild Fail
 2711,lumeng16/OpenMPstudy,C++,git,https://github.com/lumeng16/OpenMPstudy.git,0.0,2019-03-26 15:02:30+00:00,autofail.sh,CI,,,5cdb7b83a249cac62235790286fd0ada392cde8f,Autobuild Fail
-2705,,,,,,,,,,,,
 2701,slzhffktm/radix-sort-openmp,C++,git,https://github.com/slzhffktm/radix-sort-openmp.git,0.0,2019-03-31 08:34:16+00:00,default_make.sh,CI,,False,6e3eaeb084aced70fe2f506b6d9f90855fae1efb,Autobuild Success
-2695,,,,,,,,,,,,
 2691,MotiElbaz/Parallel-KMEANS,C++,git,https://github.com/MotiElbaz/Parallel-KMEANS.git,0.0,2019-04-01 18:02:59+00:00,autofail.sh,CI,,,6feff0732f3e0ef69e74d45f830c88060b5e836b,Autobuild Fail
 2647,Lexxeous/hybrid_gol,C++,git,https://github.com/Lexxeous/hybrid_gol.git,0.0,2019-04-19 16:09:25+00:00,default_make.sh,CI,,False,9fa1cebd02a822f1097976ecc524048a84616209,Autobuild Success
-2609,,,,,,,,,,,,
-2604,,,,,,,,,,,,
-2598,,,,,,,,,,,,
 2592,alecluna/Parallel-Programming-is-Hard,C,git,https://github.com/alecluna/Parallel-Programming-is-Hard.git,0.0,2019-05-06 02:26:03+00:00,autofail.sh,CI,,,bc32499ed29d8f5eed24d05bc8ead97888a868c5,Autobuild Fail
 2585,avivadla8/Parallel-FFT,C++,git,https://github.com/avivadla8/Parallel-FFT.git,0.0,2019-05-07 17:50:57+00:00,autofail.sh,CI,,,3d9d849736cc559a61705f1beaf1491ae1da1b3e,Autobuild Fail
-2579,,,,,,,,,,,,
 2645,rajathjavali/OpenMP_benchmark,C,git,https://github.com/rajathjavali/OpenMP_benchmark.git,0.0,2019-04-20 02:09:59+00:00,autofail.sh,CI,,,b2f9498f5afd7a35e592a70e60956b72eadc1491,Autobuild Fail
 2642,Akash01010/Dijkstra_OpenMP,C,git,https://github.com/Akash01010/Dijkstra_OpenMP.git,0.0,2019-04-22 06:41:00+00:00,autofail.sh,CI,,,d2cc67fc07b5369b70f47c98af9341c7a85f083e,Autobuild Fail
-2638,,,,,,,,,,,,
-2631,,,,,,,,,,,,
-2624,,,,,,,,,,,,
 2619,amr1990/hpc-openmp,C,git,https://github.com/amr1990/hpc-openmp.git,0.0,2019-04-28 18:22:16+00:00,autofail.sh,CI,,,cd996c82b03e5b03c60d50a3dc356ad15c5aaf2c,Autobuild Fail
 2615,AllynVo/Simple-Parallel-Computing-with-OpenMP,C++,git,https://github.com/AllynVo/Simple-Parallel-Computing-with-OpenMP.git,0.0,2019-05-01 03:59:55+00:00,autofail.sh,CI,,,08d91db751ac3543221df3d666bef64e53d65cd4,Autobuild Fail
 3398,gitdxj/OpenMP-gaussian-elimination,C++,git,https://github.com/gitdxj/OpenMP-gaussian-elimination.git,0.0,2020-07-22 03:14:14+00:00,autofail.sh,CI,,,9bed741525ca62394f4ddb376f485e71c4e2a34e,Autobuild Fail
@@ -1963,24 +1877,18 @@
 3322,akuldr67/OpenMP-CovarianceMatrix,C,git,https://github.com/akuldr67/OpenMP-CovarianceMatrix.git,0.0,2020-08-28 12:31:44+00:00,autofail.sh,CI,,,f5d4bca34e42cdfd13fd1e1469666e280b4438fe,Autobuild Fail
 3316,lexispike/openMP_matrix_decomposition,C++,git,https://github.com/lexispike/openMP_matrix_decomposition.git,0.0,2020-08-29 23:41:30+00:00,default_make.sh,CI,,False,5bcd39c35331e119b1b1615751688ba279bdaf00,Autobuild Success
 3311,NikitaBarsukov/OpenMP-Labs,C++,git,https://github.com/NikitaBarsukov/OpenMP-Labs.git,0.0,2020-08-31 18:04:56+00:00,autofail.sh,CI,,,8fd398e4273451fc6c130c38d31ccdc9a1c3093a,Autobuild Fail
-3345,,,,,,,,,,,,
 3372,seiji19761225/aobench,C,git,https://github.com/seiji19761225/aobench.git,0.0,2020-07-31 13:58:35+00:00,default_make.sh,CI,,False,f523a928040365849e8bc389f6a88dd6d0ccddf6,Autobuild Success
-3367,,,,,,,,,,,,
 3361,chingyuany/Monte-Carlo-Method-in-OpenMP-and-MPI,C,git,https://github.com/chingyuany/Monte-Carlo-Method-in-OpenMP-and-MPI.git,0.0,2020-08-07 01:24:22+00:00,autofail.sh,CI,,,31b95dd930357fe25acd3992416a8543d7020209,Autobuild Fail
 3357,Mayraju/openmp,C,git,https://github.com/Mayraju/openmp.git,0.0,2020-08-09 15:16:59+00:00,autofail.sh,CI,,,9528113ccc63ad0d4452017c4f512cd372e4d9f3,Autobuild Fail
 3353,theompek/Parallel_Programming_Projects,C,git,https://github.com/theompek/Parallel_Programming_Projects.git,0.0,2020-08-11 20:53:20+00:00,autofail.sh,CI,,,0d670c41b5ebe921e7ab127ec826ddf9066816fa,Autobuild Fail
-3348,,,,,,,,,,,,
 3011,faizan-khan-iit/openmp,C++,git,https://github.com/faizan-khan-iit/openmp.git,0.0,2018-11-23 18:29:38+00:00,autofail.sh,CI,,,c8436cd64bde2c0c5dca57e2ac45aef572f60f1a,Autobuild Fail
-3546,,,,,,,,,,,,
 3542,harunsasmaz/Game-Of-Life,C,git,https://github.com/harunsasmaz/Game-Of-Life.git,0.0,2020-06-03 14:50:26+00:00,autofail.sh,CI,,,6f94d92f79640e2fcf47627494ec5b2a53f03b59,Autobuild Fail
-3538,,,,,,,,,,,,
 3534,jacksonjw12/Parallel-Kernel-Convolutions,C,git,https://github.com/jacksonjw12/Parallel-Kernel-Convolutions.git,0.0,2020-06-04 23:26:37+00:00,autofail.sh,CI,,,8d19953653b46cabbaddd9843087e957604290c7,Autobuild Fail
 3528,ViktoriaBabarykina/ParallelLinearSystemSolver,C++,git,https://github.com/ViktoriaBabarykina/ParallelLinearSystemSolver.git,0.0,2020-06-06 02:35:48+00:00,autofail.sh,CI,,,b3d6032ba92116d615c98bfd30518524cbee3d6d,Autobuild Fail
 3523,Warestone/Merge_sort_OpenMP,C++,git,https://github.com/Warestone/Merge_sort_OpenMP.git,0.0,2020-06-07 10:58:03+00:00,autofail.sh,CI,,,744eaebce87dac86b9adf78170c855458d7f07be,Autobuild Fail
 3553,bhaveshpariyani/Basic-Openmp-program,C,git,https://github.com/bhaveshpariyani/Basic-Openmp-program.git,0.0,2020-06-01 09:35:53+00:00,autofail.sh,CI,,,90ad03636361eb8c12b75c03a8f47e196e823877,Autobuild Fail
 3582,EEESlab/hsdes_mcu_conv_openmp_template,C,git,https://github.com/EEESlab/hsdes_mcu_conv_openmp_template.git,0.0,2020-05-25 13:51:45+00:00,autofail.sh,CI,,,52ee3abc3190bf81c97452cf0a6357230ffafb80,Autobuild Fail
 3576,adam-zlatniczki/moar-zeta-cpp-openmp,C++,git,https://github.com/adam-zlatniczki/moar-zeta-cpp-openmp.git,0.0,2020-05-27 06:19:34+00:00,default_make.sh,CI,,False,cb78832bb52aa1b3979e9f55c4409458ce85fef7,Autobuild Success
-3571,,,,,,,,,,,,
 3565,skanerOH/OpenMPLab,C++,git,https://github.com/skanerOH/OpenMPLab.git,0.0,2020-05-28 22:29:50+00:00,autofail.sh,CI,,,2059db88604a61cc168c264bd34651550ff6f9fe,Autobuild Fail
 3559,ksush23/GaussSeidel,C++,git,https://github.com/ksush23/GaussSeidel.git,0.0,2020-05-29 20:57:59+00:00,autofail.sh,CI,,,8028631a9f7708b45d7524afdc9acef27e94fcb6,Autobuild Fail
 3555,Kadphol/HPC,C,git,https://github.com/Kadphol/HPC.git,0.0,2020-05-31 15:13:38+00:00,autofail.sh,CI,,,29589283bf02e0bf0227bad94b1ae5da61e974fb,Autobuild Fail
@@ -1997,28 +1905,21 @@
 3499,Sharanjeetghumman/Parallel-Kernel-Convolutions,C,git,https://github.com/Sharanjeetghumman/Parallel-Kernel-Convolutions.git,0.0,2020-06-14 00:40:44+00:00,autofail.sh,CI,,,15fbe1e747ea30520518e3e6d3537896883ec358,Autobuild Fail
 3493,s4b7r/PI_MonteCarlo,C,git,https://github.com/s4b7r/PI_MonteCarlo.git,0.0,2020-06-15 19:38:01+00:00,autofail.sh,CI,,,1a6919b287a191eba2c9b649544a79b6ff3f6a15,Autobuild Fail
 3489,Tyggesnusk/MasterThesisCode-SurfaceWaves,C++,git,https://github.com/Tyggesnusk/MasterThesisCode-SurfaceWaves.git,0.0,2020-06-16 10:28:51+00:00,autofail.sh,CI,,,df99ab1243b6b6f2f00388c12bd798025de1c4c7,Autobuild Fail
-3305,,,,,,,,,,,,
-3117,,,,,,,,,,,,
 3113,mikomister/openmp_tasks,C++,git,https://github.com/mikomister/openmp_tasks.git,0.0,2018-10-11 13:12:11+00:00,autofail.sh,CI,,,debf779dd1150ebf1c6b378c38029b9082fe7bfc,Autobuild Fail
 3109,jenniferleeny/openMP,C++,git,https://github.com/jenniferleeny/openMP.git,0.0,2018-10-12 23:08:46+00:00,autofail.sh,CI,,,335c22f4301157434583642e0a09b0a8b6046641,Autobuild Fail
 3104,riak16/Parallel-addition,C,git,https://github.com/riak16/Parallel-addition.git,0.0,2018-10-17 16:49:04+00:00,autofail.sh,CI,,,658d783e6a12ba1ed9923e2fe7539e31453f93a6,Autobuild Fail
-3096,,,,,,,,,,,,
 3090,Jayrobo/OpenMP,C++,git,https://github.com/Jayrobo/OpenMP.git,0.0,2018-10-23 18:24:32+00:00,autofail.sh,CI,,,a4a49c22a17b95d2146a0a1ddc922a0bf10a725a,Autobuild Fail
 3122,in-doge-we-trust/openmp-tasks,C++,git,https://github.com/in-doge-we-trust/openmp-tasks.git,0.0,2018-10-07 18:33:51+00:00,default_cmake.sh,CI,,False,a3e55e5ee5f60d06ddc466dae2285eb011a872b2,Autobuild Success
 3152,jaewow/openmp,C,git,https://github.com/jaewow/openmp.git,0.0,2018-09-28 01:03:52+00:00,autofail.sh,CI,,,b7f03c75cb9e38625df063c3deb894f8078b6068,Autobuild Fail
 3147,Oneloves/Introduction-to-OpenMP,C++,git,https://github.com/Oneloves/Introduction-to-OpenMP.git,0.0,2018-09-29 21:57:59+00:00,autofail.sh,CI,,,3a2d1fbf1ddeeef440e6b7f7a8ae029c5ae0209f,Autobuild Fail
 3143,parp1/C-Parallelism-Exploration,C,git,https://github.com/parp1/C-Parallelism-Exploration.git,0.0,2018-09-30 23:16:59+00:00,default_make.sh,CI,,False,4fc1785b4f6231556ee06331d89f42074e77e4af,Autobuild Success
-3139,,,,,,,,,,,,
-3135,,,,,,,,,,,,
 3130,antoniadm/PageRank,C,git,https://github.com/antoniadm/PageRank.git,0.0,2018-10-04 19:31:07+00:00,default_make.sh,CI,,False,981af04a878d57ec8fd80c4d2bf41d371b142b16,Autobuild Success
 3084,sumasree98/travelling-salesman-genetic-algorithm,C,git,https://github.com/sumasree98/travelling-salesman-genetic-algorithm.git,0.0,2018-10-25 10:54:22+00:00,autofail.sh,CI,,,4236878a339dd0b7a0a2343f9c61723a8097d7be,Autobuild Fail
 3042,shrey920/Pagerank,C,git,https://github.com/shrey920/Pagerank.git,0.0,2018-11-12 05:08:51+00:00,autofail.sh,CI,,,e4e3a5f715767b73ee41df7340319ac6a222f31b,Autobuild Fail
 3036,pengjintao/OpenMP,C++,git,https://github.com/pengjintao/OpenMP.git,0.0,2018-11-13 14:20:07+00:00,autofail.sh,CI,,,4c4c7d8abcd623e484bc946e9ff3da2b7d4255e9,Autobuild Fail
 3031,dashan124/Parallel_Convex_Hull,C++,git,https://github.com/dashan124/Parallel_Convex_Hull.git,0.0,2018-11-14 19:33:49+00:00,autofail.sh,CI,,,45bc01286b883e0d51856ad0a51a5e097dec66bd,Autobuild Fail
 3025,RuwanKarunanayake/openmp_unrolling_4,C++,git,https://github.com/RuwanKarunanayake/openmp_unrolling_4.git,0.0,2018-11-16 12:11:16+00:00,autofail.sh,CI,,,6611baf1198bb1a18b590fc6d6bda67c77ac89d0,Autobuild Fail
-3021,,,,,,,,,,,,
 3014,nichow/genprimes,C,git,https://github.com/nichow/genprimes.git,0.0,2018-11-22 15:58:20+00:00,autofail.sh,CI,,,2d1d34315e224deff6b155e305802a6499019ce4,Autobuild Fail
-3048,,,,,,,,,,,,
 3078,Clark0/NSCC_OpenMP,C,git,https://github.com/Clark0/NSCC_OpenMP.git,0.0,2018-10-28 03:00:03+00:00,autofail.sh,CI,,,765bfddd659e8852a5da0cf54c3163098aca5723,Autobuild Fail
 3069,filhei/OpenMP,C,git,https://github.com/filhei/OpenMP.git,0.0,2018-10-30 11:17:24+00:00,default_make.sh,CI,,False,4f1f6e2cbdc7840d18aeb8c8d20c104329668f5f,Autobuild Success
 3064,bbw7561135/OpenMP-Workshop,C,git,https://github.com/bbw7561135/OpenMP-Workshop.git,0.0,2018-11-03 13:03:55+00:00,autofail.sh,CI,,,3affe5676240d9670e241cfad9c818b18df408b7,Autobuild Fail
@@ -2026,9 +1927,7 @@
 3052,albertjbelardino/OpenMpMatrix,C,git,https://github.com/albertjbelardino/OpenMpMatrix.git,0.0,2018-11-07 17:36:09+00:00,default_make.sh,CI,,False,c60a695475115ca68faf8116b4a99eefb3a5e6b4,Autobuild Success
 3156,jankopanski/Three-Body-Problem,C,git,https://github.com/jankopanski/Three-Body-Problem.git,0.0,2018-09-26 07:45:38+00:00,autofail.sh,CI,,,1a3f34556248d7efd9c0ac16c0b89e25e9a16a8e,Autobuild Fail
 3266,TiagoCastilhos/fractals-openmp,C++,git,https://github.com/TiagoCastilhos/fractals-openmp.git,0.0,2020-09-23 01:22:54+00:00,autofail.sh,CI,,,e5980cc592c27349afa9fd068ad3c11fa9a34acc,Autobuild Fail
-3260,,,,,,,,,,,,
 3255,vzhenylenko/MPI-OpenMP-examples,C++,git,https://github.com/vzhenylenko/MPI-OpenMP-examples.git,0.0,2020-09-27 11:57:45+00:00,autofail.sh,CI,,,cdf3d64768b5f637e3e616c9c6575af931e06260,Autobuild Fail
-3250,,,,,,,,,,,,
 3242,minyaho/Histogram-Equalization-by-OpenMP-and-OpenCL,C++,git,https://github.com/minyaho/Histogram-Equalization-by-OpenMP-and-OpenCL.git,0.0,2020-10-02 17:03:59+00:00,autofail.sh,CI,,,3028b59a0a85789f8ca4cd5cff772edbd634c265,Autobuild Fail
 3236,Seiseigy/taller-2-paralela,C++,git,https://github.com/Seiseigy/taller-2-paralela.git,0.0,2020-10-04 01:59:35+00:00,default_make.sh,CI,,False,cdf9d6e6dc4b9371b6f4d8822197cb41be302304,Autobuild Success
 3270,matheusfsa/T0-CountingSort-Base,,git,https://github.com/matheusfsa/T0-CountingSort-Base.git,0.0,2020-09-21 00:36:07+00:00,default_cmake.sh,CI,,False,eb743101050b2e631e515d4c3ecf03085ff592fc,Autobuild Success
@@ -2036,12 +1935,10 @@
 3295,kitti-noo/OpenMP,C,git,https://github.com/kitti-noo/OpenMP.git,0.0,2020-09-10 12:08:05+00:00,autofail.sh,CI,,,41d52a06b4bcb45357650afe617f5c9c29ac38b2,Autobuild Fail
 3290,Sirozu/Examples-of-MPI-OpenMp,C++,git,https://github.com/Sirozu/Examples-of-MPI-OpenMp.git,0.0,2020-09-11 07:20:39+00:00,autofail.sh,CI,,,79b2982d41b6ab51be8b2ad765cf86eb9fffdeac,Autobuild Fail
 3285,manolismih/sparseMatPerm,C,git,https://github.com/manolismih/sparseMatPerm.git,0.0,2020-09-13 13:55:37+00:00,autofail.sh,CI,,,a73f4c181d7dff0ed1e1a4292ca4d306da75d204,Autobuild Fail
-3278,,,,,,,,,,,,
 3273,kunalkhade/Sieve-of-Eratosthenes,C,git,https://github.com/kunalkhade/Sieve-of-Eratosthenes.git,0.0,2020-09-19 18:28:46+00:00,autofail.sh,CI,,,03aee30a81adce9d7e8550e0b0fdc01117689ef8,Autobuild Fail
 3161,cmnshareteb/HPC-OpenMP,C++,git,https://github.com/cmnshareteb/HPC-OpenMP.git,0.0,2018-09-24 15:56:23+00:00,autofail.sh,CI,,,72fd577a7134107d8d53830303eab859de9c139f,Autobuild Fail
 3189,nurzhan-saktaganov/perftool_mock,C,git,https://github.com/nurzhan-saktaganov/perftool_mock.git,0.0,2018-09-11 16:56:10+00:00,default_make.sh,CI,,False,8b0b8a4ab2d18d4c21c001ec35d2fc34f18ee276,Autobuild Success
 3185,arnav-kansal/parallel_linsolver,C,git,https://github.com/arnav-kansal/parallel_linsolver.git,0.0,2018-09-13 07:00:52+00:00,autofail.sh,CI,,,77afebcf2d59bf16d104f4ccd45d811c8947e50e,Autobuild Fail
-3177,,,,,,,,,,,,
 3172,frank11158/PL_Matrix_Multiplication,C++,git,https://github.com/frank11158/PL_Matrix_Multiplication.git,0.0,2018-09-19 13:14:25+00:00,autofail.sh,CI,,,4e86ffa4c37e967512d175d162d474c321e56ae3,Autobuild Fail
 3168,MiloVahos/PruebasOMP,C,git,https://github.com/MiloVahos/PruebasOMP.git,0.0,2018-09-21 20:26:22+00:00,autofail.sh,CI,,,5b9f183b01d0b8edf72be1fe6f110f7387bc7752,Autobuild Fail
 3162,welchdante/DiffusionLimitedAggregation,C++,git,https://github.com/welchdante/DiffusionLimitedAggregation.git,0.0,2018-09-23 21:43:11+00:00,autofail.sh,CI,,,01567054ff22d3a07cc20b54fe706a44dde33338,Autobuild Fail
