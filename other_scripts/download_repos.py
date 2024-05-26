@@ -34,38 +34,35 @@ BASE_PATH= "/home/ci24amun/projects/openmp-usage-analysis/openmp-usage-analysis-
 REPO_PATH   = BASE_PATH+"/data/"
 SCRIPT_PATH = BASE_PATH+"/scripts/CI"
 def cloneRepo(repoUrl, path, commit_hash=None):
+    environ_vars = os.environ.copy()
+    # git should not ask for credentials but fail instead
+    environ_vars["GIT_TERMINAL_PROMPT"] = "0"
     try:
         # remove any old repo
         if not os.path.isdir(path):
             # not already present:
             # download
-            # check if URL is still available
-            
-            server_status =subprocess.check_output("curl -S  --head --request GET "+repoUrl.rstrip(".git")+" 2>/dev/null | head -n1 | awk '{print $2}'",shell=True,
-                                    encoding='UTF-8')
-            #   print("Executed: "+"curl -S  --head --request GET "+repoUrl.rstrip(".git")+" 2>/dev/null | head -n1 | awk '{print $2}'")
-#            if server_status.startswith("4") or server_status == "301":
-            if int(server_status) != 200:
-                print("return code was ",int(server_status))
-                raise RepoUnavailable(server_status)
-            subprocess.check_output(f'git clone --depth 1 {repoUrl} {path}', stderr=subprocess.STDOUT, shell=True,
-                                    encoding='UTF-8')
+            subprocess.check_output(f'GIT_TERMINAL_PROMPT=0 git clone --depth 1 {repoUrl} {path}',
+                                    stderr=subprocess.STDOUT, shell=True,
+                                    encoding='UTF-8',
+                                    env=environ_vars)
+
         # get current hash, remove trailing \n
         current_hash = subprocess.check_output(f'git rev-parse --verify HEAD', cwd=path, stderr=subprocess.STDOUT,
-                                               shell=True, encoding='UTF-8').strip()
+                                               shell=True, encoding='UTF-8',env=environ_vars).strip()
         if commit_hash is None or current_hash == commit_hash:
             return current_hash
         else:
             # fetch different revision
             # TODO one could check that origin-url is set up correctly
             subprocess.check_output(f'git fetch --depth 1 origin {commit_hash}', cwd=path, stderr=subprocess.STDOUT,
-                                    shell=True, encoding='UTF-8')
+                                    shell=True, encoding='UTF-8',env=environ_vars)
             subprocess.check_output(f'git checkout {commit_hash}', cwd=path, stderr=subprocess.STDOUT,
-                                    shell=True, encoding='UTF-8')
+                                    shell=True, encoding='UTF-8',env=environ_vars)
             return commit_hash
 
     except subprocess.CalledProcessError as e:
-        print("ERROR: downloading Repo (",repoUrl,") to (",path,"):")
+        print("ERROR: downloading Repo (", repoUrl, ") to (", path, "):")
         print(e.output)
 
 
