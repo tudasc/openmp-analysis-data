@@ -35,8 +35,8 @@
 6540,ECP-ExaGraph/miniVite,C++,git,https://github.com/ECP-ExaGraph/miniVite.git,24,30.07.8777,e630f9c3726fd61768a765fb1399da92efa456ac,,RS,RS/ECP-ExaGraph--miniVite.sh,,,User script
 5786,fandreuz/parallel-kd-tree,C++,git,https://github.com/fandreuz/parallel-kd-tree.git,23,-1648015,66faa1108c9652f2b2518d658a759556135e17bc,,RS,RS/fandreuz--parallel-kd-tree.sh,,,User script
 3256,tsaglam/TrafficSimulation,C++,git,https://github.com/tsaglam/TrafficSimulation.git,22,-6808015,65a7947592193159106c5bb32646da3be5f891c3,,RS,autofail.sh,,,Autobuild
-2450,richursa/cpuBitonicSort,C++,git,https://github.com/richursa/cpuBitonicSort.git,21,9862383,2b2616b610d8e508af0039d5dc0eff6d6abd68d1,,RS,autofail.sh,,,Autobuild
-4354,dalvangriebler/NPB-CPP,C++,git,https://github.com/dalvangriebler/NPB-CPP.git,21,-3758015,d31c997580ef1a58c13c69fe02dadcb3e0e95105,,RS,autofail.sh,,,Autobuild
+2450,richursa/cpuBitonicSort,C++,git,https://github.com/richursa/cpuBitonicSort.git,21,9862383,2b2616b610d8e508af0039d5dc0eff6d6abd68d1,,RS,RS/richursa--cpuBitonicSort.sh,,,TODO:TestScript
+4354,dalvangriebler/NPB-CPP,C++,git,https://github.com/dalvangriebler/NPB-CPP.git,21,-3758015,d31c997580ef1a58c13c69fe02dadcb3e0e95105,,RS,RS/dalvangriebler--NPB-CPP.sh,,,TODO:TestScript
 1316,repalash/CUDAPathTracerRL,C++,git,https://github.com/repalash/CUDAPathTracerRL.git,20,6242383,339194a903a115fb09a50c639ac82d3348eb2425,,RS,autofail.sh,,,Autobuild
 6294,ECP-ExaGraph/grappolo,C++,git,https://github.com/ECP-ExaGraph/grappolo.git,20,3101985,7671af320338fdfb8ead6233d03ed1a1d1b7fce5,,RS,default_make.sh,,FALSCH,Autobuild
 6333,TApplencourt/OvO,C++,git,https://github.com/TApplencourt/OvO.git,19,2971985,198b5d0242f39f1c31ea98f9a1d360d332511a1d,,RS,autofail.sh,,,Autobuild
