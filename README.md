@@ -1,10 +1,12 @@
 # OpenMP usage analysis Binaries
 
-This repo should contain the build scripts to build all relevant repos
-if the build script cannot automatically build a repo, the tar.gz of the binaries should be included
-in this case the "build" script should just extract the tarball while serving as a documentation on how to build it.
+This repo contains the build scripts to build all relevant repos for our OpenMP study.
+The result_data.tar.gz includes the collected data from our analysis
+
+TODO: Link to repo with the analysis script
 
 ## Build script
+All build script in scripts are designed as follows:
 
 #### Input
 
