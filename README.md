@@ -1,9 +1,8 @@
 # OpenMP usage analysis Binaries
 
 This repo contains the build scripts to build all relevant repos for our OpenMP study.
-The result_data.tar.gz includes the collected data from our analysis
-
-TODO: Link to repo with the analysis script
+The result_data.tar.gz includes the collected data from our analysis.
+The scripts used for analysis are in our repo: https://github.com/tudasc/openmp-analysis
 
 ## Build script
 All build script in scripts are designed as follows:
